@@ -7,9 +7,6 @@ redirect_from:
   - /about.html
 ---
 
-
-## Abdelrahman S. Abdelrahman
-
 PhD Student in Computer Engineering
 UC Santa Barbara (UCSB)
 
