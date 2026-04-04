@@ -3,7 +3,8 @@
 permalink: /
 title: "Abdelrahman S. Abdelrahman"
 author_profile: true
---------------------
+
+---
 
 ## Abdelrahman S. Abdelrahman
 
@@ -38,5 +39,5 @@ My research introduces the **Probabilistic Approximate Optimization Algorithm (P
 
 ### Contact
 
-* Email: your_email_here
-* Google Scholar: https://scholar.google.com/citations?user=PS_CX0AAAAAJ
+* Email: abdelrahman@ucsb.edu
+* Google Scholar: https://scholar.google.com/citations?user=PNZvVskAAAAJ&hl=en
