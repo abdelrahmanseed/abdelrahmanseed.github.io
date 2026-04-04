@@ -35,7 +35,7 @@ My research introduces the **Probabilistic Approximate Optimization Algorithm (P
 
 * *Generalized Probabilistic Approximate Optimization* — Nature Communications (2026)
 * *Probabilistic Optimization using SPAD Arrays* — Under Review
-* *Probabilistic Computing with p-bits* — Under Review
+* *Probabilistic Algorithms for Ising Machines: From Optimization to Generative AI* — Under Review
 
 ---
 
