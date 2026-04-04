@@ -52,6 +52,3 @@ My research introduces the **Probabilistic Approximate Optimization Algorithm (P
 * Email: abdelrahman@ucsb.edu
 * Google Scholar: https://scholar.google.com/citations?user=PS_CX0AAAAAJ
 
-git add .
-git commit 
-git push origin master
