@@ -5,7 +5,7 @@ title: "Abdelrahman S. Abdelrahman"
 author_profile: true
 --------------------
 
-## Abdelrahman Seed
+## Abdelrahman S. Abdelrahman
 
 PhD Student, Computer Engineering — UC Santa Barbara (UCSB)
 Machine Intelligence | Probabilistic Optimization | MCMC | Quantum-Inspired Algorithms
@@ -32,10 +32,11 @@ My work introduces the **Probabilistic Approximate Optimization Algorithm (PAOA)
 
 * *Generalized Probabilistic Approximate Optimization* — Nature Communications (2026)
 * *Probabilistic Optimization using SPAD Arrays* — Under Review
+* *Probabilistic Computing with p-bits* — Under Review
 
 ---
 
 ### Contact
 
-* Email: abdelrahman@ucsb.edu
+* Email: your_email_here
 * Google Scholar: https://scholar.google.com/citations?user=PS_CX0AAAAAJ
