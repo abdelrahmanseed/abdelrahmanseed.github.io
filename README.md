@@ -1,7 +1,7 @@
 ---
 
 permalink: /
-title: "Abdelrahman Seed"
+title: "Abdelrahman S. Abdelrahman"
 author_profile: true
 --------------------
 
