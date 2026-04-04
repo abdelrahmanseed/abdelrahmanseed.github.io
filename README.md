@@ -33,5 +33,5 @@ My work introduces the **Probabilistic Approximate Optimization Algorithm (PAOA)
 
 ### Contact
 
-* Email: your_email_here
+* Email: abdelrahman@ucsb.edu
 * Google Scholar: https://scholar.google.com/citations?user=PS_CX0AAAAAJ
