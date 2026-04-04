@@ -10,11 +10,21 @@ redirect_from:
 PhD Student in Computer Engineering
 UC Santa Barbara (UCSB)
 
+<a href="/cv/" class="btn-cv">View CV</a>
+
 ---
 
 I work on **probabilistic optimization algorithms** for solving hard combinatorial problems, with a focus on learning effective sampling strategies in complex, glassy energy landscapes.
 
 My research introduces the **Probabilistic Approximate Optimization Algorithm (PAOA)** — a quantum-inspired framework that learns annealing schedules and proposal distributions to accelerate convergence in Markov Chain Monte Carlo (MCMC).
+
+<div class="tags">
+<span>Probabilistic computing</span>
+<span>MCMC</span>
+<span>Optimization</span>
+<span>FPGA</span>
+<span>Ising models</span>
+</div>
 
 ---
 
