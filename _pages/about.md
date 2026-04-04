@@ -50,5 +50,5 @@ My research introduces the **Probabilistic Approximate Optimization Algorithm (P
 ### Contact
 
 * Email: abdelrahman@ucsb.edu
-* Google Scholar: https://scholar.google.com/citations?user=PS_CX0AAAAAJ
+<!-- * Google Scholar: https://scholar.google.com/citations?user=PS_CX0AAAAAJ -->
 
