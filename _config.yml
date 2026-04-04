@@ -26,9 +26,9 @@ author:
   avatar           : "me.png"
   name             : "Abdelrahman S. Abdelrahman"
   # pronouns         : # example: "she/her"  
-  bio              : "PhD student at UCSB working on probabilistic optimization, MCMC, and quantum-inspired algorithms (PAOA)."
+  bio              : "PhD student at UCSB working on probabilistic optimization, MCMC, and quantum-inspired algorithms."
   location         : "Santa Barbara, CA"
-  employer         : "University of California, Santa Barbara"
+  employer         : "UC Santa Barbara"
   # uri              : # URL
   email            : "abdelrahman@ucsb.edu" 
 
