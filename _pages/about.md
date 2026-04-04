@@ -1,6 +1,6 @@
 ---
 permalink: /
-# title: "..."
+title: "Abdelrahman S. Abdelrahman"
 author_profile: true
 redirect_from: 
   - /about/
@@ -8,22 +8,23 @@ redirect_from:
 ---
 
 PhD Student in Computer Engineering
-UC Santa Barbara (UCSB)
+UC Santa Barbara (UCSB)---<a href="https://opus.ece.ucsb.edu" target="_blank">OPUS Lab</a>
 
-<a href="/cv/" class="btn-cv">View CV</a>
+<a href="https://ucsb.box.com/s/7k2ug6qmr2zqz2w2pkn7qzzfc2ulfiw3" class="btn-cv" target="_blank">
+  View CV
+</a>
 
 ---
 
 I work on **probabilistic optimization algorithms** for solving hard combinatorial problems, with a focus on learning effective sampling strategies in complex, glassy energy landscapes.
 
-My research introduces the **Probabilistic Approximate Optimization Algorithm (PAOA)** — a quantum-inspired framework that learns annealing schedules and proposal distributions to accelerate convergence in Markov Chain Monte Carlo (MCMC).
+My research introduces the **Probabilistic Approximate Optimization Algorithm (PAOA)**, a quantum-inspired framework that learns annealing schedules and proposal distributions to accelerate convergence in Markov Chain Monte Carlo (MCMC).
 
 <div class="tags">
 <span>Probabilistic computing</span>
-<span>MCMC</span>
-<span>Optimization</span>
-<span>FPGA</span>
-<span>Ising models</span>
+<span>Ising model</span>
+<span>Hardware Acceleration</span>
+<span>Statistical Modeling</span>
 </div>
 
 ---
@@ -50,3 +51,7 @@ My research introduces the **Probabilistic Approximate Optimization Algorithm (P
 
 * Email: abdelrahman@ucsb.edu
 * Google Scholar: https://scholar.google.com/citations?user=PS_CX0AAAAAJ
+
+git add .
+git commit 
+git push origin master
