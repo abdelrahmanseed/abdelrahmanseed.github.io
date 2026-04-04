@@ -1,5 +1,3 @@
-
-
 ## Abdelrahman S. Abdelrahman
 
 PhD Student, Electrical and Computer Engineering — UC Santa Barbara (UCSB)
