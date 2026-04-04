@@ -1,10 +1,9 @@
 ---
-
-title: "Probabilistic Approximate Optimization Algorithm (PAOA)"
+title: "Probabilistic Approximate Optimization Algorithm"
+excerpt: "PAOA is a quantum-inspired probabilistic optimization framework designed to accelerate convergence in Markov Chain Monte Carlo (MCMC). <br/><img src='/images/500x300.png'>"
 collection: portfolio
----------------------
+---
 
-PAOA is a quantum-inspired probabilistic optimization framework designed to accelerate convergence in Markov Chain Monte Carlo (MCMC).
 
 It learns adaptive annealing schedules and proposal distributions to efficiently explore complex, non-convex energy landscapes.
 
