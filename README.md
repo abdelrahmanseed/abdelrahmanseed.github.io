@@ -2,7 +2,7 @@
 
 ## Abdelrahman S. Abdelrahman
 
-PhD Student, Computer Engineering — UC Santa Barbara (UCSB)
+PhD Student, Electrical and Computer Engineering — UC Santa Barbara (UCSB)
 Machine Intelligence | Probabilistic Optimization | MCMC | Quantum-Inspired Algorithms
 
 ---
