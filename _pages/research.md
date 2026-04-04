@@ -3,7 +3,8 @@
 title: "Research"
 permalink: /research/
 layout: single
---------------
+
+---
 
 ## Research Overview
 
