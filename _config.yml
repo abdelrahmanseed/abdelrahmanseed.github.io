@@ -12,7 +12,7 @@ site_theme               : "default" # The available themes options are "default
 title                    : "Abdelrahman S. Abdelrahman"
 title_separator          : "-"
 name                     : &name "Abdelrahman S. Abdelrahman"
-description              : &description "PhD Student, Machine Intelligence — Probabilistic Optimization & MCMC"   # Update this with a general description of your site, this is the default if not overridden by a page
+description              : &description "Data scientist and PhD candidate specializing in machine learning, stochastic optimization, and scalable probabilistic AI systems."   # Update this with a general description of your site, this is the default if not overridden by a page
 url                      : https://abdelrahmanseed.github.io # The base hostname & protocol for your site e.g. "https://[your GitHub username].github.io",
                                                            # or if you already have some other page hosted on Github then use "https://[your GitHub username].github.io/[Your Repo Name]"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
@@ -26,7 +26,7 @@ author:
   avatar           : "me.png"
   name             : "Abdelrahman S. Abdelrahman"
   # pronouns         : # example: "she/her"  
-  bio              : "PhD student at UCSB working on probabilistic optimization, MCMC, and quantum-inspired algorithms."
+  bio              : "Data scientist and PhD candidate at UCSB working on machine learning, stochastic optimization, and probabilistic AI systems."
   location         : "Santa Barbara, CA"
   employer         : "UC Santa Barbara"
   # uri              : # URL
@@ -84,13 +84,10 @@ author:
 
 # Publication Category - The following the list of publication categories and their headings
 publication_category:
-  books:
-    title: 'Books'
   manuscripts:
-    # title: 'Selected Journal Articles'    
-    title: 'Selected Papers'    
-  # conferences:
-  #   title: 'Selected Conference Papers'
+    title: 'Journal Publications and Preprints'
+  conferences:
+    title: 'Conference Publications'
 
 # Site Settings
 teaser                   :  # filename of teaser fallback teaser image placed in /images/ for social media previews

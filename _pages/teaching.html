@@ -3,10 +3,46 @@ layout: archive
 title: "Teaching"
 permalink: /teaching/
 author_profile: true
+hide_page_title: true
 ---
 
-{% include base_path %}
+<div class="page-intro">
+  <p class="section-kicker section-kicker--lead">Courses, discussion sections, labs, and student-facing materials</p>
+  <p>I have served as a Teaching Assistant in the UCSB ECE Department, leading discussion sections and labs for 100+ students across digital design, signal processing, and applied linear algebra.</p>
+</div>
 
-{% for post in site.teaching reversed %}
-  {% include archive-single.html %}
-{% endfor %}
+<section class="teaching-summary" aria-label="Teaching highlights">
+  <article>
+    <strong>100+ students</strong>
+    <span>Discussion sections, labs, office hours, and mentoring</span>
+  </article>
+  <article>
+    <strong>3 course areas</strong>
+    <span>Digital design, signals and systems, and linear algebra</span>
+  </article>
+  <article>
+    <strong>Open materials</strong>
+    <span>Course material and feedback links from the CV are collected below</span>
+  </article>
+</section>
+
+<section class="teaching-grid">
+  {% for post in site.teaching reversed %}
+    <article class="teaching-card">
+      <p class="section-kicker">{{ post.type }}</p>
+      <h2>{{ post.title }}</h2>
+      <p class="teaching-card__meta">{{ post.term }} · {{ post.venue }}</p>
+      <p>{{ post.excerpt | markdownify | strip_html }}</p>
+      {% if post.topics %}
+        <div class="research-pills">
+          {% for topic in post.topics %}<span>{{ topic }}</span>{% endfor %}
+        </div>
+      {% endif %}
+      <div class="resource-links">
+        {% if post.courseurl %}<a href="{{ post.courseurl }}" target="_blank" rel="noopener"><i class="fa-solid fa-building-columns" aria-hidden="true"></i> Course Catalog</a>{% endif %}
+        {% if post.materialurl %}<a href="{{ post.materialurl }}" target="_blank" rel="noopener"><i class="fa-solid fa-file-lines" aria-hidden="true"></i> Materials</a>{% endif %}
+        {% if post.feedbackurl %}<a href="{{ post.feedbackurl }}" target="_blank" rel="noopener"><i class="fa-solid fa-comment-dots" aria-hidden="true"></i> Feedback</a>{% endif %}
+      </div>
+    </article>
+  {% endfor %}
+</section>

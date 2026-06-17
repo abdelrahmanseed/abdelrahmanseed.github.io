@@ -25,8 +25,10 @@ layout: default
 
     <div class="page__inner-wrap">
       {% unless page.header.overlay_color or page.header.overlay_image %}
-        <header>
-          {% if page.title %}<h1 class="page__title" itemprop="headline">{{ page.title | markdownify | remove: "<p>" | remove: "</p>" }}</h1>{% endif %}
+      <header>
+          {% unless page.hide_page_title %}
+            {% if page.title %}<h1 class="page__title" itemprop="headline">{{ page.title | markdownify | remove: "<p>" | remove: "</p>" }}</h1>{% endif %}
+          {% endunless %}
           {% if page.read_time %}
             <p class="page__meta"><i class="fa fa-clock" aria-hidden="true"></i> {% include read-time.html %}</p>
           {% endif %}
@@ -71,6 +73,33 @@ layout: default
           <p style="font-size: smaller"><a href="{{ page.slidesurl }}">Download Slides</a></p>
         {% elsif page.bibtexurl %}
           <p style="font-size: smaller"><a href="{{ page.bibtexurl }}">Download Bibtex</a></p>
+        {% endif %}
+
+        {% assign show_resource_paper = false %}
+        {% if page.paperurl and page.collection != 'publications' %}
+          {% assign show_resource_paper = true %}
+        {% endif %}
+        {% assign show_resource_slides = false %}
+        {% if page.slidesurl and page.collection != 'publications' %}
+          {% assign show_resource_slides = true %}
+        {% endif %}
+        {% if show_resource_paper or page.codeurl or page.codeurl2 or page.paperurl2 or page.reporturl or page.reporturl2 or page.demourl or page.materialurl or page.feedbackurl or page.videourl or page.videourl2 or show_resource_slides or page.slidesurl2 or page.courseurl %}
+          <div class="resource-links resource-links--detail">
+            {% if show_resource_paper %}<a href="{{ page.paperurl }}" target="_blank" rel="noopener"><i class="fa-solid fa-file-lines" aria-hidden="true"></i> Paper</a>{% endif %}
+            {% if page.paperurl2 %}<a href="{{ page.paperurl2 }}" target="_blank" rel="noopener"><i class="fa-solid fa-file-lines" aria-hidden="true"></i> Related Paper</a>{% endif %}
+            {% if page.codeurl %}<a href="{{ page.codeurl }}" target="_blank" rel="noopener"><i class="fa-solid fa-code" aria-hidden="true"></i> Code</a>{% endif %}
+            {% if page.codeurl2 %}<a href="{{ page.codeurl2 }}" target="_blank" rel="noopener"><i class="fa-solid fa-code" aria-hidden="true"></i> Code 2</a>{% endif %}
+            {% if page.reporturl %}<a href="{{ page.reporturl }}" target="_blank" rel="noopener"><i class="fa-solid fa-chart-line" aria-hidden="true"></i> Report</a>{% endif %}
+            {% if page.reporturl2 %}<a href="{{ page.reporturl2 }}" target="_blank" rel="noopener"><i class="fa-solid fa-chart-line" aria-hidden="true"></i> Report 2</a>{% endif %}
+            {% if page.demourl %}<a href="{{ page.demourl }}" target="_blank" rel="noopener"><i class="fa-solid fa-play" aria-hidden="true"></i> Demo</a>{% endif %}
+            {% if page.videourl %}<a href="{{ page.videourl }}" target="_blank" rel="noopener"><i class="fa-solid fa-video" aria-hidden="true"></i> Video</a>{% endif %}
+            {% if page.videourl2 %}<a href="{{ page.videourl2 }}" target="_blank" rel="noopener"><i class="fa-solid fa-video" aria-hidden="true"></i> Video 2</a>{% endif %}
+            {% if show_resource_slides %}<a href="{{ page.slidesurl }}" target="_blank" rel="noopener"><i class="fa-solid fa-display" aria-hidden="true"></i> Slides</a>{% endif %}
+            {% if page.slidesurl2 %}<a href="{{ page.slidesurl2 }}" target="_blank" rel="noopener"><i class="fa-solid fa-display" aria-hidden="true"></i> Slides 2</a>{% endif %}
+            {% if page.courseurl %}<a href="{{ page.courseurl }}" target="_blank" rel="noopener"><i class="fa-solid fa-building-columns" aria-hidden="true"></i> Course Catalog</a>{% endif %}
+            {% if page.materialurl %}<a href="{{ page.materialurl }}" target="_blank" rel="noopener"><i class="fa-solid fa-file-lines" aria-hidden="true"></i> Materials</a>{% endif %}
+            {% if page.feedbackurl %}<a href="{{ page.feedbackurl }}" target="_blank" rel="noopener"><i class="fa-solid fa-comment-dots" aria-hidden="true"></i> Feedback</a>{% endif %}
+          </div>
         {% endif %}
 
         {% if page.link %}<div><a href="{{ page.link }}" class="btn">{{ site.data.ui-text[site.locale].ext_link_label | default: "Direct Link" }}</a></div>{% endif %}
