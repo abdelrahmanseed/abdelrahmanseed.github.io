@@ -83,7 +83,7 @@ layout: default
         {% if page.slidesurl and page.collection != 'publications' %}
           {% assign show_resource_slides = true %}
         {% endif %}
-        {% if show_resource_paper or page.codeurl or page.codeurl2 or page.paperurl2 or page.reporturl or page.reporturl2 or page.demourl or page.materialurl or page.feedbackurl or page.videourl or page.videourl2 or show_resource_slides or page.slidesurl2 or page.courseurl %}
+        {% if show_resource_paper or page.codeurl or page.codeurl2 or page.paperurl2 or page.reporturl or page.reporturl2 or page.demourl or page.materialurl or page.repositoryurl or page.feedbackurl or page.videourl or page.videourl2 or show_resource_slides or page.slidesurl2 or page.courseurl %}
           <div class="resource-links resource-links--detail">
             {% if show_resource_paper %}<a href="{{ page.paperurl }}" target="_blank" rel="noopener"><i class="fa-solid fa-file-lines" aria-hidden="true"></i> Paper</a>{% endif %}
             {% if page.paperurl2 %}<a href="{{ page.paperurl2 }}" target="_blank" rel="noopener"><i class="fa-solid fa-file-lines" aria-hidden="true"></i> Related Paper</a>{% endif %}
@@ -97,6 +97,7 @@ layout: default
             {% if show_resource_slides %}<a href="{{ page.slidesurl }}" target="_blank" rel="noopener"><i class="fa-solid fa-display" aria-hidden="true"></i> Slides</a>{% endif %}
             {% if page.slidesurl2 %}<a href="{{ page.slidesurl2 }}" target="_blank" rel="noopener"><i class="fa-solid fa-display" aria-hidden="true"></i> Slides 2</a>{% endif %}
             {% if page.courseurl %}<a href="{{ page.courseurl }}" target="_blank" rel="noopener"><i class="fa-solid fa-building-columns" aria-hidden="true"></i> Course Catalog</a>{% endif %}
+            {% if page.repositoryurl %}<a href="{{ page.repositoryurl }}" target="_blank" rel="noopener"><i class="fa-brands fa-github" aria-hidden="true"></i> Course notebooks</a>{% endif %}
             {% if page.materialurl %}<a href="{{ page.materialurl }}" target="_blank" rel="noopener"><i class="fa-solid fa-file-lines" aria-hidden="true"></i> Materials</a>{% endif %}
             {% if page.feedbackurl %}<a href="{{ page.feedbackurl }}" target="_blank" rel="noopener"><i class="fa-solid fa-comment-dots" aria-hidden="true"></i> Feedback</a>{% endif %}
           </div>

@@ -619,6 +619,48 @@ html[data-theme="dark"] .home-hero__visual::before {
   line-height: 1.5;
 }
 
+.teaching-feature {
+  background:
+    linear-gradient(135deg, rgba(12, 107, 110, 0.08), rgba(169, 120, 32, 0.08)),
+    var(--asa-surface);
+  border: 1px solid var(--asa-border);
+  border-left: 4px solid var(--asa-teal);
+  border-radius: 8px;
+  box-shadow: var(--asa-shadow);
+  margin: 0 0 1.3rem;
+  padding: 1.15rem;
+}
+
+.teaching-feature h2 {
+  color: var(--asa-ink);
+  font-size: 1.3rem;
+  line-height: 1.2;
+  margin: 0 0 0.65rem;
+}
+
+.teaching-feature p {
+  color: var(--asa-muted);
+  margin: 0 0 0.8rem;
+}
+
+.teaching-feature .section-kicker {
+  color: var(--asa-gold);
+  margin-bottom: 0.35rem;
+}
+
+.teaching-feature .research-pills {
+  margin: 0.9rem 0 0;
+}
+
+.teaching-feature .resource-links {
+  margin-top: 1rem;
+}
+
+.teaching-feature .resource-links a:first-child {
+  background: var(--asa-teal);
+  color: #fff;
+}
+
 .teaching-card,
 .portfolio-card {
   background: var(--asa-surface);

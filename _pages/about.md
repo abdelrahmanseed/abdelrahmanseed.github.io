@@ -86,13 +86,13 @@ redirect_from:
 
   <article class="spotlight-card">
     <p class="section-kicker">Methods</p>
-    <h2>Ml-guided sampling</h2>
+    <h2>ML-guided sampling</h2>
     <p>Learning schedules, proposal distributions, and dynamics that help MCMC move through difficult energy landscapes.</p>
   </article>
 
   <article class="spotlight-card">
     <p class="section-kicker">Problems</p>
-    <h2>Optimization and ai</h2>
+    <h2>Optimization and AI</h2>
     <p>Studying k-SAT, spin glasses, Ising systems, and generative-AI-adjacent probabilistic models where sampling quality matters.</p>
   </article>
 </section>

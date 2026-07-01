@@ -82,6 +82,28 @@ redirect_from:
 </section>
 
 <section class="cv-section">
+  <p class="section-kicker">Teaching</p>
+  <div class="cv-timeline">
+    {% assign teaching_by_date = site.teaching | sort: "date" | reverse %}
+    {% for teaching in teaching_by_date %}
+      <article>
+        <span>{{ teaching.term }}</span>
+        <p class="section-kicker section-kicker--lead">{{ teaching.type }}, {{ teaching.title }}</p>
+        <p>{{ teaching.venue }} · {{ teaching.excerpt | markdownify | strip_html }}</p>
+        {% if teaching.courseurl or teaching.materialurl or teaching.repositoryurl or teaching.feedbackurl %}
+          <div class="resource-links">
+            {% if teaching.courseurl %}<a href="{{ teaching.courseurl }}" target="_blank" rel="noopener"><i class="fa-solid fa-building-columns" aria-hidden="true"></i> Course catalog</a>{% endif %}
+            {% if teaching.materialurl %}<a href="{{ teaching.materialurl }}" target="_blank" rel="noopener"><i class="fa-solid fa-file-lines" aria-hidden="true"></i> Materials</a>{% endif %}
+            {% if teaching.repositoryurl %}<a href="{{ teaching.repositoryurl }}" target="_blank" rel="noopener"><i class="fa-brands fa-github" aria-hidden="true"></i> Course notebooks</a>{% endif %}
+            {% if teaching.feedbackurl %}<a href="{{ teaching.feedbackurl }}" target="_blank" rel="noopener"><i class="fa-solid fa-comment-dots" aria-hidden="true"></i> Feedback</a>{% endif %}
+          </div>
+        {% endif %}
+      </article>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="cv-section">
   <p class="section-kicker">Awards and Activities</p>
   <ul class="cv-list">
     <li>International Doctoral Recruitment Fellowship, UCSB.</li>
