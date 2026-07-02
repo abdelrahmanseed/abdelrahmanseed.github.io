@@ -98,7 +98,7 @@ layout: default
             {% if page.slidesurl2 %}<a href="{{ page.slidesurl2 }}" target="_blank" rel="noopener"><i class="fa-solid fa-display" aria-hidden="true"></i> Slides 2</a>{% endif %}
             {% if page.courseurl %}<a href="{{ page.courseurl }}" target="_blank" rel="noopener"><i class="fa-solid fa-building-columns" aria-hidden="true"></i> Course Catalog</a>{% endif %}
             {% if page.repositoryurl %}<a href="{{ page.repositoryurl }}" target="_blank" rel="noopener"><i class="fa-brands fa-github" aria-hidden="true"></i> Course notebooks</a>{% endif %}
-            {% if page.materialurl %}<a href="{{ page.materialurl }}" target="_blank" rel="noopener"><i class="fa-solid fa-file-lines" aria-hidden="true"></i> Materials</a>{% endif %}
+            {% if page.materialurl %}<a href="{{ page.materialurl }}" target="_blank" rel="noopener"><i class="fa-solid fa-file-lines" aria-hidden="true"></i> {{ page.materiallabel | default: "Materials" }}</a>{% endif %}
             {% if page.feedbackurl %}<a href="{{ page.feedbackurl }}" target="_blank" rel="noopener"><i class="fa-solid fa-comment-dots" aria-hidden="true"></i> Feedback</a>{% endif %}
           </div>
         {% endif %}

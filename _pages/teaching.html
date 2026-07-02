@@ -8,7 +8,7 @@ hide_page_title: true
 
 <div class="page-intro">
   <p class="section-kicker section-kicker--lead">Courses, discussion sections, labs, and student-facing materials</p>
-  <p>My teaching at UC Santa Barbara includes TA-led labs and discussion sections, plus an instructor role designing an intensive summer course in probabilistic computing.</p>
+  <p>My teaching at UC Santa Barbara includes TA-led labs and discussion sections, Research Mentorship Program advising, and an instructor role designing an intensive summer course in probabilistic computing.</p>
 </div>
 
 <section class="teaching-feature" aria-label="Featured teaching appointment">
@@ -35,7 +35,7 @@ hide_page_title: true
   </article>
   <article>
     <strong>100+ students</strong>
-    <span>Discussion sections, labs, office hours, and mentoring across ECE courses</span>
+    <span>Discussion sections, labs, office hours, and RMP research mentoring across student-facing roles</span>
   </article>
   <article>
     <strong>Open materials</strong>
@@ -56,12 +56,14 @@ hide_page_title: true
           {% for topic in post.topics %}<span>{{ topic }}</span>{% endfor %}
         </div>
       {% endif %}
-      <div class="resource-links">
-        {% if post.courseurl %}<a href="{{ post.courseurl }}" target="_blank" rel="noopener"><i class="fa-solid fa-building-columns" aria-hidden="true"></i> Course Catalog</a>{% endif %}
-        {% if post.materialurl %}<a href="{{ post.materialurl }}" target="_blank" rel="noopener"><i class="fa-solid fa-file-lines" aria-hidden="true"></i> Materials</a>{% endif %}
-        {% if post.repositoryurl %}<a href="{{ post.repositoryurl }}" target="_blank" rel="noopener"><i class="fa-brands fa-github" aria-hidden="true"></i> Course notebooks</a>{% endif %}
-        {% if post.feedbackurl %}<a href="{{ post.feedbackurl }}" target="_blank" rel="noopener"><i class="fa-solid fa-comment-dots" aria-hidden="true"></i> Feedback</a>{% endif %}
-      </div>
+      {% if post.courseurl or post.materialurl or post.repositoryurl or post.feedbackurl %}
+        <div class="resource-links">
+          {% if post.courseurl %}<a href="{{ post.courseurl }}" target="_blank" rel="noopener"><i class="fa-solid fa-building-columns" aria-hidden="true"></i> Course Catalog</a>{% endif %}
+          {% if post.materialurl %}<a href="{{ post.materialurl }}" target="_blank" rel="noopener"><i class="fa-solid fa-file-lines" aria-hidden="true"></i> {{ post.materiallabel | default: "Materials" }}</a>{% endif %}
+          {% if post.repositoryurl %}<a href="{{ post.repositoryurl }}" target="_blank" rel="noopener"><i class="fa-brands fa-github" aria-hidden="true"></i> Course notebooks</a>{% endif %}
+          {% if post.feedbackurl %}<a href="{{ post.feedbackurl }}" target="_blank" rel="noopener"><i class="fa-solid fa-comment-dots" aria-hidden="true"></i> Feedback</a>{% endif %}
+        </div>
+      {% endif %}
     </article>
   {% endfor %}
 </section>

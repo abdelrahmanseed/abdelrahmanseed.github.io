@@ -93,7 +93,7 @@ redirect_from:
         {% if teaching.courseurl or teaching.materialurl or teaching.repositoryurl or teaching.feedbackurl %}
           <div class="resource-links">
             {% if teaching.courseurl %}<a href="{{ teaching.courseurl }}" target="_blank" rel="noopener"><i class="fa-solid fa-building-columns" aria-hidden="true"></i> Course catalog</a>{% endif %}
-            {% if teaching.materialurl %}<a href="{{ teaching.materialurl }}" target="_blank" rel="noopener"><i class="fa-solid fa-file-lines" aria-hidden="true"></i> Materials</a>{% endif %}
+            {% if teaching.materialurl %}<a href="{{ teaching.materialurl }}" target="_blank" rel="noopener"><i class="fa-solid fa-file-lines" aria-hidden="true"></i> {{ teaching.materiallabel | default: "Materials" }}</a>{% endif %}
             {% if teaching.repositoryurl %}<a href="{{ teaching.repositoryurl }}" target="_blank" rel="noopener"><i class="fa-brands fa-github" aria-hidden="true"></i> Course notebooks</a>{% endif %}
             {% if teaching.feedbackurl %}<a href="{{ teaching.feedbackurl }}" target="_blank" rel="noopener"><i class="fa-solid fa-comment-dots" aria-hidden="true"></i> Feedback</a>{% endif %}
           </div>
