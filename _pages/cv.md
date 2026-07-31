@@ -20,7 +20,7 @@ redirect_from:
   <article>
     <p class="section-kicker section-kicker--lead">UC Santa Barbara</p>
     <ul class="cv-list">
-      <li><strong>PhD, Electrical and Computer Engineering</strong> - expected Dec 2028; thesis: Probabilistic Approximate Optimization.</li>
+      <li><strong>PhD, Electrical and Computer Engineering</strong> - Jan 2026-Present; thesis: Probabilistic Approximate Optimization.</li>
       <li><strong>MSc, Electrical and Computer Engineering</strong> - Dec 2025; GPA 4.0/4.0.</li>
       <li><strong>BSc, Electrical and Electronics Engineering</strong> - KFUPM, May 2022; ranked 1st, GPA 3.99/4.0.</li>
     </ul>

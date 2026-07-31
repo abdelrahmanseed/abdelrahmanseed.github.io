@@ -37,7 +37,7 @@ redirect_from:
   <article>
     <span>Education</span>
     <strong>PhD ECE, UCSB</strong>
-    <p>Expected Dec 2028; thesis on Probabilistic Approximate Optimization.</p>
+    <p>Jan 2026-Present; thesis on Probabilistic Approximate Optimization.</p>
   </article>
   <article>
     <span>Experience</span>
