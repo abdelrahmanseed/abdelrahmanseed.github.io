@@ -1,35 +1,12 @@
 ## Abdelrahman S. Abdelrahman
 
-PhD Student, Electrical and Computer Engineering — UC Santa Barbara (UCSB)
-Machine Intelligence | Probabilistic Optimization | MCMC | Quantum-Inspired Algorithms
+PhD candidate in Electrical and Computer Engineering at UC Santa Barbara, OPUS Lab.
 
----
+I develop learning-based sampling and probabilistic optimization algorithms, with implementations on FPGA and single-photon avalanche diode arrays.
 
-I develop **probabilistic algorithms for solving hard combinatorial problems**, with a focus on learning effective sampling strategies in complex, non-convex energy landscapes.
+This repository powers [abdelrahmanseed.github.io](https://abdelrahmanseed.github.io).
 
-My work introduces the **Probabilistic Approximate Optimization Algorithm (PAOA)** — a quantum-inspired framework that learns annealing schedules and accelerates convergence in Markov Chain Monte Carlo (MCMC).
-
----
-
-### Research Interests
-
-* Probabilistic Optimization (PAOA)
-* Markov Chain Monte Carlo (MCMC)
-* Statistical Physics & Energy-Based Models
-* Quantum-Inspired Algorithms
-* Spin Glasses & k-SAT
-
----
-
-### Selected Publications
-
-* *Generalized Probabilistic Approximate Optimization* — Nature Communications (2026)
-* *Probabilistic Optimization using SPAD Arrays* — Under Review
-* *Probabilistic Computing with p-bits* — Under Review
-
----
-
-### Contact
-
-* Email: abdelrahman@ucsb.edu
-* Google Scholar: https://scholar.google.com/citations?user=PNZvVskAAAAJ&hl=en
+- [CV](https://abdelrahmanseed.github.io/files/CV.pdf)
+- [Research and publications](https://abdelrahmanseed.github.io/research/)
+- [Teaching materials](https://abdelrahmanseed.github.io/teaching/)
+- Contact: abdelrahman@ucsb.edu

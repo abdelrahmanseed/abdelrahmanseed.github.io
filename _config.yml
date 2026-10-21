@@ -12,7 +12,7 @@ site_theme               : "default" # The available themes options are "default
 title                    : "Abdelrahman S. Abdelrahman"
 title_separator          : "-"
 name                     : &name "Abdelrahman S. Abdelrahman"
-description              : &description "Data scientist and PhD candidate specializing in machine learning, stochastic optimization, and scalable probabilistic AI systems."   # Update this with a general description of your site, this is the default if not overridden by a page
+description              : &description "PhD candidate at UC Santa Barbara developing learning-based sampling and probabilistic optimization algorithms."
 url                      : https://abdelrahmanseed.github.io # The base hostname & protocol for your site e.g. "https://[your GitHub username].github.io",
                                                            # or if you already have some other page hosted on Github then use "https://[your GitHub username].github.io/[Your Repo Name]"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
@@ -26,7 +26,7 @@ author:
   avatar           : "me.png"
   name             : "Abdelrahman S. Abdelrahman"
   # pronouns         : # example: "she/her"  
-  bio              : "Data scientist and PhD candidate at UCSB working on machine learning, stochastic optimization, and probabilistic AI systems."
+  bio              : "PhD candidate at UCSB. Learning-based sampling and probabilistic optimization."
   location         : "Santa Barbara, CA"
   employer         : "UC Santa Barbara"
   # uri              : # URL

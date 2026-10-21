@@ -7,8 +7,8 @@ hide_page_title: true
 ---
 
 <div class="page-intro">
-  <p class="section-kicker section-kicker--lead">Selected publications and research systems</p>
-  <p>A visual overview of the work, with paper figures, code, talks, and demos grouped around the projects they represent.</p>
+  <h1 class="section-kicker section-kicker--lead">Research and deployed systems</h1>
+  <p>Paper figures, implementations, and demos.</p>
 </div>
 
 {% include base_path %}
@@ -26,7 +26,7 @@ hide_page_title: true
         <div class="publication-figure-card__body">
           <p class="section-kicker">{{ paper.date | date: "%Y" }} / {{ paper_type }}</p>
           <h2><a href="{{ paper.url | relative_url }}">{{ paper.title }}</a></h2>
-          {% if paper.venue %}<p class="publication-figure-card__venue">{{ paper.venue }}</p>{% endif %}
+          {% if paper.venue %}<p class="publication-figure-card__venue">{{ paper.venue }}{% if paper.publication_status %} · {{ paper.publication_status }}{% endif %}</p>{% endif %}
           <p>{{ paper.excerpt | markdownify | strip_html }}</p>
           {% if paper.paperurl or paper.codeurl or paper.slidesurl or paper.posterurl or paper.profileurl or paper.bibtexurl or paper.resources %}
             <div class="resource-links">
@@ -50,7 +50,7 @@ hide_page_title: true
 </section>
 
 <div class="portfolio-section-heading">
-  <p class="section-kicker section-kicker--lead">Implementation work, demos, and research materials.</p>
+  <h2 class="section-kicker section-kicker--lead">Projects and demos</h2>
 </div>
 
 <section class="portfolio-grid">

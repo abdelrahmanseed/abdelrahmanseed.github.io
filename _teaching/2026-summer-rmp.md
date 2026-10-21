@@ -7,7 +7,7 @@ venue: "UC Santa Barbara"
 date: 2026-06-01
 term: "Summer 2026"
 location: "Santa Barbara, CA"
-excerpt: "Mentored high-achieving high school students in UCSB's Research Mentorship Program through hands-on, university-level research on learning-based optimization for complex energy landscapes, with a focus on protein folding."
+excerpt: "Mentored a four-week protein-folding project, from an HP lattice environment and REINFORCE benchmarks to a final report and presentation."
 topics:
   - Research mentorship
   - Learning-based optimization
@@ -16,6 +16,4 @@ topics:
   - Scientific Python
 ---
 
-Served as a research mentor in UC Santa Barbara's Research Mentorship Program (RMP), guiding high-achieving high school students through hands-on, university-level research.
-
-The project focused on learning-based optimization for complex energy landscapes, with protein folding as the central application.
+Mentored a student on **Protein Folding Using Variational Annealing** over four weeks. Guided problem formulation, a tested HP lattice-folding environment, REINFORCE baselines and benchmarks, and the final report and presentation.

@@ -1,13 +1,13 @@
 ---
 title: "Probabilistic Approximate Optimization Algorithm"
-excerpt: "PAOA is a quantum-inspired probabilistic optimization framework designed to accelerate convergence in Markov Chain Monte Carlo."
+excerpt: "Learns sampling dynamics for combinatorial optimization on probabilistic computers."
 collection: portfolio
 permalink: /portfolio/paoa/
-category_label: "Paper Figure 1"
+category_label: "Paper · Nature Communications · 2026"
 figure: "PAOA.png"
 figure_alt: "Figure showing the PAOA workflow and learned probabilistic optimization process"
 figure_caption: "Figure 1: PAOA workflow"
-summary: "A variational Monte Carlo algorithm inspired by QAOA that learns annealing schedules and proposal distributions for hard combinatorial problems."
+summary: "Developed PAOA and implemented on-chip annealing on FPGA hardware. Published in Nature Communications, 17, 498 (2026)."
 profileurl: "https://opus.ece.ucsb.edu/people/abdelrahman-abdelrahman"
 paperurl: "https://www.nature.com/articles/s41467-025-67187-5"
 codeurl: "https://github.com/OPUSLab/PAOAwithPbits"
@@ -27,10 +27,4 @@ tags:
   <img src="/images/PAOA.png" alt="Figure showing the PAOA workflow and learned probabilistic optimization process">
 </figure>
 
-It learns adaptive annealing schedules and proposal distributions to efficiently explore complex, non-convex energy landscapes.
-
-### Applications
-
-* k-SAT
-* Spin glass systems
-* Probabilistic computing (p-bits)
+PAOA learns how to sample rather than following a fixed annealing schedule. The implementation includes FPGA-based on-chip annealing for spin-glass optimization.
