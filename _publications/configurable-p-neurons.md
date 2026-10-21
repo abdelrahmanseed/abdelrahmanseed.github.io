@@ -1,8 +1,10 @@
 ---
 title: "Configurable p-Neurons Using Modular p-Bits"
 collection: publications
+layout: publication
+story_key: configurable-p-neurons
 category: conferences
-permalink: /publication/configurable-p-neurons
+permalink: /publication/configurable-p-neurons/
 excerpt: "Configurable stochastic neurons with shared randomness, reducing FPGA hardware resources by 10×."
 date: 2026-01-01
 venue: "ISCAS - IEEE International Symposium on Circuits and Systems"

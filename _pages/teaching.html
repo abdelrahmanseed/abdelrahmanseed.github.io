@@ -1,37 +1,29 @@
 ---
-layout: archive
+layout: research
 title: "Teaching"
 permalink: /teaching/
-author_profile: true
-hide_page_title: true
+author_profile: false
 ---
 
-<div class="page-intro">
-  <h1 class="section-kicker section-kicker--lead">Teaching and mentorship</h1>
-  <p>Designed and taught Probabilistic Computing at UCSB, mentored protein-folding research, and led labs and discussion sections for 100+ students.</p>
-</div>
+<header class="site-page-heading"><p class="research-eyebrow">Teaching</p><h1>Teaching & <em>Mentorship</em></h1><p>Courses, research mentorship, and materials from my teaching at UC Santa Barbara.</p></header>
 
-<section class="teaching-grid">
-  {% assign teaching_by_date = site.teaching | sort: "date" | reverse %}
-  {% for post in teaching_by_date %}
-    <article class="teaching-card">
-      <p class="section-kicker">{{ post.type }}</p>
-      <h2>{{ post.title }}</h2>
-      <p class="teaching-card__meta">{{ post.term }} · {{ post.venue }}</p>
-      <p>{{ post.excerpt | markdownify | strip_html }}</p>
-      {% if post.topics %}
-        <div class="research-pills">
-          {% for topic in post.topics %}<span>{{ topic }}</span>{% endfor %}
+<section class="teaching-appointments">
+  {% assign courses = site.teaching | sort: 'date' | reverse %}
+  {% for course in courses %}
+    <article class="appointment">
+      <div class="appointment__meta"><span>{{ course.term }}</span><strong>{{ course.type }}</strong></div>
+      <div class="appointment__body"><h2><a href="{{ course.url | relative_url }}">{{ course.title }}</a></h2><p>{{ course.excerpt | markdownify | strip_html }}</p>
+        <div class="research-story__links">
+          {% if course.materialurl %}<a href="{{ course.materialurl }}" target="_blank" rel="noopener">{{ course.materiallabel | default: 'Materials' }} ↗</a>{% endif %}
+          {% if course.repositoryurl %}<a href="{{ course.repositoryurl }}" target="_blank" rel="noopener">Course notebooks ↗</a>{% endif %}
+          {% if course.feedbackurl %}<a href="{{ course.feedbackurl }}" target="_blank" rel="noopener">Student feedback ↗</a>{% endif %}
+          {% if course.proposalurl %}<a href="{{ course.proposalurl }}" target="_blank" rel="noopener">Project proposal ↗</a>{% endif %}
+          {% if course.courseurl %}<a href="{{ course.courseurl }}" target="_blank" rel="noopener">Course catalog ↗</a>{% endif %}
+          {% if course.description_section %}<a href="{{ course.url | relative_url }}#{{ course.description_section }}">Course description →</a>{% elsif course.descriptionurl %}<a href="{{ course.descriptionurl }}" target="_blank" rel="noopener">Course description ↗</a>{% endif %}
         </div>
-      {% endif %}
-      {% if post.courseurl or post.materialurl or post.repositoryurl or post.feedbackurl %}
-        <div class="resource-links">
-          {% if post.courseurl %}<a href="{{ post.courseurl }}" target="_blank" rel="noopener"><i class="fa-solid fa-building-columns" aria-hidden="true"></i> Course Catalog</a>{% endif %}
-          {% if post.materialurl %}<a href="{{ post.materialurl }}" target="_blank" rel="noopener"><i class="fa-solid fa-file-lines" aria-hidden="true"></i> {{ post.materiallabel | default: "Materials" }}</a>{% endif %}
-          {% if post.repositoryurl %}<a href="{{ post.repositoryurl }}" target="_blank" rel="noopener"><i class="fa-brands fa-github" aria-hidden="true"></i> Course notebooks</a>{% endif %}
-          {% if post.feedbackurl %}<a href="{{ post.feedbackurl }}" target="_blank" rel="noopener"><i class="fa-solid fa-comment-dots" aria-hidden="true"></i> Feedback</a>{% endif %}
-        </div>
-      {% endif %}
+        {% if course.proposal_description %}<div class="teaching-proposal"><h3>{{ course.proposal_title }}</h3><p>{{ course.proposal_description }}</p></div>{% endif %}
+        {% if course.sample_image or course.sample_video or course.sample_animation %}{% include teaching-sample.html course=course %}{% endif %}
+      </div>
     </article>
   {% endfor %}
 </section>

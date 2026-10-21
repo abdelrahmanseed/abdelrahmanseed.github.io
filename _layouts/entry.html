@@ -1,0 +1,19 @@
+---
+layout: research
+---
+<header class="site-page-heading entry-heading">
+  <a class="page-back" href="{{ '/teaching/' | relative_url }}">← Back to Teaching</a>
+  <p class="research-eyebrow">{{ page.type }}</p>
+  <h1>{{ page.title }}</h1><p>{{ page.term }} · {{ page.venue }}</p>
+</header>
+<article class="entry-content">{{ content }}
+  <div class="research-story__links">
+    {% if page.materialurl %}<a href="{{ page.materialurl }}" target="_blank" rel="noopener">{{ page.materiallabel | default: 'Materials' }} ↗</a>{% endif %}
+    {% if page.repositoryurl %}<a href="{{ page.repositoryurl }}" target="_blank" rel="noopener">Course notebooks ↗</a>{% endif %}
+    {% if page.feedbackurl %}<a href="{{ page.feedbackurl }}" target="_blank" rel="noopener">Student feedback ↗</a>{% endif %}
+    {% if page.courseurl %}<a href="{{ page.courseurl }}" target="_blank" rel="noopener">Course catalog ↗</a>{% endif %}
+    {% if page.description_section %}<a href="#{{ page.description_section }}">Course description ↓</a>{% elsif page.descriptionurl %}<a href="{{ page.descriptionurl }}" target="_blank" rel="noopener">Course description ↗</a>{% endif %}
+    {% if page.proposalurl %}<a href="{{ page.proposalurl }}" target="_blank" rel="noopener">Project proposal ↗</a>{% endif %}
+  </div>
+  {% if page.sample_image or page.sample_video or page.sample_animation %}{% include teaching-sample.html course=page expanded=true %}{% endif %}
+</article>

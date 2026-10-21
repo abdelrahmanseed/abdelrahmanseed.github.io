@@ -1,8 +1,10 @@
 ---
 title: "Probabilistic approximate optimization using single-photon avalanche diode arrays"
 collection: publications
+layout: publication
+story_key: paoaSPAD
 category: manuscripts
-permalink: /publication/paoaSPAD
+permalink: /publication/paoaSPAD/
 excerpt: 'Runs PAOA on a 64 × 64 SPAD array, adapting to device variability through learned parameters.'
 date: 2026-02-15
 venue: 'npj Unconventional Computing'

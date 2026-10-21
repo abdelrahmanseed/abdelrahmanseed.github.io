@@ -12,6 +12,5 @@ tags:
   - Covariance estimation
   - Signal processing
   - ICASSP
+redirect_to: /publication/adaptive-regularization-portfolio/
 ---
-
-This work connects adaptive regularization, covariance approximation, and robust portfolio optimization.

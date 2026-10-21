@@ -16,6 +16,5 @@ tags:
   - YOLO
   - ByteTrack
   - NVIDIA Jetson
+redirect_to: /portfolio/
 ---
-
-Selected production computer vision systems developed at Wakeb, including personnel detection for high-voltage testing and real-time crowd management pipelines.

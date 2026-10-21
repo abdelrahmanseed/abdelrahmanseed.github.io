@@ -1,8 +1,10 @@
 ---
 title: "An Adaptive Regularization Approach to Portfolio Optimization"
 collection: publications
+layout: publication
+story_key: adaptive-regularization-portfolio
 category: conferences
-permalink: /publication/adaptive-regularization-portfolio
+permalink: /publication/adaptive-regularization-portfolio/
 excerpt: "An adaptive regularization approach for portfolio optimization."
 date: 2021-01-01
 venue: "ICASSP - IEEE International Conference on Acoustics, Speech and Signal Processing"

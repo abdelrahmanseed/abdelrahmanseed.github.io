@@ -11,6 +11,5 @@ tags:
   - Probabilistic computing
   - Circuits
   - ISCAS
+redirect_to: /publication/configurable-p-neurons/
 ---
-
-Modular p-bits separate stochastic signals from input data. The FPGA implementation shares stochastic units to reduce hardware resources while supporting configurable probabilistic activation functions.

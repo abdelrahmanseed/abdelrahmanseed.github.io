@@ -1,0 +1,6 @@
+---
+layout: default
+---
+<main id="main" class="research-showcase">{{ content }}</main>
+{% if page.story_key %}{% include figure-viewer.html %}{% endif %}
+<script defer src="{{ '/assets/js/research.js' | relative_url }}"></script>

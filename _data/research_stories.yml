@@ -1,0 +1,32 @@
+- id: learning
+  number: '01'
+  title: Learning the sampler
+  description: Learning the dynamics of a sampler and learning the configurations it proposes.
+  papers:
+    - paoa
+    - isingformer
+    - ising-machines-generative-ai
+- id: hardware
+  number: '02'
+  title: Stochastic hardware
+  description: Connecting probabilistic algorithms to devices and reusable circuit architectures.
+  papers:
+    - paoaSPAD
+    - configurable-p-neurons
+- id: physics
+  number: '03'
+  title: Devices and dynamics
+  description: Statistical device models and the behavior of delayed physical systems.
+  papers:
+    - defect-aware-2d-memristors
+    - hbn-memristors-scalability
+    - coupled-oscillators-delay
+    - delay-eigenvalue-coupled-oscillators
+- id: applications
+  number: '04'
+  title: Sensing and estimation
+  description: Energy-efficient data collection and adaptive statistical estimation.
+  papers:
+    - aerial-data-aggregation
+    - wur-aerial-data-demo
+    - adaptive-regularization-portfolio

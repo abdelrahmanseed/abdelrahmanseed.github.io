@@ -1,8 +1,10 @@
 ---
 title: "Scalability of h-BN Based Memristors: Yield and Variability Considerations"
 collection: publications
+layout: publication
+story_key: hbn-memristors-scalability
 category: conferences
-permalink: /publication/hbn-memristors-scalability
+permalink: /publication/hbn-memristors-scalability/
 excerpt: "A study of yield and variability considerations for h-BN based memristive device scaling."
 date: 2023-01-01
 venue: "Silicon Nanoelectronics Workshop"

@@ -12,6 +12,5 @@ tags:
   - UAV
   - Wake-up radio
   - Energy efficiency
+redirect_to: /publication/aerial-data-aggregation/
 ---
-
-An implementation-driven project on aerial IoT data aggregation, connecting prototyping, large-scale implementation, and energy-efficient communication.

@@ -28,6 +28,5 @@ tags:
   - Invited talks
   - Slides
   - Video demos
+redirect_to: /cv/#talks
 ---
-
-Selected videos and slide decks for talks and demos listed in the CV.

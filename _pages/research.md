@@ -1,57 +1,43 @@
 ---
 title: "Research and publications"
+description: "Probabilistic optimization, stochastic hardware, physical models, and sensing."
 permalink: /research/
-layout: single
-hide_page_title: true
+layout: research
+author_profile: false
 ---
 
-<section class="page-intro">
-  <h1 class="section-kicker section-kicker--lead">Learning how to sample</h1>
-  <p>I develop <strong>variational Monte Carlo algorithms</strong> for combinatorial optimization, with implementations on FPGA and single-photon avalanche diode arrays.</p>
-</section>
-
-<section class="research-map" aria-label="Research contributions">
-  <article>
-    <h2>PAOA</h2>
-    <p>The Probabilistic Approximate Optimization Algorithm learns annealing schedules and coupling parameters for spin-glass optimization.</p>
-    <a class="feature-link" href="{{ '/publication/paoa' | relative_url }}">Paper and code <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
-  </article>
-  <article>
-    <h2>Algorithms on stochastic hardware</h2>
-    <p>Implemented variational annealing on FPGA and probabilistic optimization on a 64 × 64 SPAD array, adapting sampling to real device behavior.</p>
-    <a class="feature-link" href="{{ '/publication/paoaSPAD' | relative_url }}">SPAD implementation <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
-  </article>
-</section>
-
-<figure class="wide-figure">
-  <img src="{{ '/images/PAOA.png' | relative_url }}" alt="PAOA workflow showing learned sampling and optimization">
-</figure>
-
-<section id="publications" class="research-publications" aria-labelledby="publications-title">
-  <div class="page-intro page-intro--compact">
-    <h2 id="publications-title" class="section-kicker section-kicker--lead">Publications</h2>
-    <p><a href="{{ '/files/CV.pdf' | relative_url }}">Full CV</a>{% if site.author.googlescholar %} · <a href="{{ site.author.googlescholar }}">Google Scholar</a>{% endif %}</p>
+<header class="research-hero">
+  <div class="research-hero__copy">
+    <p class="research-eyebrow">Research / Publications</p>
+    <h1>Learning to compute with <em>randomness.</em></h1>
+    <p class="research-hero__lede">Four connected research threads. Open a paper to explore its complete story.</p>
+    <a href="{{ site.author.googlescholar }}" target="_blank" rel="noopener" class="quiet-link">Google Scholar <span aria-hidden="true">↗</span></a>
   </div>
+  <div class="research-hero__visual">{% include sampler-animation.html %}</div>
+</header>
 
-  {% include base_path %}
+<nav class="research-nav" aria-label="Research themes">
+  {% for theme in site.data.research_stories %}<a href="#{{ theme.id }}"><span>{{ theme.number }}</span> {{ theme.title }}</a>{% endfor %}
+</nav>
 
-  {% if site.publication_category %}
-    {% for category in site.publication_category %}
-      {% assign title_shown = false %}
-      {% for post in site.publications reversed %}
-        {% if post.category != category[0] %}
-          {% continue %}
-        {% endif %}
-        {% unless title_shown %}
-          <h3 class="section-kicker publication-category-title">{{ category[1].title }}</h3>
-          {% assign title_shown = true %}
-        {% endunless %}
-        {% include archive-single.html compact_publication=true %}
-      {% endfor %}
-    {% endfor %}
-  {% else %}
-    {% for post in site.publications reversed %}
-      {% include archive-single.html compact_publication=true %}
-    {% endfor %}
-  {% endif %}
-</section>
+<div id="publications" class="research-chapters research-overview">
+  {% for theme in site.data.research_stories %}
+    <section class="research-chapter" id="{{ theme.id }}" aria-labelledby="title-{{ theme.id }}">
+      <header class="research-chapter__heading"><span class="research-chapter__number">{{ theme.number }}</span><div><h2 id="title-{{ theme.id }}">{{ theme.title }}</h2><p>{{ theme.description }}</p></div></header>
+      <div class="paper-overview-list">
+        {% for key in theme.papers %}
+          {% assign paper = site.publications | where: 'story_key', key | first %}
+          {% assign story = site.data.paper_stories[key] %}
+          <article class="paper-overview">
+            <div class="paper-overview__body">
+              <h3><a href="{{ paper.url | relative_url }}">{{ paper.title }}</a></h3>
+              <p class="research-story__venue">{{ paper.venue }} · {{ paper.date | date: '%Y' }}{% if paper.publication_status %} · {{ paper.publication_status }}{% endif %}</p>
+              <p>{{ story.summary | default: paper.excerpt }}</p>
+            </div>
+            <a class="paper-overview__open" href="{{ paper.url | relative_url }}">Explore paper <span aria-hidden="true">↗</span></a>
+          </article>
+        {% endfor %}
+      </div>
+    </section>
+  {% endfor %}
+</div>

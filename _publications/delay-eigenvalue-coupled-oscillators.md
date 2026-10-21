@@ -1,8 +1,10 @@
 ---
 title: "A Comparison of Numerical Solvers for the Delay Eigenvalue Problem of Coupled Oscillators"
 collection: publications
+layout: publication
+story_key: delay-eigenvalue-coupled-oscillators
 category: conferences
-permalink: /publication/delay-eigenvalue-coupled-oscillators
+permalink: /publication/delay-eigenvalue-coupled-oscillators/
 excerpt: "A comparison of numerical methods for delay eigenvalue problems arising in coupled oscillator systems."
 date: 2021-01-01
 venue: "Journal of Physics: Conference Series"

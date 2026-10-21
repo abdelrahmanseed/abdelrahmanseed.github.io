@@ -14,6 +14,5 @@ tags:
   - Stochastic geometry
   - Device scaling
   - Variability
+redirect_to: /publication/defect-aware-2d-memristors/
 ---
-
-Stochastic geometry connects atomic defects to device yield, operating voltage, and variability, helping assess the limits of memristor miniaturization.

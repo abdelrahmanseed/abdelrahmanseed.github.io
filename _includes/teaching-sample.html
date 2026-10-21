@@ -1,0 +1,18 @@
+{% assign sample = include.course %}
+<details class="teaching-sample"{% if include.expanded %} open{% endif %}>
+  <summary>Content sample: {{ sample.sample_title }}</summary>
+  {% if sample.sample_animation %}
+  <figure>
+    <video class="teaching-sample__animation" controls loop muted playsinline preload="metadata" poster="{{ sample.sample_poster | relative_url }}" aria-label="{{ sample.sample_alt | escape }}"><source src="{{ sample.sample_animation | relative_url }}" type="video/mp4">Your browser cannot play this video. <a href="{{ sample.sample_animation | relative_url }}">Open the animation</a>.</video>
+    <figcaption>{{ sample.sample_caption }} <a href="{{ sample.sample_source }}" target="_blank" rel="noopener">Open notebook ↗</a></figcaption>
+  </figure>
+  {% elsif sample.sample_image %}
+  <figure>
+    <a href="{{ sample.sample_source }}" target="_blank" rel="noopener"><img src="{{ sample.sample_image | relative_url }}" alt="{{ sample.sample_alt | escape }}" loading="lazy" decoding="async"></a>
+    <figcaption>{{ sample.sample_caption }} <a href="{{ sample.sample_source }}" target="_blank" rel="noopener">Open source ↗</a></figcaption>
+  </figure>
+  {% elsif sample.sample_video %}
+  <div class="teaching-sample__video"><iframe src="{{ sample.sample_video }}" title="{{ sample.sample_title | escape }}" allow="fullscreen" allowfullscreen loading="lazy"></iframe></div>
+  <p>{{ sample.sample_caption }} <a href="{{ sample.sample_source }}" target="_blank" rel="noopener">Open demo ↗</a></p>
+  {% endif %}
+</details>

@@ -1,0 +1,515 @@
+# Credits follow the author block in each paper manuscript.
+paoa:
+  authors:
+  - name: Abdelrahman S. Abdelrahman
+    affiliations:
+    - 1
+  - name: Shuvro Chowdhury
+    affiliations:
+    - 1
+  - name: Flaviano Morone
+    affiliations:
+    - 2
+  - name: Kerem Y. Camsari
+    affiliations:
+    - 1
+  affiliations:
+  - id: 1
+    name: Department of Electrical and Computer Engineering, University of California, Santa Barbara, CA, USA
+  - id: 2
+    name: Center for Quantum Phenomena, Department of Physics, New York University, New York, NY, USA
+  bibtex: |
+    @article{abdelrahman2026paoa,
+      title = {Generalized Probabilistic Approximate Optimization Algorithm},
+      author = {Abdelrahman, Abdelrahman S. and Chowdhury, Shuvro and Morone, Flaviano and Camsari, Kerem Y.},
+      journal = {Nature Communications},
+      volume = {17},
+      pages = {498},
+      year = {2026},
+      doi = {10.1038/s41467-025-67187-5}
+    }
+paoaSPAD:
+  authors:
+  - name: Ziyad Alswaidan
+    affiliations:
+    - 1
+  - name: Abdelrahman S. Abdelrahman
+    affiliations:
+    - 2
+  - name: Md Sakibur Sajal
+    affiliations:
+    - 1
+  - name: Shuvro Chowdhury
+    affiliations:
+    - 2
+  - name: Kai-Chun Lin
+    affiliations:
+    - 1
+  - name: Hunter Guthrie
+    affiliations:
+    - 1
+  - name: Sanjay Seshan
+    affiliations:
+    - 1
+  - name: Shawn Blanton
+    affiliations:
+    - 1
+  - name: Flaviano Morone
+    affiliations:
+    - 3
+  - name: Marc Dandin
+    affiliations:
+    - 1
+  - name: Kerem Y. Camsari
+    affiliations:
+    - 2
+  - name: Tathagata Srimani
+    affiliations:
+    - 1
+  affiliations:
+  - id: 1
+    name: Department of Electrical and Computer Engineering, Carnegie Mellon University, Pittsburgh, PA, USA
+  - id: 2
+    name: Department of Electrical and Computer Engineering, University of California, Santa Barbara, CA, USA
+  - id: 3
+    name: Center for Quantum Phenomena, Department of Physics, New York University, New York, NY, USA
+  bibtex: |
+    @article{alswaidan2026spad,
+      title = {Probabilistic approximate optimization using single-photon avalanche diode arrays},
+      author = {Alswaidan, Ziyad and Abdelrahman, Abdelrahman S. and Sajal, Md Sakibur and Chowdhury, Shuvro and Lin, Kai-Chun and Guthrie, Hunter and Seshan, Sanjay and Blanton, Shawn and Morone, Flaviano and Dandin, Marc and Camsari, Kerem Y. and Srimani, Tathagata},
+      journal = {npj Unconventional Computing},
+      year = {2026},
+      note = {In press},
+      eprint = {2602.13943},
+      archivePrefix = {arXiv},
+      url = {https://arxiv.org/abs/2602.13943}
+    }
+isingformer:
+  authors:
+  - name: Saleh Bunaiyan
+    affiliations:
+    - 1
+    - 2
+  - name: Corentin Delacour
+    affiliations:
+    - 1
+  - name: Shuvro Chowdhury
+    affiliations:
+    - 1
+  - name: Kyle Lee
+    affiliations:
+    - 1
+  - name: Abdelrahman S. Abdelrahman
+    affiliations:
+    - 1
+  - name: Kerem Y. Camsari
+    affiliations:
+    - 1
+  affiliations:
+  - id: 1
+    name: Department of Electrical and Computer Engineering, University of California, Santa Barbara, CA, USA
+  - id: 2
+    name: Electrical Engineering Department, King Fahd University of Petroleum and Minerals, Dhahran, Saudi Arabia
+  bibtex: |
+    @misc{bunaiyan2026isingformer,
+      title = {Isingformer: Augmenting parallel tempering with learned proposals},
+      author = {Bunaiyan, Saleh and Delacour, Corentin and Chowdhury, Shuvro and Lee, Kyle and Abdelrahman, Abdelrahman S. and Camsari, Kerem Y.},
+      year = {2026},
+      eprint = {2509.23043},
+      archivePrefix = {arXiv},
+      primaryClass = {cs.LG},
+      url = {https://arxiv.org/abs/2509.23043}
+    }
+ising-machines-generative-ai:
+  authors:
+  - name: Corentin Delacour
+    affiliations:
+    - 1
+  - name: Xiuqi Zhang
+    affiliations:
+    - 1
+  - name: Abdelrahman S. Abdelrahman
+    affiliations:
+    - 1
+  - name: Saleh Bunaiyan
+    affiliations:
+    - 1
+    - 2
+  - name: Kyle Lee
+    affiliations:
+    - 1
+  - name: Shuvro Chowdhury
+    affiliations:
+    - 1
+  - name: Kerem Y. Camsari
+    affiliations:
+    - 1
+  affiliations:
+  - id: 1
+    name: Department of Electrical and Computer Engineering, University of California, Santa Barbara, CA, USA
+  - id: 2
+    name: Electrical Engineering Department, King Fahd University of Petroleum and Minerals, Dhahran, Saudi Arabia
+  bibtex: |
+    @article{delacour2026probabilistic,
+      title = {Probabilistic algorithms for Ising machines from optimization to generative AI},
+      author = {Delacour, Corentin and Zhang, Xiuqi and Abdelrahman, Abdelrahman S. and Bunaiyan, Saleh and Lee, Kyle and Chowdhury, Shuvro and Camsari, Kerem Y.},
+      journal = {Nature Reviews Electrical Engineering},
+      year = {2026},
+      doi = {10.1038/s44287-026-00344-0}
+    }
+configurable-p-neurons:
+  authors:
+  - name: Saleh Bunaiyan
+    affiliations:
+    - 1
+    - 2
+  - name: Mohammad Alsharif
+    affiliations:
+    - 3
+    - 4
+  - name: Abdelrahman S. Abdelrahman
+    affiliations:
+    - 1
+  - name: Hesham ElSawy
+    affiliations:
+    - 5
+  - name: Suraj S. Cheema
+    affiliations:
+    - 6
+  - name: Suhaib A. Fahmy
+    affiliations:
+    - 4
+  - name: Kerem Y. Camsari
+    affiliations:
+    - 1
+  - name: Feras Al-Dirini
+    affiliations:
+    - 5
+    - 6
+  affiliations:
+  - id: 1
+    name: Department of Electrical and Computer Engineering, University of California, Santa Barbara, CA, USA
+  - id: 2
+    name: Electrical Engineering Department, King Fahd University of Petroleum and Minerals, Dhahran, Saudi Arabia
+  - id: 3
+    name: Computer Engineering Department, King Fahd University of Petroleum and Minerals, Dhahran, Saudi Arabia
+  - id: 4
+    name: Computer, Electrical and Mathematical Sciences and Engineering, King Abdullah University of Science and
+      Technology, Thuwal, Saudi Arabia
+  - id: 5
+    name: School of Computing, Queen’s University, Kingston, ON, Canada
+  - id: 6
+    name: Research Laboratory of Electronics, Massachusetts Institute of Technology, Cambridge, MA, USA
+  bibtex: |
+    @inproceedings{bunaiyan2026pneurons,
+      title = {Configurable p-Neurons Using Modular p-Bits},
+      author = {Bunaiyan, Saleh and Alsharif, Mohammad and Abdelrahman, Abdelrahman S. and ElSawy, Hesham and Cheema, Suraj S. and Fahmy, Suhaib A. and Camsari, Kerem Y. and Al-Dirini, Feras},
+      booktitle = {2026 IEEE International Symposium on Circuits and Systems (ISCAS)},
+      year = {2026},
+      doi = {10.1109/ISCAS66217.2026.11562319}
+    }
+defect-aware-2d-memristors:
+  authors:
+  - name: Abdelrahman S. Abdelrahman
+    affiliations:
+    - 1
+  - name: Hesham ElSawy
+    affiliations:
+    - 2
+  - name: Yue Yuan
+    affiliations:
+    - 3
+  - name: Suraj S. Cheema
+    affiliations:
+    - 4
+    - 5
+    - 10
+  - name: Deji Akinwande
+    affiliations:
+    - 6
+  - name: Mario Lanza
+    affiliations:
+    - 7
+    - 8
+    - 9
+  - name: Feras Al-Dirini
+    affiliations:
+    - 2
+    - 10
+  affiliations:
+  - id: 1
+    name: Department of Electrical and Computer Engineering, University of California, Santa Barbara, CA, USA
+  - id: 2
+    name: School of Computing, Queen’s University, Kingston, ON, Canada
+  - id: 3
+    name: Physical Science and Engineering, King Abdullah University of Science and Technology, Thuwal, Saudi Arabia
+  - id: 4
+    name: Electrical Engineering and Computer Science, Massachusetts Institute of Technology, Cambridge, MA, USA
+  - id: 5
+    name: Department of Materials Science and Engineering, Massachusetts Institute of Technology, Cambridge, MA,
+      USA
+  - id: 6
+    name: Microelectronics Research Center, University of Texas at Austin, Austin, TX, USA
+  - id: 7
+    name: Department of Materials Science and Engineering, National University of Singapore, Singapore
+  - id: 8
+    name: Institute for Functional Intelligent Materials, National University of Singapore, Singapore
+  - id: 9
+    name: Centre for Advanced 2D Materials, National University of Singapore, Singapore
+  - id: 10
+    name: Research Laboratory of Electronics, Massachusetts Institute of Technology, Cambridge, MA, USA
+  bibtex: |
+    @misc{abdelrahman2025defect,
+      title = {Defect-Aware Extreme Device Scaling Limits of 2D Memristive Technologies},
+      author = {Abdelrahman, Abdelrahman S. and ElSawy, Hesham and Yuan, Yue and Cheema, Suraj S. and Akinwande, Deji and Lanza, Mario and Al-Dirini, Feras},
+      year = {2025},
+      publisher = {Research Square},
+      doi = {10.21203/rs.3.rs-7265912/v1},
+      url = {https://www.researchsquare.com/article/rs-7265912/v1}
+    }
+coupled-oscillators-delay:
+  authors:
+  - name: Fahhad H. Alharbi
+    affiliations:
+    - 1
+    - 2
+  - name: Abdelrahman S. Abdelrahman
+    affiliations:
+    - 1
+  - name: Abdullah M. Alkathiry
+    affiliations:
+    - 1
+  - name: Hussain M. Al-Qahtani
+    affiliations:
+    - 3
+  affiliations:
+  - id: 1
+    name: Electrical Engineering Department, King Fahd University of Petroleum and Minerals, Dhahran, Saudi Arabia
+  - id: 2
+    name: SDAIA–KFUPM Joint Research Center for Artificial Intelligence, Dhahran, Saudi Arabia
+  - id: 3
+    name: Mechanical Engineering Department, King Fahd University of Petroleum and Minerals, Dhahran, Saudi Arabia
+  bibtex: |
+    @article{alharbi2022energy,
+      title = {Energy transfer and coherence in coupled oscillators with delayed coupling: a classical picture of two-level systems},
+      author = {Alharbi, Fahhad H. and Abdelrahman, Abdelrahman S. and Alkathiry, Abdullah M. and Al-Qahtani, Hussain M.},
+      journal = {Physica Scripta},
+      volume = {97},
+      number = {8},
+      pages = {085215},
+      year = {2022},
+      doi = {10.1088/1402-4896/ac7f62}
+    }
+delay-eigenvalue-coupled-oscillators:
+  authors:
+  - name: Abdelrahman S. Abdelrahman
+    affiliations:
+    - 1
+  - name: Hussain Al-Qahtani
+    affiliations:
+    - 2
+  - name: Fahhad H. Alharbi
+    affiliations:
+    - 1
+    - 3
+  affiliations:
+  - id: 1
+    name: Electrical Engineering Department, King Fahd University of Petroleum and Minerals, Dhahran, Saudi Arabia
+  - id: 2
+    name: Mechanical Engineering Department, King Fahd University of Petroleum and Minerals, Dhahran, Saudi Arabia
+  - id: 3
+    name: K.A.CARE Energy Research and Innovation Center, Dhahran, Saudi Arabia
+  bibtex: |
+    @article{abdelrahman2021delay,
+      title = {A Comparison of Numerical Solvers for the Delay Eigenvalue Problem of Coupled Oscillators},
+      author = {Abdelrahman, Abdelrahman S. and Al-Qahtani, Hussain and Alharbi, Fahhad H.},
+      journal = {Journal of Physics: Conference Series},
+      volume = {1730},
+      number = {1},
+      pages = {012114},
+      year = {2021},
+      doi = {10.1088/1742-6596/1730/1/012114}
+    }
+hbn-memristors-scalability:
+  authors:
+  - name: Abdelrahman S. Abdelrahman
+    affiliations:
+    - 1
+  - name: Hesham ElSawy
+    affiliations:
+    - 2
+  - name: Mario Lanza
+    affiliations:
+    - 3
+  - name: Deji Akinwande
+    affiliations:
+    - 4
+  - name: Feras Al-Dirini
+    affiliations:
+    - 1
+    - 5
+  affiliations:
+  - id: 1
+    name: Electrical Engineering Department, King Fahd University of Petroleum and Minerals, Dhahran, Saudi Arabia
+  - id: 2
+    name: School of Computing, Queen’s University, Kingston, ON, Canada
+  - id: 3
+    name: Physical Science and Engineering Division, King Abdullah University of Science and Technology, Thuwal,
+      Saudi Arabia
+  - id: 4
+    name: Microelectronics Research Center, University of Texas at Austin, Austin, TX, USA
+  - id: 5
+    name: Center for Advanced Materials, King Fahd University of Petroleum and Minerals, Dhahran, Saudi Arabia
+  bibtex: |
+    @inproceedings{abdelrahman2023scalability,
+      title = {Scalability of h-BN Based Memristors: Yield and Variability Considerations},
+      author = {Abdelrahman, Abdelrahman S. and ElSawy, Hesham and Lanza, Mario and Akinwande, Deji and Al-Dirini, Feras},
+      booktitle = {2023 Silicon Nanoelectronics Workshop (SNW)},
+      year = {2023},
+      doi = {10.23919/SNW57900.2023.10183973}
+    }
+adaptive-regularization-portfolio:
+  authors:
+  - name: Tarig Ballal
+    affiliations:
+    - 1
+  - name: Abdelrahman S. Abdelrahman
+    affiliations:
+    - 2
+  - name: Ali H. Muqaibel
+    affiliations:
+    - 2
+  - name: Tareq Y. Al-Naffouri
+    affiliations:
+    - 1
+  affiliations:
+  - id: 1
+    name: Electrical and Computer Engineering, CEMSE, King Abdullah University of Science and Technology, Thuwal,
+      Saudi Arabia
+  - id: 2
+    name: Electrical Engineering Department, King Fahd University of Petroleum and Minerals, Dhahran, Saudi Arabia
+  bibtex: |
+    @inproceedings{ballal2021adaptive,
+      title = {An Adaptive Regularization Approach to Portfolio Optimization},
+      author = {Ballal, Tarig and Abdelrahman, Abdelrahman S. and Muqaibel, Ali H. and Al-Naffouri, Tareq Y.},
+      booktitle = {ICASSP 2021 — 2021 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)},
+      pages = {5175--5179},
+      year = {2021},
+      doi = {10.1109/ICASSP39728.2021.9413865}
+    }
+aerial-data-aggregation:
+  authors:
+  - name: Omar Khalifa
+    affiliations:
+    - 1
+  - name: Anas S. Mohammed
+    affiliations:
+    - 2
+  - name: Ali Alhejab
+    affiliations:
+    - 1
+  - name: Abdelrahman S. Abdelrahman
+    affiliations:
+    - 3
+  - name: Ahmed Al-Radhwan
+    affiliations:
+    - 4
+  - name: Ruslan Zhagypar
+    affiliations:
+    - 1
+  - name: Hesham ElSawy
+    affiliations:
+    - 5
+  - name: Nour Kouzayha
+    affiliations:
+    - 1
+  - name: Noha Al-Harthi
+    affiliations:
+    - 6
+  - name: Jaafar Elmirghani
+    affiliations:
+    - 6
+  - name: Zekeriya Aksoy
+    affiliations:
+    - 6
+  - name: Tareq Y. Al-Naffouri
+    affiliations:
+    - 1
+  affiliations:
+  - id: 1
+    name: Computer, Electrical and Mathematical Sciences and Engineering, King Abdullah University of Science and
+      Technology, Thuwal, Saudi Arabia
+  - id: 2
+    name: Department of Electrical and Computer Engineering, Queen’s University, Kingston, Canada
+  - id: 3
+    name: University of California, Santa Barbara, CA, USA
+  - id: 4
+    name: Electrical Engineering Department, King Fahd University of Petroleum and Minerals, Dhahran, Saudi Arabia
+  - id: 5
+    name: School of Computing, Queen’s University, Kingston, ON, Canada
+  - id: 6
+    name: Technology, Research, and Innovation Department in Public Safety, NEOM, Saudi Arabia
+  bibtex: |
+    @article{khalifa2025aerial,
+      title = {Energy-Efficient Aerial Data Aggregation for IoT: From Prototyping to Large-Scale Implementation},
+      author = {Khalifa, Omar and Mohammed, Anas S. and Alhejab, Ali and Abdelrahman, Abdelrahman S. and Al-Radhwan, Ahmed and Zhagypar, Ruslan and ElSawy, Hesham and Kouzayha, Nour and Al-Harthi, Noha and Elmirghani, Jaafar and Aksoy, Zekeriya and Al-Naffouri, Tareq Y.},
+      journal = {IEEE Transactions on Instrumentation and Measurement},
+      volume = {74},
+      pages = {1--18},
+      year = {2025},
+      doi = {10.1109/TIM.2024.3497061}
+    }
+wur-aerial-data-demo:
+  authors:
+  - name: Anas S. Mohammed
+    affiliations:
+    - 1
+  - name: Omar Khalifa
+    affiliations:
+    - 2
+  - name: Ali Alhejab
+    affiliations:
+    - 2
+  - name: Abdelrahman S. Abdelrahman
+    affiliations:
+    - 1
+  - name: Ahmed Al-Radhwan
+    affiliations:
+    - 1
+  - name: Hesham ElSawy
+    affiliations:
+    - 3
+  - name: Nour Kouzayha
+    affiliations:
+    - 2
+  - name: Noha Al-Harthi
+    affiliations:
+    - 4
+  - name: Jaafar Elmirghani
+    affiliations:
+    - 4
+  - name: Mansoor Hanif
+    affiliations:
+    - 4
+  - name: Tareq Y. Al-Naffouri
+    affiliations:
+    - 2
+  affiliations:
+  - id: 1
+    name: Electrical Engineering Department, King Fahd University of Petroleum and Minerals, Dhahran, Saudi Arabia
+  - id: 2
+    name: Computer, Electrical and Mathematical Sciences and Engineering, King Abdullah University of Science and
+      Technology, Thuwal, Saudi Arabia
+  - id: 3
+    name: School of Computing, Queen’s University, Kingston, ON, Canada
+  - id: 4
+    name: Emerging Technologies, NEOM, Saudi Arabia
+  bibtex: |
+    @inproceedings{mohammed2023wur,
+      title = {Demo Abstract: Energy-Efficient Aerial Data Aggregation in IoT Networks with WuR},
+      author = {Mohammed, Anas S. and Khalifa, Omar and Alhejab, Ali and Abdelrahman, Abdelrahman S. and Al-Radhwan, Ahmed and ElSawy, Hesham and Kouzayha, Nour and Al-Harthi, Noha and Elmirghani, Jaafar and Hanif, Mansoor and Al-Naffouri, Tareq Y.},
+      booktitle = {2023 IEEE International Black Sea Conference on Communications and Networking (BlackSeaCom)},
+      pages = {147--149},
+      year = {2023},
+      doi = {10.1109/BlackSeaCom58138.2023.10299765}
+    }

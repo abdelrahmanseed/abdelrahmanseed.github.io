@@ -1,8 +1,10 @@
 ---
 title: "Generalized Probabilistic Approximate Optimization Algorithm"
 collection: publications
+layout: publication
+story_key: paoa
 category: manuscripts
-permalink: /publication/paoa
+permalink: /publication/paoa/
 excerpt: 'Learns sampling dynamics for combinatorial optimization, with an FPGA implementation of on-chip annealing.'
 date: 2026-01-14
 venue: 'Nature Communications'

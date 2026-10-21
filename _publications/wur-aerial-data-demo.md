@@ -1,8 +1,10 @@
 ---
 title: "Demo Abstract: Energy-Efficient Aerial Data Aggregation in IoT Networks with WuR"
 collection: publications
+layout: publication
+story_key: wur-aerial-data-demo
 category: conferences
-permalink: /publication/wur-aerial-data-demo
+permalink: /publication/wur-aerial-data-demo/
 excerpt: "A demo abstract on wake-up-radio enabled aerial data aggregation for IoT networks."
 date: 2023-01-01
 venue: "IEEE International Black Sea Conference on Communications and Networking"

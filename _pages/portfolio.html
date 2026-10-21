@@ -1,103 +1,17 @@
 ---
-layout: archive
+layout: research
 title: "Portfolio"
 permalink: /portfolio/
-author_profile: true
-hide_page_title: true
+author_profile: false
 ---
 
-<div class="page-intro">
-  <h1 class="section-kicker section-kicker--lead">Research and deployed systems</h1>
-  <p>Paper figures, implementations, and demos.</p>
-</div>
+<header class="site-page-heading"><p class="research-eyebrow">Portfolio</p><h1>Computer vision. <em>In the field.</em></h1><p>Systems developed at Wakeb for industrial safety and real-time monitoring.</p></header>
 
-{% include base_path %}
-
-{% assign publications_by_date = site.publications | sort: "date" | reverse %}
-<section class="publication-figure-grid" aria-label="Publication Figure 1 gallery">
-  {% for paper in publications_by_date %}
-    {% if paper.figure %}
-      {% assign paper_type = paper.category | default: "Publication" | replace: "-", " " | capitalize %}
-      <article class="publication-figure-card">
-        <a class="publication-figure-card__media" href="{{ paper.url | relative_url }}" aria-label="Open {{ paper.title }}">
-          <img src="{{ paper.figure | prepend: '/images/' | relative_url }}" alt="{{ paper.figure_alt | default: paper.title }}">
-          {% if paper.figure_caption %}<span>{{ paper.figure_caption }}</span>{% endif %}
-        </a>
-        <div class="publication-figure-card__body">
-          <p class="section-kicker">{{ paper.date | date: "%Y" }} / {{ paper_type }}</p>
-          <h2><a href="{{ paper.url | relative_url }}">{{ paper.title }}</a></h2>
-          {% if paper.venue %}<p class="publication-figure-card__venue">{{ paper.venue }}{% if paper.publication_status %} · {{ paper.publication_status }}{% endif %}</p>{% endif %}
-          <p>{{ paper.excerpt | markdownify | strip_html }}</p>
-          {% if paper.paperurl or paper.codeurl or paper.slidesurl or paper.posterurl or paper.profileurl or paper.bibtexurl or paper.resources %}
-            <div class="resource-links">
-              {% if paper.paperurl %}<a href="{{ paper.paperurl }}" target="_blank" rel="noopener"><i class="fa-solid fa-file-lines" aria-hidden="true"></i> Paper</a>{% endif %}
-              {% if paper.codeurl %}<a href="{{ paper.codeurl }}" target="_blank" rel="noopener"><i class="fa-solid fa-code" aria-hidden="true"></i> Code</a>{% endif %}
-              {% if paper.slidesurl %}<a href="{{ paper.slidesurl }}" target="_blank" rel="noopener"><i class="fa-solid fa-display" aria-hidden="true"></i> Slides</a>{% endif %}
-              {% if paper.posterurl %}<a href="{{ paper.posterurl }}" target="_blank" rel="noopener"><i class="fa-solid fa-image" aria-hidden="true"></i> Poster</a>{% endif %}
-              {% if paper.profileurl %}<a href="{{ paper.profileurl }}" target="_blank" rel="noopener"><i class="fa-solid fa-address-card" aria-hidden="true"></i> Profile</a>{% endif %}
-              {% if paper.bibtexurl %}<a href="{{ paper.bibtexurl }}" target="_blank" rel="noopener"><i class="fa-solid fa-quote-right" aria-hidden="true"></i> BibTeX</a>{% endif %}
-              {% if paper.resources %}
-                {% for resource in paper.resources %}
-                  <a href="{{ resource.url }}" target="_blank" rel="noopener"><i class="{{ resource.icon | default: 'fa-solid fa-link' }}" aria-hidden="true"></i> {{ resource.label }}</a>
-                {% endfor %}
-              {% endif %}
-            </div>
-          {% endif %}
-        </div>
-      </article>
-    {% endif %}
-  {% endfor %}
+<section class="applied-projects">
+  <article class="applied-project applied-project--featured">
+    <div class="applied-project__copy"><p class="research-eyebrow">Alfanar Electric / Smart Alerting System</p><h2>Personnel detection for high-voltage testing.</h2><p>A computer vision system for detecting people in high-voltage test areas and enabling automated safety shutdowns.</p><ul class="project-technologies" aria-label="Technologies"><li>PyTorch</li><li>YOLO</li><li>ByteTrack</li><li>C++</li><li>NVIDIA Jetson</li></ul></div>
+    <div class="project-demo"><iframe src="https://ucsb.app.box.com/embed/s/yaqn7m7cyu536uvv67y2pba7i8jsfc4a/file/2186396742575?uxLite=true" title="Smart Alerting System video demo" allow="fullscreen" allowfullscreen loading="lazy"></iframe><a class="quiet-link" href="https://ucsb.app.box.com/s/yaqn7m7cyu536uvv67y2pba7i8jsfc4a/file/2186396742575" target="_blank" rel="noopener">Open demo in Box ↗</a></div>
+  </article>
+  <article class="applied-project applied-project--monitoring"><div><p class="research-eyebrow">Saudi Water Authority / Aware</p><h2>Real-time monitoring across 100+ cameras.</h2><p>A crowd-management system using PyTorch and YOLO, deployed with a secure offline dashboard for autonomous operation.</p></div><div class="project-scale"><strong>100+</strong><span>Cameras in deployment</span></div></article>
 </section>
-
-<div class="portfolio-section-heading">
-  <h2 class="section-kicker section-kicker--lead">Projects and demos</h2>
-</div>
-
-<section class="portfolio-grid">
-  {% for post in site.portfolio %}
-    {% assign show_portfolio_card = true %}
-    {% if post.category_label contains "Paper" %}
-      {% unless post.figure %}
-        {% assign show_portfolio_card = false %}
-      {% endunless %}
-    {% endif %}
-    {% if show_portfolio_card %}
-      <article class="portfolio-card{% unless post.figure %} portfolio-card--text{% endunless %}">
-        {% if post.figure %}
-          <a class="portfolio-card__figure" href="{{ post.url | relative_url }}" aria-label="Open {{ post.title }}">
-            <img src="{{ post.figure | prepend: '/images/' }}" alt="{{ post.figure_alt | default: post.title }}">
-            {% if post.figure_caption %}<span>{{ post.figure_caption }}</span>{% endif %}
-          </a>
-        {% endif %}
-        <div class="portfolio-card__body">
-          <p class="section-kicker">{{ post.category_label | default: "Project" }}</p>
-          <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
-          <p>{{ post.summary | default: post.excerpt | markdownify | strip_html }}</p>
-          {% if post.tags %}
-            <div class="research-pills">
-              {% for tag in post.tags %}<span>{{ tag }}</span>{% endfor %}
-            </div>
-          {% endif %}
-          <div class="resource-links">
-            {% if post.paperurl %}<a href="{{ post.paperurl }}" target="_blank" rel="noopener"><i class="fa-solid fa-file-lines" aria-hidden="true"></i> Paper</a>{% endif %}
-            {% if post.paperurl2 %}<a href="{{ post.paperurl2 }}" target="_blank" rel="noopener"><i class="fa-solid fa-file-lines" aria-hidden="true"></i> Related Paper</a>{% endif %}
-            {% if post.reporturl %}<a href="{{ post.reporturl }}" target="_blank" rel="noopener"><i class="fa-solid fa-chart-line" aria-hidden="true"></i> Report</a>{% endif %}
-            {% if post.reporturl2 %}<a href="{{ post.reporturl2 }}" target="_blank" rel="noopener"><i class="fa-solid fa-chart-line" aria-hidden="true"></i> Report 2</a>{% endif %}
-            {% if post.codeurl %}<a href="{{ post.codeurl }}" target="_blank" rel="noopener"><i class="fa-solid fa-code" aria-hidden="true"></i> Code</a>{% endif %}
-            {% if post.codeurl2 %}<a href="{{ post.codeurl2 }}" target="_blank" rel="noopener"><i class="fa-solid fa-code" aria-hidden="true"></i> Code 2</a>{% endif %}
-            {% if post.demourl %}<a href="{{ post.demourl }}" target="_blank" rel="noopener"><i class="fa-solid fa-play" aria-hidden="true"></i> Demo</a>{% endif %}
-            {% if post.slidesurl %}<a href="{{ post.slidesurl }}" target="_blank" rel="noopener"><i class="fa-solid fa-display" aria-hidden="true"></i> Slides</a>{% endif %}
-            {% if post.orgurl %}<a href="{{ post.orgurl }}" target="_blank" rel="noopener"><i class="fa-solid fa-building" aria-hidden="true"></i> Organization</a>{% endif %}
-            {% if post.profileurl %}<a href="{{ post.profileurl }}" target="_blank" rel="noopener"><i class="fa-solid fa-address-card" aria-hidden="true"></i> Profile</a>{% endif %}
-            {% if post.posterurl %}<a href="{{ post.posterurl }}" target="_blank" rel="noopener"><i class="fa-solid fa-image" aria-hidden="true"></i> Poster</a>{% endif %}
-            {% if post.resources %}
-              {% for resource in post.resources %}
-                <a href="{{ resource.url }}" target="_blank" rel="noopener"><i class="{{ resource.icon | default: 'fa-solid fa-link' }}" aria-hidden="true"></i> {{ resource.label }}</a>
-              {% endfor %}
-            {% endif %}
-          </div>
-        </div>
-      </article>
-      {% endif %}
-  {% endfor %}
-</section>
+<section class="site-resource-section"><h2>Implementation resources</h2><p>Reports and code for the computer vision work.</p><div class="research-story__links"><a href="https://ucsb.box.com/s/ldx6tqr5v77df2l8qinkt46jzb60d1j5" target="_blank" rel="noopener">Report 1 ↗</a><a href="https://ucsb.box.com/s/k889bw7w9iwrnpwdmpu9ta1pbcbdkbzo" target="_blank" rel="noopener">Code 1 ↗</a><a href="https://ucsb.box.com/s/j6l3zth650uo28palamt0r6quihod5n7" target="_blank" rel="noopener">Report 2 ↗</a><a href="https://ucsb.box.com/s/x9gjqivp0mj45ngxeh1ocgp5ridc878f" target="_blank" rel="noopener">Code 2 ↗</a></div></section>

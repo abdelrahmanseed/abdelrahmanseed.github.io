@@ -1,0 +1,45 @@
+---
+layout: research
+---
+{% assign story = site.data.paper_stories[page.story_key] %}
+{% assign credits = site.data.paper_metadata[page.story_key] %}
+<header class="paper-heading">
+  <a class="page-back paper-back" href="{{ '/research/' | relative_url }}">← Back to Research</a>
+  <h1>{{ page.title }}</h1>
+  <div class="paper-credits">
+    <p class="paper-authors">{% for author in credits.authors %}<span>{{ author.name }}<sup>{{ author.affiliations | join: ',' }}</sup></span>{% unless forloop.last %}, {% endunless %}{% endfor %}</p>
+    <ol class="paper-affiliations">{% for affiliation in credits.affiliations %}<li value="{{ affiliation.id }}">{{ affiliation.name }}</li>{% endfor %}</ol>
+  </div>
+  <p class="paper-venue">{{ page.venue }} · {{ page.date | date: '%Y' }}{% if page.publication_status %} · {{ page.publication_status }}{% endif %}</p>
+  <p class="paper-summary">{{ story.summary }}</p>
+  <div class="research-story__links paper-actions">
+    <a class="research-button" href="{{ page.paperurl }}" target="_blank" rel="noopener">Original paper ↗</a>
+    {% if page.codeurl %}<a href="{{ page.codeurl }}" target="_blank" rel="noopener">Code ↗</a>{% endif %}
+    {% if page.slidesurl %}<a href="{{ page.slidesurl }}" target="_blank" rel="noopener">Slides ↗</a>{% endif %}
+    <a href="#citation">Citation ↓</a>
+  </div>
+</header>
+
+<article class="paper-body">
+  <section class="paper-introduction" id="overview"><h2>The question</h2><p>{{ story.introduction }}</p></section>
+  {% for figure in story.figures %}
+    <section class="paper-section" id="figure-{{ forloop.index }}" aria-labelledby="figure-heading-{{ forloop.index }}">
+      <h2 id="figure-heading-{{ forloop.index }}">{{ figure.title }}</h2>
+      <p>{{ figure.text }}</p>
+      <figure class="paper-figure">
+        <a href="{{ figure.image | relative_url }}" data-figure-open data-caption="Figure {{ forloop.index }} · {{ figure.title | escape }}" aria-label="Expand figure {{ forloop.index }}: {{ figure.title | escape }}"><img src="{{ figure.image | relative_url }}" alt="Figure {{ forloop.index }}: {{ figure.title | escape }}" loading="lazy" decoding="async"><span class="research-story__expand" aria-hidden="true">Expand figure ↗</span></a>
+        <figcaption>Figure {{ forloop.index }} · {{ figure.title }}<span>From the paper, p. {{ figure.page }}.</span></figcaption>
+      </figure>
+    </section>
+  {% endfor %}
+  {% if story.supplementary %}
+    <details class="paper-supplementary" id="supplementary"><summary>Supplementary figures <span>{{ story.supplementary.size }} figures</span></summary>
+      {% for figure in story.supplementary %}
+        <section class="paper-section"><h2>{{ figure.title }}</h2><p>{{ figure.text }}</p><figure class="paper-figure"><a href="{{ figure.image | relative_url }}" data-figure-open data-caption="Figure S{{ forloop.index }} · {{ figure.title | escape }}" aria-label="Expand supplementary figure S{{ forloop.index }}"><img src="{{ figure.image | relative_url }}" alt="Figure S{{ forloop.index }}: {{ figure.title | escape }}" loading="lazy"><span class="research-story__expand" aria-hidden="true">Expand figure ↗</span></a><figcaption>Figure S{{ forloop.index }} · {{ figure.title }}</figcaption></figure></section>
+      {% endfor %}
+    </details>
+  {% endif %}
+  <section class="paper-conclusion"><p class="research-eyebrow">Putting it together</p><h2>{{ story.conclusion_title }}</h2><p>{{ story.conclusion }}</p></section>
+  {% if story.related %}<nav class="paper-connected" aria-label="Connected papers"><h2>Connected papers</h2>{% for key in story.related %}{% assign other = site.publications | where: 'story_key', key | first %}<a href="{{ other.url | relative_url }}">{{ other.title }} <span aria-hidden="true">↗</span></a>{% endfor %}</nav>{% endif %}
+  <details class="paper-citation" id="citation"><summary>Citation</summary><p>{{ page.citation }}</p><h3>BibTeX</h3><pre><code>{{ credits.bibtex | escape }}</code></pre></details>
+</article>

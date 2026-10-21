@@ -1,8 +1,10 @@
 ---
 title: "Energy Transfer and Coherence in Coupled Oscillators with Delayed Coupling"
 collection: publications
+layout: publication
+story_key: coupled-oscillators-delay
 category: manuscripts
-permalink: /publication/coupled-oscillators-delay
+permalink: /publication/coupled-oscillators-delay/
 excerpt: "A classical oscillator perspective on energy transfer and coherence in delayed coupled systems."
 date: 2022-08-01
 venue: "Physica Scripta"

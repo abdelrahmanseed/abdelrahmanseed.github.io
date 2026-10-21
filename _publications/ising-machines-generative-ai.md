@@ -1,8 +1,10 @@
 ---
 title: "Probabilistic algorithms for Ising machines from optimization to generative AI"
 collection: publications
+layout: publication
+story_key: ising-machines-generative-ai
 category: manuscripts
-permalink: /publication/ising-machines-generative-ai
+permalink: /publication/ising-machines-generative-ai/
 excerpt: "Connects sampling algorithms, Ising hardware, and generative models for optimization and inference."
 date: 2026-10-15
 venue: "Nature Reviews Electrical Engineering"

@@ -21,10 +21,5 @@ tags:
   - k-SAT
   - p-bits
   - FPGA
+redirect_to: /publication/paoa/
 ---
-
-<figure class="wide-figure">
-  <img src="/images/PAOA.png" alt="Figure showing the PAOA workflow and learned probabilistic optimization process">
-</figure>
-
-PAOA learns how to sample rather than following a fixed annealing schedule. The implementation includes FPGA-based on-chip annealing for spin-glass optimization.
