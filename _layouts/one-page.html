@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% include seo.html %}
+    <meta name="theme-color" content="#ffffff">
+    <link rel="icon" href="{{ '/favicon.ico' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/one-page.css' | relative_url }}">
+    <script>document.documentElement.classList.replace('no-js', 'js');</script>
+    <script defer src="{{ '/assets/js/one-page.js' | relative_url }}"></script>
+    <script defer src="{{ '/assets/js/research-models.js' | relative_url }}"></script>
+    <script defer src="{{ '/assets/js/research-labs.js' | relative_url }}"></script>
+    <script defer src="{{ '/assets/js/figure-layout.js' | relative_url }}"></script>
+  </head>
+  <body class="one-page">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <a class="wordmark" href="#about" aria-label="Abdelrahman S. Abdelrahman, home">Abdelrahman S. Abdelrahman</a>
+      <nav class="section-nav" aria-label="Main navigation"><a href="#research">Research</a><a href="#teaching">Teaching</a><a href="#work">Applied work</a><a href="#background">Background</a></nav>
+      <nav class="header-actions" aria-label="Contact and CV"><a class="header-email" href="mailto:{{ site.author.email }}">Email <span aria-hidden="true">↗</span></a><a class="header-contact" href="{{ '/files/CV.pdf' | relative_url }}" target="_blank" rel="noopener">View CV <span aria-hidden="true">↗</span></a></nav>
+      <span class="reading-progress" aria-hidden="true"></span>
+    </header>
+    <main id="main">{{ content }}</main>
+    {% include figure-viewer.html %}
+    <a class="back-top" href="#about" aria-label="Back to top">↑</a>
+    {% include analytics.html %}
+  </body>
+</html>

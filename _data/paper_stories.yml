@@ -14,11 +14,21 @@ paoa:
     text: A four-node majority gate makes the target distribution small enough to inspect directly. Analytical and sample-based
       optimization reach matching outcomes, connecting the variational formulation to the sampling procedure used in larger
       systems.
+    notes:
+    - label: "Panels (a) and (b)"
+      text: "The four-node majority gate provides a small problem with eight valid input–output combinations. The loss curves compare exact-gradient training with sample-based, gradient-free optimization, so both methods can be checked against the same known target."
+    - label: "Panels (c) and (d)"
+      text: "Follow the probability assigned to each state over two layers. The exact Markov calculation is shown in (c); the MCMC approximation is shown in (d). Both concentrate probability on truth-table states rather than treating every configuration as equally likely."
     image: /images/paper-stories/paoa/figure-2.webp
     page: 5
   - title: Recover annealing on an FPGA.
     text: The next step moves from a small truth table to a three-dimensional spin glass. Optimizing the schedule on an FPGA-based
       probabilistic computer shifts the energy distribution toward lower-energy solutions and recovers an annealing-like trajectory.
+    notes:
+    - label: "Panels (a) and (b)"
+      text: "The FPGA supplies configurations while a CPU updates the annealing schedule. The energy histogram compares the same spin-glass instance before and after optimization; the useful change is a larger concentration of samples near the putative ground state."
+    - label: "Panel (c)"
+      text: "Schedules at depths 5, 10, and 15 start from the same flat inverse-temperature profile. The learned profiles resemble cooling schedules. The insets compare success probabilities across repeated optimization runs, exposing variation that a single best schedule would hide."
     image: /images/paper-stories/paoa/figure-3.webp
     page: 6
   - title: Compare matched parameter budgets.
@@ -55,11 +65,21 @@ paoaSPAD:
     text: Gate voltage changes the dark-count behavior of each device. Quenching, reset, and a defined integration window
       turn those stochastic events into binary outputs; their averaged response reveals the activation function available
       to the algorithm.
+    notes:
+    - label: "Panels (a) and (b)"
+      text: "The perimeter gate changes the electric field near the SPAD junction edge. The readout circuit then converts avalanche events into a bit: at least one event within the integration window gives one output state, while no event gives the other."
+    - label: "Panels (c) and (d)"
+      text: "The time traces show how gate voltage changes switching statistics. The measured activation curves compare devices, rather than repeated measurements of one ideal element; the Gompertz fit describes their asymmetric average response."
     image: /images/paper-stories/paoaSPAD/figure-2.webp
     page: 3
   - title: Match the algorithm to the device response.
     text: The benchmarks separate activation mismatch from matched hardware deployment. They compare idealized tanh and asymmetric
       Gompertz responses, then place measured SPAD inference alongside simulation using a hardware-matched training model.
+    notes:
+    - label: "Panels (a) and (b)"
+      text: "Residual energy and approximation ratio compare matched tanh training/inference with tanh training followed by Gompertz inference. The schedules are learned on training instances and applied to a separate test set without retraining."
+    - label: "Panels (c) and (d)"
+      text: "These panels instead use matched Gompertz schedules for both hardware and CPU inference. The hardware averages 50 runs, compared with one million in simulation. Bootstrap confidence intervals help distinguish agreement from sampling variability."
     image: /images/paper-stories/paoaSPAD/figure-3.webp
     page: 4
   - title: Ask what happens at greater depth.
@@ -104,11 +124,21 @@ paoaSPAD:
   - title: Document the characterization apparatus.
     text: The temperature chamber, data-acquisition equipment, board, and die connect the reported device responses to the
       actual measurement setup.
+    notes:
+    - label: "Panels (a) and (b)"
+      text: "The temperature chamber, liquid-nitrogen tank, and power supplies establish the operating conditions. The data-acquisition setup supplies timing signals and records the device output, connecting the characterization curves to a physical measurement procedure."
+    - label: "Panels (c) and (d)"
+      text: "The board photograph shows the wire-bonded chip and protected connections. The micrograph locates the 64 × 64 array and its peripheral logic. These are different views of the same measurement platform, from laboratory equipment down to the die."
     image: /images/paper-stories/paoaSPAD/figure-S6.webp
     page: 12
   - title: Return to a small, inspectable learning problem.
     text: A majority-gate benchmark compares matched tanh and Gompertz learning with mismatched inference. The loss, divergence,
       and final state distributions make the effect of activation choice visible.
+    notes:
+    - label: "Panels (a) and (b)"
+      text: "The majority-gate network and its valid truth-table states define an exactly inspectable target. The training curves then compare learning with symmetric tanh and asymmetric Gompertz activations."
+    - label: "Panels (c) and (d)"
+      text: "KL divergence and the final state probabilities distinguish matched training/inference from activation mismatch. Comparing these two panels checks both a scalar error measure and which configurations receive probability at the final depth."
     image: /images/paper-stories/paoaSPAD/figure-S7.webp
     page: 13
 isingformer:
@@ -138,12 +168,22 @@ isingformer:
   - title: Reuse one generator across factorization targets.
     text: An invertible multiplier circuit encodes candidate factors and their product. Training with unclamped product spins
       creates a reusable generator; clamping a particular product later defines the search task for that target.
+    notes:
+    - label: "Panels (a) and (b)"
+      text: "Clamping the product of an invertible multiplier turns factorization into an Ising search problem. Training uses an unclamped universal circuit; at inference, a target product conditions the search while the trained generator is reused."
+    - label: "Panels (c) and (d)"
+      text: "The timing comparison covers 440 semiprime instances at a target success probability of 0.99. The example trajectory follows the relative product error for 1,022,117 = 1009 × 1013. The timing is conditional on an already-generated proposal bank."
     image: /images/paper-stories/isingformer/figure-4.webp
     page: 7
   - title: Separate search timing from proposal generation.
     text: The scaling experiment measures time to solution conditional on pre-generated proposal banks. The fitted exponents
       compare the tested search procedures; generating those proposal banks is excluded, so this is not a claim of an end-to-end
       speedup including model training and generation.
+    notes:
+    - label: "Reading the axes"
+      text: "The horizontal axis is the maximum product bit length; the vertical axis is the median time to reach a 0.99 success probability. Markers summarize instances, error bars give bootstrap confidence intervals, and dashed lines show exponential fits."
+    - label: "What is timed"
+      text: "This experiment uses proposals generated by long-run MCMC, rather than IsingFormer. Optimization operations are included, but offline proposal-bank generation is excluded. The fitted exponents, 0.846 for PT and 0.564 for TAPT, describe this conditional comparison."
     image: /images/paper-stories/isingformer/figure-5.webp
     page: 8
   conclusion_title: Learned moves, carefully interpreted.
@@ -233,6 +273,13 @@ configurable-p-neurons:
   - title: Separate randomness from the input path.
     text: The opening architecture contrasts a coupled p-bit with a modular design. Decoupling the stochastic and activation
       units makes it possible to change the neuron response without rebuilding the entire source of randomness.
+    notes:
+    - label: "Panel (a)"
+      text: "In the original architecture, the stochastic element and input path meet within the same circuit. Changing the random source or its response can therefore also affect how the input is processed."
+    - label: "Panel (b)"
+      text: "The modular architecture separates the stochastic unit from the input and activation paths. The dual-sMTJ example supplies randomness to a distinct activation circuit, giving the designer separate choices for these two functions."
+    - label: "Panel (c)"
+      text: "The lower diagrams connect a random-variable distribution and an instantaneous activation function to the time-averaged neuron response. The point is configurability: different combinations can produce probabilistic tanh, sigmoid, ReLU, or linear behavior."
     image: /images/paper-stories/configurable-p-neurons/figure-1.webp
     page: 1
   - title: Build several activation functions.
@@ -243,6 +290,11 @@ configurable-p-neurons:
   - title: Engineer the distribution of the stochastic unit.
     text: Different stochastic-unit constructions produce different voltage distributions. The normal-like and uniform-like
       examples show how this module can be selected to support the desired probabilistic activation.
+    notes:
+    - label: "Panel (a)"
+      text: "Two stochastic magnetic tunnel junctions form a voltage divider. The conductance histograms on the left describe the individual elements; the voltage histogram on the right shows the approximately normal distribution produced by the combined stochastic unit."
+    - label: "Panel (b)"
+      text: "Replacing one junction with a fixed resistor changes the output distribution to approximately uniform. Comparing the two rows shows why the stochastic unit is a design choice: its distribution helps determine the neuron’s eventual activation function."
     image: /images/paper-stories/configurable-p-neurons/figure-3.webp
     page: 2
   - title: Tune the range of probabilistic behavior.
@@ -253,6 +305,13 @@ configurable-p-neurons:
   - title: Test modularity on digital hardware.
     text: FPGA experiments realize several activation functions and examine stochastic-unit sharing. A small p-AND network
       checks functional behavior, while resource comparisons show the hardware implications of sharing the random-number source.
+    notes:
+    - label: "Panels (a)–(h)"
+      text: "The first four panels show measured average responses for digital tanh, sigmoid, ReLU, and linear neurons. The corresponding designs underneath compare a digital input with a random number supplied by the stochastic unit."
+    - label: "Panels (i)–(m)"
+      text: "The hardware photograph and sharing diagrams connect those responses to FPGA experiments. The p-AND example uses three neurons sharing one random-number source; its state histogram is compared with the expected Boltzmann distribution."
+    - label: "Panels (n) and (o)"
+      text: "Resource-utilization and transistor-count comparisons quantify the architectural motivation. Read these alongside the sharing experiments: the reduction comes from reusing stochastic resources, while each neuron retains its own activation path."
     image: /images/paper-stories/configurable-p-neurons/figure-5.webp
     page: 4
   conclusion_title: Modularity as a circuit design tool.
@@ -271,12 +330,26 @@ defect-aware-2d-memristors:
     text: 'The framework moves through several levels of description: individual defect behavior, spatial material statistics,
       and the response of a complete device. This organization links microscopic assumptions to quantities such as yield and
       operating voltage.'
+    notes:
+    - label: "Panel (a) and panels (d)–(f)"
+      text: "The framework starts with an individual defect and a switching structure, then moves to microscopy and spatial maps of many defects. The material model connects atom-scale information to a statistical description of the film."
+    - label: "Panels (g) and (c)"
+      text: "The device model assigns switching behavior to a realization of defects. Measurements across multiple devices then constrain its statistical parameters; the displayed yield data represent a device population, rather than a single switching trace."
+    - label: "Panel (b)"
+      text: "The crossbar illustration is the final scale of the framework. Devices within an array can contain different defect realizations, so predictions of yield and variability must carry the underlying stochastic model through to the array level."
     image: /images/paper-stories/defect-aware-2d-memristors/figure-1.webp
     page: 20
   - title: Represent atomic defects statistically.
     text: Poisson and hard-core point processes describe different spatial assumptions about defects. Comparing these models
       shows when exclusion distances matter and how physically constrained defect distributions differ from unconstrained
       random placement.
+    notes:
+    - label: "Panels (a)–(c)"
+      text: "A Poisson point process supplies a starting spatial model, while the h-BN lattice introduces a minimum separation between admissible vacancy locations. An unconstrained random placement need not respect that atomic distance."
+    - label: "Panels (d) and (e)"
+      text: "The hard-core construction removes points that violate the separation rule. Black points in the construction are removed; retained red points form the constrained realization shown separately in the next panel."
+    - label: "Panel (f)"
+      text: "The density comparison shows how the Poisson and hard-core models diverge as defects become crowded. The saturation bound and constraint-violation probability identify when an unconstrained spatial approximation becomes physically problematic."
     image: /images/paper-stories/defect-aware-2d-memristors/figure-2.webp
     page: 22
   - title: Predict monolayer device behavior.
@@ -292,6 +365,13 @@ defect-aware-2d-memristors:
   - title: Examine extreme miniaturization.
     text: Nanoscale characterization and model extrapolations probe the consequences of reducing device area. The results
       distinguish a device being able to switch from it doing so with favorable voltage and device-to-device variability.
+    notes:
+    - label: "Panels (a), (b), and (d)"
+      text: "Conductive-AFM measurements connect nanoscale switching voltages to films with different measured defect densities. The current maps are thresholded to make individual defects visible; the voltage plot includes experimental variability."
+    - label: "Panel (c)"
+      text: "The spatial realizations shrink the device area while marking defects by their activation voltage. Smaller devices contain fewer candidate switching sites, so different defect realizations can lead to different device responses."
+    - label: "Panels (e)–(g)"
+      text: "Operational-yield curves are translated into switching-voltage distributions and then into mean voltage and standard deviation. Reading all three separates the chance of switching from the spread of voltages among devices."
     image: /images/paper-stories/defect-aware-2d-memristors/figure-5.webp
     page: 26
   conclusion_title: Scaling needs a statistical description.
@@ -308,6 +388,13 @@ hbn-memristors-scalability:
   - title: Start with a spatial model of defects.
     text: The schematic, microscopy example, and stochastic realization introduce the physical origin of switching sites.
       The modeling steps connect the distribution of those sites to the probability of obtaining an operational device.
+    notes:
+    - label: "Panels (a) and (b)"
+      text: "The defect schematic and conductive-AFM image motivate a spatial model: switching-relevant sites are distributed across the material, rather than guaranteed to appear in the same place in every device."
+    - label: "Panels (c) and (d)"
+      text: "The point-process realization is a mathematical representation of those locations. The lattice drawing adds the atomic-scale constraint that neighboring vacancy sites cannot be arbitrarily close together."
+    - label: "Panel (e)"
+      text: "The density plot compares the Poisson model with two hard-core processes and a saturation limit. Its second axis tracks the Poisson model’s distance-constraint violations. This explains where a convenient random-placement model needs a physical correction."
     image: /images/paper-stories/hbn-memristors-scalability/figure-1.webp
     page: 2
   - title: Relate intrinsic yield to density and area.
@@ -410,31 +497,61 @@ coupled-oscillators-delay:
   - title: Follow the delayed eigenvalue spectrum.
     text: The complex spectrum is plotted for different couplings and delays. Moving beyond the instantaneous model reveals
       additional structure in the possible dynamical modes.
+    notes:
+    - label: "Across the six rows"
+      text: "The coupling increases from one quarter of the damping rate to one hundred times that rate. Within each row, colors distinguish delays from 0.3 to 1.0, allowing the displacement of the spectrum to be separated from a change in coupling."
+    - label: "The red circles"
+      text: "The two highlighted roots are the main dynamical modes followed in the later figures. Their horizontal position gives the growth or decay rate, while their vertical position gives the oscillation frequency."
+    - label: "Reading the comparison"
+      text: "Use the same axes to compare the circled pair with the other roots. The figure establishes which part of the spectrum is being tracked before subsequent plots focus on the dominant pair and the stability boundary."
     image: /images/paper-stories/coupled-oscillators-delay/figure-5.webp
     page: 8
   - title: Resolve the principal eigenvalues as delay changes.
     text: Real and imaginary parts of the main modes are followed across delay. Their trajectories distinguish changes in
       oscillation frequency from changes in stability or decay.
+    notes:
+    - label: "Real and imaginary components"
+      text: "The two plots separate changes in decay or growth from changes in oscillation frequency. Solid and dashed curves of the same color identify the two main modes at a fixed coupling."
+    - label: "The stability boundary"
+      text: "The black zero-real-part line marks the transition between decay and growth. Comparing the three coupling choices—half, equal to, and twice the damping rate—shows why frequency splitting alone does not establish stable dynamics."
     image: /images/paper-stories/coupled-oscillators-delay/figure-6.webp
     page: 9
   - title: Identify the modes that control long-time behavior.
     text: The rightmost eigenvalues determine whether a mode grows or decays most slowly. Comparing coupling strengths exposes
       how the dominant dynamical behavior changes with delay.
+    notes:
+    - label: "Top row"
+      text: "The imaginary parts track oscillation frequencies as normalized delay changes. Following both branches reveals how the dominant pair evolves across the tested coupling strengths."
+    - label: "Middle and bottom rows"
+      text: "Positive real parts are plotted separately from negative real parts. That separation makes unstable growth distinguishable from damped motion, even when their frequency branches look similar."
     image: /images/paper-stories/coupled-oscillators-delay/figure-7.webp
     page: 10
   - title: View mode evolution in the complex plane.
     text: The eigenvalue paths offer another representation of the same delayed dynamics. Their geometry clarifies how conjugate
       modes move as the interaction delay varies.
+    notes:
+    - label: "Panels (a) and (b)"
+      text: "These trajectories follow the upper pair of coupled modes in the complex plane. Read horizontal displacement as a change in the real part and vertical displacement as a change in frequency."
+    - label: "Panels (c) and (d)"
+      text: "The lower panels show the corresponding conjugate modes. Viewing the pairs together links the separate real- and imaginary-part plots to complete eigenvalue trajectories as delay varies."
     image: /images/paper-stories/coupled-oscillators-delay/figure-8.webp
     page: 10
   - title: Summarize the geometry of the mode paths.
     text: A schematic condenses the evolution into circles and interwinding trajectories. It provides a visual guide to the
       more detailed eigenvalue plots that precede it.
+    notes:
+    - label: "Reading the schematic"
+      text: "The circles summarize the mode paths in the preceding complex-plane plots. Their overlap and interwinding organize the recurring evolution with delay; the drawing is a geometric guide to those trajectories, rather than another time-domain measurement."
     image: /images/paper-stories/coupled-oscillators-delay/figure-9.webp
     page: 11
   - title: Locate intervals of instability.
     text: The stability map gathers intervals in which eigenvalues imply growing motion. Comparing different coupling strengths
       shows how stable and unstable delay ranges alternate.
+    notes:
+    - label: "Stable intervals"
+      text: "Gray intervals in the upper panel mark stable dynamics. Comparing their widths and locations as coupling increases makes the repeated stable and unstable delay regions easier to identify than in individual root plots."
+    - label: "Connection to the spectrum"
+      text: "These intervals summarize where the leading eigenvalues have the sign required for decay. They should be read together with the real-part plots, which show how a mode reaches the stability boundary."
     image: /images/paper-stories/coupled-oscillators-delay/figure-10.webp
     page: 11
   - title: Connect stability boundaries to bifurcation.
@@ -450,16 +567,33 @@ coupled-oscillators-delay:
   - title: Measure energy exchange and coherence.
     text: The exchange frequency and coherence time are mapped across coupling and delay. These quantities summarize how quickly
       energy moves and how long the exchange remains discernible.
+    notes:
+    - label: "Panel (a)"
+      text: "The energy-exchange frequency is plotted against both coupling and delay. It describes how quickly energy moves between the oscillators; it is a different quantity from the individual oscillators’ carrier frequencies."
+    - label: "Panel (b)"
+      text: "The coherence-time surface measures how long the exchange remains coherent under the same parameter variation. Comparing the surfaces separates a faster transfer process from a longer-lived one."
     image: /images/paper-stories/coupled-oscillators-delay/figure-13.webp
     page: 13
   - title: Inspect trajectories near the coupling boundary.
     text: Time traces compare the individual oscillator energies for couplings around the damping scale. The cases place the
       abstract coherence and stability measures back into direct energy dynamics.
+    notes:
+    - label: "Across the rows"
+      text: "The coupling is 0.9, 1.0, and 1.1 times the damping rate. These closely spaced choices probe the region around the coupling boundary instead of comparing only widely separated regimes."
+    - label: "Across the columns"
+      text: "The left and right columns use normalized delays of zero and π/2. Each plot follows both oscillator energies, making the effect of delay visible at the same coupling."
     image: /images/paper-stories/coupled-oscillators-delay/figure-14.webp
     page: 13
   - title: Compare weak and stronger coupling in time.
     text: The final trajectories broaden the coupling comparison and contrast instantaneous with delayed interaction. They
       complete the connection between the spectrum, stability, and the observed energy exchange.
+    notes:
+    - label: "Panels (a), (c), (e), and (g)"
+      text: "The left column shows the first oscillator’s energy. From top to bottom, coupling rises from 0.5 to 1, 5, and 10 times the damping rate, while each surface varies time and delay."
+    - label: "Panels (b), (d), (f), and (h)"
+      text: "The right column follows the second oscillator under the matching conditions. Compare each row as a pair to see transferred energy alongside the energy remaining in the first oscillator."
+    - label: "Reading the surfaces"
+      text: "The oscillatory exchange becomes more apparent in the stronger-coupling rows. The plotted delay range also changes between rows, so matching the axes matters when comparing the extent and persistence of the oscillations."
     image: /images/paper-stories/coupled-oscillators-delay/figure-15.webp
     page: 14
   conclusion_title: One model, several views of the dynamics.
@@ -481,6 +615,11 @@ wur-aerial-data-demo:
   - title: Take the wake-up link outdoors.
     text: The field setup places the transmitter on a UAV and the receiving node on the ground. This makes aerial reach and
       alignment part of the practical system test.
+    notes:
+    - label: "Outdoor arrangement"
+      text: "The transmitter is carried by the UAV while the receiver is part of the ground IoT node. This places the wake-up mechanism in the geometry relevant to aerial data collection, beyond an instrument-only bench test."
+    - label: "What is evaluated"
+      text: "The experiment tests successful device wake-up as the aircraft’s position changes. The later height-versus-offset plot is needed to interpret the operating range; the setup photograph establishes where the transmitting and receiving hardware are located."
     image: /images/paper-stories/wur-aerial-data-demo/figure-2.webp
     page: 3
   - title: Build the sensing node.
@@ -506,6 +645,11 @@ wur-aerial-data-demo:
   - title: Demonstrate the wake-up transaction.
     text: The final photographs show the IoT node and a controlled UAV-emulation setup. They document the practical activation
       and data-collection process used in the demo.
+    notes:
+    - label: "The sensing device"
+      text: "The 7 × 7 cm² IoT board combines the low-power wake-up path with the circuitry needed to acquire and transmit measurements. The board is the end device being activated, rather than a stand-in for the radio link."
+    - label: "The demonstration"
+      text: "The setup emulates the UAV-side wake-up transaction so visitors can follow activation and data collection. This makes the sequence inspectable in a demonstration setting, alongside the separate outdoor range experiments."
     image: /images/paper-stories/wur-aerial-data-demo/figure-7.webp
     page: 4
   conclusion_title: An end-to-end proof of implementation.
@@ -522,16 +666,31 @@ aerial-data-aggregation:
   - title: Start with the full collection system.
     text: The architecture connects the UAV wake-up transmitter, sleeping IoT node, base station, database, and dashboard.
       It establishes the path that later hardware and analytical results must support.
+    notes:
+    - label: "Wake-up and data paths"
+      text: "The wake-up call travels from the UAV to the ground device; the sensed data travels back toward the UAV and base station. These arrows separate the low-power activation mechanism from the main data-transfer link."
+    - label: "Ground infrastructure"
+      text: "The base station organizes the collected measurements and uploads them to a cloud database. The dashboard completes the path to the user, making the figure an end-to-end system diagram rather than only a radio-link sketch."
     image: /images/paper-stories/aerial-data-aggregation/figure-1.webp
     page: 4
   - title: Design the low-power IoT node.
     text: The block diagram separates wake-up detection, addressing, sensing, and data transmission. A successful wake-up
       event activates the functions that would otherwise consume power while the node waits.
+    notes:
+    - label: "Upper signal path"
+      text: "The subcarrier-modulation input stage contains matching, rectification, and filtering blocks before the commercial wake-up receiver. The receiver then detects an address and issues the wake-up signal."
+    - label: "Lower device blocks"
+      text: "The microcontroller, sensors, memory, and data transceiver perform the sensing and reporting task after activation. Separating these functions explains how the wake-up path can remain available while more power-hungry circuitry sleeps."
     image: /images/paper-stories/aerial-data-aggregation/figure-2.webp
     page: 4
   - title: Create an addressable wake-up waveform.
     text: Subcarrier modulation lets a higher-frequency transmitted signal deliver the lower-frequency pattern expected by
       the wake-up receiver. The waveform connects the radio carrier to the decoded binary message.
+    notes:
+    - label: "Carrier and envelopes"
+      text: "The drawing starts with an 868 MHz subcarrier and shows the lower-frequency envelope recovered from it. A subsequent detection stage exposes the on–off keyed message used by the wake-up receiver."
+    - label: "Reading the bit sequence"
+      text: "Compare the high-frequency oscillations with the slower binary envelope above them. The receiver needs the address-bearing message, rather than the original radio-frequency waveform, which motivates the passive input-stage demodulation."
     image: /images/paper-stories/aerial-data-aggregation/figure-3.webp
     page: 5
   - title: Implement the receiver input stage.
@@ -542,6 +701,11 @@ aerial-data-aggregation:
   - title: Build the transmitter and receiver hardware.
     text: Photographs show the developed IoT device and wake-up transmitter. This step turns the earlier architecture and
       circuit descriptions into physical components for testing.
+    notes:
+    - label: "The transmitter"
+      text: "The CC1101-based wake-up transmitter and its dipole antenna implement the radio side of the wake-up call. The IoT board provides the corresponding receiver-side hardware, connecting the earlier block diagrams to assembled components."
+    - label: "Why both boards matter"
+      text: "An operational wake-up link depends on the transmitter waveform, antenna, input stage, and receiver together. The photograph documents the prototype used for the following bench, indoor, and aerial experiments; it is not a chip-level integration claim."
     image: /images/paper-stories/aerial-data-aggregation/figure-5.webp
     page: 6
   - title: Make the measurements accessible.
@@ -557,26 +721,57 @@ aerial-data-aggregation:
   - title: Check the wake-up signal on the bench.
     text: The laboratory setup uses a signal generator and oscilloscope to test subcarrier modulation with the IoT node. This
       isolates the receive path before outdoor deployment.
+    notes:
+    - label: "Signal source"
+      text: "The microwave signal generator supplies a carrier swept around the intended 868 MHz operating frequency. This isolates the subcarrier-modulation input stage before the complete wake-up protocol is tested."
+    - label: "Measurement"
+      text: "The oscilloscope observes the receiver input-stage output. With a continuous carrier and no slower modulation envelope, rectification and low-pass filtering produce an approximately DC output, so the test checks the input stage’s frequency response."
+    - label: "Scope of this test"
+      text: "This is a bench characterization of the signal-conditioning path. The separate indoor and aerial experiments are needed to establish how the complete wake-up link behaves over distance."
     image: /images/paper-stories/aerial-data-aggregation/figure-8.webp
     page: 8
   - title: Inspect the transmitted wake-up call.
     text: Oscilloscope traces expose the carrier burst, preamble, and address pattern. These measurements check that the transmitted
       signal contains the structure expected by the receiver.
+    notes:
+    - label: "Panel (a)"
+      text: "The complete transmitted wake-up call contains the carrier burst, preamble, and address pattern. Reading these in order shows how a receiver is prepared and then given an identification-bearing message."
+    - label: "Panels (b) and (c)"
+      text: "The lower panels zoom into the 125 kHz on–off keyed carrier and the 868 MHz subcarrier. They are different time scales of the same transmitted waveform, rather than two independent communication experiments."
     image: /images/paper-stories/aerial-data-aggregation/figure-9.webp
     page: 8
   - title: Measure the indoor communication link.
     text: The indoor range experiment tests the transmitter and receiving node in a controlled environment. It provides a
       practical reference before moving to the aerial configuration.
+    notes:
+    - label: "Test arrangement"
+      text: "The wake-up transmitter is placed across the room from the assembled IoT device and its receiver. This checks the complete link after the input stage has been characterized on the bench."
+    - label: "What changes between tests"
+      text: "The indoor experiment changes separation between the transmitter and receiver. It precedes the aerial test, where antenna alignment and UAV motion introduce additional conditions that a room-scale stationary setup does not capture."
+    - label: "Reading the photograph"
+      text: "The labeled receiver is part of the powered IoT prototype. Successful wake-up refers to activating that device through the wake-up path, not merely observing an RF signal at an instrument input."
     image: /images/paper-stories/aerial-data-aggregation/figure-10.webp
     page: 8
   - title: Move the transmitter onto a UAV.
     text: The outdoor setup combines a flying transmitter with the deployed IoT node. It tests the intended data-collection
       geometry rather than a fixed bench arrangement.
+    notes:
+    - label: "On the UAV"
+      text: "The wake-up transmitter and antenna are attached to the aircraft for outdoor measurements. The inset identifies the transmitter assembly, distinguishing the wake-up hardware from the UAV itself."
+    - label: "On the ground"
+      text: "The deployed IoT device is the target of the wake-up calls. The experiment varies height and horizontal offset to determine when the assembled device can still be activated."
+    - label: "From setup to result"
+      text: "The reported stable wake-up height reaches 23 m in the tested arrangement. The next figure shows how that reach falls with horizontal misalignment; the photograph alone should not be read as a general range specification."
     image: /images/paper-stories/aerial-data-aggregation/figure-11.webp
     page: 8
   - title: Quantify aerial reach and misalignment.
     text: The measured wake-up height decreases as horizontal separation grows. That geometry becomes important when specifying
       how closely the UAV must pass a sensor.
+    notes:
+    - label: "Reading the axes"
+      text: "The horizontal axis is the UAV’s offset from the ground device; the vertical axis is the maximum height at which wake-up still succeeds. Each point represents a tested geometry, rather than a trajectory through time."
+    - label: "What the trend means"
+      text: "The available wake-up height drops as the UAV moves sideways. Greater separation and a less favorable line-of-sight geometry reduce the received signal, so directly overhead range cannot be assumed at every horizontal offset."
     image: /images/paper-stories/aerial-data-aggregation/figure-12.webp
     page: 8
   - title: Define a reliable communication window.
@@ -607,21 +802,41 @@ aerial-data-aggregation:
   - title: Construct a spatial network realization.
     text: A sample field places UAVs and IoT nodes in a geometric setting. The realization illustrates the spatial assumptions
       used when evaluating wake-up and unintended wake-up events.
+    notes:
+    - label: "Symbols and cells"
+      text: "Triangles mark UAV locations and dots mark ground IoT devices. The Voronoi boundaries partition the sample field spatially, connecting an individual nearest-UAV relationship to the network model."
+    - label: "A spatial realization"
+      text: "The drawing is one realization of the assumed point processes at the stated UAV and IoT intensities. It supports the probability calculations that follow; it is not a map of a deployed agricultural site."
     image: /images/paper-stories/aerial-data-aggregation/figure-18.webp
     page: 13
   - title: Choose a detection threshold.
     text: Wake-up and false wake-up probabilities respond differently to the threshold power. Simulation points provide a
       check on the analytical curves used to evaluate that tradeoff.
+    notes:
+    - label: "Two probabilities"
+      text: "The solid wake-up curve and dashed false-wake-up curve both vary with the receiver’s power threshold. Raising the threshold suppresses false activations, but also reduces the chance of detecting an intended wake-up."
+    - label: "Model and simulation"
+      text: "Simulation markers are overlaid on the analytical curves. Their comparison checks the network approximation, while the gap between the two probability curves exposes the threshold-selection tradeoff."
     image: /images/paper-stories/aerial-data-aggregation/figure-19.webp
     page: 14
   - title: Study the effect of altitude.
     text: Changing UAV height alters both desired and unintended wake-up probabilities. Comparing thresholds shows why a deployment
       setting must consider more than communication range alone.
+    notes:
+    - label: "Across thresholds"
+      text: "The two threshold choices, −24 dBm and −18 dBm, give separate wake-up and false-wake-up curves. Comparing a threshold pair holds the receiver setting fixed while the UAV altitude changes."
+    - label: "Reading the tradeoff"
+      text: "Both probabilities tend to decrease with greater altitude in this model. Lower false-wake-up probability is therefore accompanied by weaker intended detection, rather than being a free improvement in selectivity."
     image: /images/paper-stories/aerial-data-aggregation/figure-20.webp
     page: 14
   - title: Study density and energy conversion together.
     text: The final network-scale comparison varies UAV intensity and power-conversion efficiency. It connects local receiver
       behavior to the probability that a device is activated across a distributed deployment.
+    notes:
+    - label: "Across UAV densities"
+      text: "The horizontal axis varies the UAV point-process intensity. More nearby transmitters increase the opportunity for intended wake-up, but also increase the probability of unintended activation."
+    - label: "Across conversion efficiencies"
+      text: "Separate curve pairs use power-conversion coefficients of 1 and 0.7. Comparing them connects the network-level probabilities to receiver efficiency instead of treating the radio hardware as an ideal energy converter."
     image: /images/paper-stories/aerial-data-aggregation/figure-21.webp
     page: 14
   conclusion_title: Connect the prototype to deployment decisions.

@@ -1,0 +1,286 @@
+# Intrinsic sizes reserve space for lazy figures and keep deep links stable.
+/images/paper-stories/adaptive-regularization-portfolio/figure-1.webp:
+  width: 1801
+  height: 845
+/images/paper-stories/adaptive-regularization-portfolio/figure-2.webp:
+  width: 1801
+  height: 835
+/images/paper-stories/aerial-data-aggregation/figure-1.webp:
+  width: 1036
+  height: 804
+/images/paper-stories/aerial-data-aggregation/figure-10.webp:
+  width: 588
+  height: 932
+/images/paper-stories/aerial-data-aggregation/figure-11.webp:
+  width: 592
+  height: 932
+/images/paper-stories/aerial-data-aggregation/figure-12.webp:
+  width: 1040
+  height: 692
+/images/paper-stories/aerial-data-aggregation/figure-13.webp:
+  width: 1036
+  height: 400
+/images/paper-stories/aerial-data-aggregation/figure-14.webp:
+  width: 1040
+  height: 524
+/images/paper-stories/aerial-data-aggregation/figure-15.webp:
+  width: 1036
+  height: 636
+/images/paper-stories/aerial-data-aggregation/figure-16.webp:
+  width: 1036
+  height: 624
+/images/paper-stories/aerial-data-aggregation/figure-17.webp:
+  width: 1036
+  height: 568
+/images/paper-stories/aerial-data-aggregation/figure-18.webp:
+  width: 1040
+  height: 668
+/images/paper-stories/aerial-data-aggregation/figure-19.webp:
+  width: 1036
+  height: 700
+/images/paper-stories/aerial-data-aggregation/figure-2.webp:
+  width: 1036
+  height: 948
+/images/paper-stories/aerial-data-aggregation/figure-20.webp:
+  width: 1036
+  height: 680
+/images/paper-stories/aerial-data-aggregation/figure-21.webp:
+  width: 1040
+  height: 700
+/images/paper-stories/aerial-data-aggregation/figure-3.webp:
+  width: 1040
+  height: 704
+/images/paper-stories/aerial-data-aggregation/figure-4.webp:
+  width: 1040
+  height: 408
+/images/paper-stories/aerial-data-aggregation/figure-5.webp:
+  width: 1036
+  height: 820
+/images/paper-stories/aerial-data-aggregation/figure-6.webp:
+  width: 1036
+  height: 560
+/images/paper-stories/aerial-data-aggregation/figure-7.webp:
+  width: 1036
+  height: 476
+/images/paper-stories/aerial-data-aggregation/figure-8.webp:
+  width: 604
+  height: 932
+/images/paper-stories/aerial-data-aggregation/figure-9.webp:
+  width: 1036
+  height: 804
+/images/paper-stories/configurable-p-neurons/figure-1.webp:
+  width: 1040
+  height: 1200
+/images/paper-stories/configurable-p-neurons/figure-2.webp:
+  width: 1801
+  height: 890
+/images/paper-stories/configurable-p-neurons/figure-3.webp:
+  width: 1040
+  height: 776
+/images/paper-stories/configurable-p-neurons/figure-4.webp:
+  width: 1801
+  height: 432
+/images/paper-stories/configurable-p-neurons/figure-5.webp:
+  width: 1801
+  height: 1332
+/images/paper-stories/coupled-oscillators-delay/figure-1.webp:
+  width: 1652
+  height: 308
+/images/paper-stories/coupled-oscillators-delay/figure-10.webp:
+  width: 1652
+  height: 1056
+/images/paper-stories/coupled-oscillators-delay/figure-11.webp:
+  width: 1652
+  height: 756
+/images/paper-stories/coupled-oscillators-delay/figure-12.webp:
+  width: 1652
+  height: 664
+/images/paper-stories/coupled-oscillators-delay/figure-13.webp:
+  width: 1652
+  height: 1172
+/images/paper-stories/coupled-oscillators-delay/figure-14.webp:
+  width: 1652
+  height: 1080
+/images/paper-stories/coupled-oscillators-delay/figure-15.webp:
+  width: 1652
+  height: 1376
+/images/paper-stories/coupled-oscillators-delay/figure-2.webp:
+  width: 1652
+  height: 664
+/images/paper-stories/coupled-oscillators-delay/figure-3.webp:
+  width: 1652
+  height: 464
+/images/paper-stories/coupled-oscillators-delay/figure-4.webp:
+  width: 1652
+  height: 684
+/images/paper-stories/coupled-oscillators-delay/figure-5.webp:
+  width: 1652
+  height: 1688
+/images/paper-stories/coupled-oscillators-delay/figure-6.webp:
+  width: 1652
+  height: 984
+/images/paper-stories/coupled-oscillators-delay/figure-7.webp:
+  width: 1652
+  height: 1080
+/images/paper-stories/coupled-oscillators-delay/figure-8.webp:
+  width: 1652
+  height: 1024
+/images/paper-stories/coupled-oscillators-delay/figure-9.webp:
+  width: 1652
+  height: 1196
+/images/paper-stories/defect-aware-2d-memristors/figure-1.webp:
+  width: 1801
+  height: 1332
+/images/paper-stories/defect-aware-2d-memristors/figure-2.webp:
+  width: 1801
+  height: 1168
+/images/paper-stories/defect-aware-2d-memristors/figure-3.webp:
+  width: 1801
+  height: 852
+/images/paper-stories/defect-aware-2d-memristors/figure-4.webp:
+  width: 1801
+  height: 856
+/images/paper-stories/defect-aware-2d-memristors/figure-5.webp:
+  width: 1801
+  height: 1233
+/images/paper-stories/delay-eigenvalue-coupled-oscillators/figure-1.webp:
+  width: 1721
+  height: 556
+/images/paper-stories/delay-eigenvalue-coupled-oscillators/figure-2.webp:
+  width: 1801
+  height: 481
+/images/paper-stories/delay-eigenvalue-coupled-oscillators/figure-3.webp:
+  width: 1801
+  height: 477
+/images/paper-stories/hbn-memristors-scalability/figure-1.webp:
+  width: 557
+  height: 2101
+/images/paper-stories/hbn-memristors-scalability/figure-2.webp:
+  width: 1468
+  height: 392
+/images/paper-stories/hbn-memristors-scalability/figure-3.webp:
+  width: 1468
+  height: 384
+/images/paper-stories/hbn-memristors-scalability/figure-4.webp:
+  width: 1468
+  height: 372
+/images/paper-stories/hbn-memristors-scalability/figure-5.webp:
+  width: 1468
+  height: 764
+/images/paper-stories/ising-machines-generative-ai/figure-1.webp:
+  width: 1801
+  height: 1015
+/images/paper-stories/ising-machines-generative-ai/figure-2.webp:
+  width: 1801
+  height: 1091
+/images/paper-stories/ising-machines-generative-ai/figure-3.webp:
+  width: 1801
+  height: 794
+/images/paper-stories/ising-machines-generative-ai/figure-4.webp:
+  width: 1801
+  height: 658
+/images/paper-stories/isingformer/figure-1.webp:
+  width: 1801
+  height: 966
+/images/paper-stories/isingformer/figure-2.webp:
+  width: 1801
+  height: 686
+/images/paper-stories/isingformer/figure-3.webp:
+  width: 1801
+  height: 720
+/images/paper-stories/isingformer/figure-4.webp:
+  width: 1801
+  height: 1264
+/images/paper-stories/isingformer/figure-5.webp:
+  width: 936
+  height: 760
+/images/paper-stories/isingformer/figure-S1.webp:
+  width: 1801
+  height: 576
+/images/paper-stories/isingformer/figure-S2.webp:
+  width: 1801
+  height: 731
+/images/paper-stories/isingformer/figure-S3.webp:
+  width: 1801
+  height: 731
+/images/paper-stories/isingformer/figure-S4.webp:
+  width: 1801
+  height: 727
+/images/paper-stories/isingformer/figure-S5.webp:
+  width: 1801
+  height: 720
+/images/paper-stories/isingformer/figure-S6.webp:
+  width: 1801
+  height: 791
+/images/paper-stories/isingformer/figure-S7.webp:
+  width: 1801
+  height: 470
+/images/paper-stories/paoa/figure-1.webp:
+  width: 1801
+  height: 794
+/images/paper-stories/paoa/figure-2.webp:
+  width: 1801
+  height: 1377
+/images/paper-stories/paoa/figure-3.webp:
+  width: 1801
+  height: 1041
+/images/paper-stories/paoa/figure-4.webp:
+  width: 1801
+  height: 553
+/images/paper-stories/paoa/figure-5.webp:
+  width: 1801
+  height: 929
+/images/paper-stories/paoaSPAD/figure-1.webp:
+  width: 1801
+  height: 846
+/images/paper-stories/paoaSPAD/figure-2.webp:
+  width: 1801
+  height: 1234
+/images/paper-stories/paoaSPAD/figure-3.webp:
+  width: 1801
+  height: 1163
+/images/paper-stories/paoaSPAD/figure-4.webp:
+  width: 1801
+  height: 647
+/images/paper-stories/paoaSPAD/figure-S1.webp:
+  width: 1740
+  height: 516
+/images/paper-stories/paoaSPAD/figure-S2.webp:
+  width: 1801
+  height: 639
+/images/paper-stories/paoaSPAD/figure-S3.webp:
+  width: 1801
+  height: 697
+/images/paper-stories/paoaSPAD/figure-S4.webp:
+  width: 1801
+  height: 513
+/images/paper-stories/paoaSPAD/figure-S5.webp:
+  width: 1801
+  height: 469
+/images/paper-stories/paoaSPAD/figure-S6.webp:
+  width: 1801
+  height: 1228
+/images/paper-stories/paoaSPAD/figure-S7.webp:
+  width: 1801
+  height: 964
+/images/paper-stories/wur-aerial-data-demo/figure-1.webp:
+  width: 1420
+  height: 704
+/images/paper-stories/wur-aerial-data-demo/figure-2.webp:
+  width: 644
+  height: 704
+/images/paper-stories/wur-aerial-data-demo/figure-3.webp:
+  width: 1036
+  height: 356
+/images/paper-stories/wur-aerial-data-demo/figure-4.webp:
+  width: 1032
+  height: 556
+/images/paper-stories/wur-aerial-data-demo/figure-5.webp:
+  width: 1064
+  height: 432
+/images/paper-stories/wur-aerial-data-demo/figure-6.webp:
+  width: 1036
+  height: 484
+/images/paper-stories/wur-aerial-data-demo/figure-7.webp:
+  width: 1032
+  height: 616

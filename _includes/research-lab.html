@@ -1,0 +1,50 @@
+{% case include.theme %}
+{% when 'learning' %}
+<section class="mini-lab" data-lab="sampling" aria-labelledby="sampling-title">
+  <div class="mini-lab__copy">
+    <p class="eyebrow">Try the idea</p><h4 id="sampling-title">Turn the temperature.<br>Change the search.</h4>
+    <p>Cool the model to favor low-energy states. Warm it up to explore more possibilities, and watch the sampled distribution take shape.</p>
+    <div class="lab-control"><label for="sampling-temperature">Temperature <output for="sampling-temperature" id="sampling-temperature-value">0.8</output></label><input id="sampling-temperature" type="range" min="0.2" max="3" step="0.1" value="0.8"></div>
+    <div class="lab-actions"><button type="button" data-sampling-draw>Draw 200 samples</button><button type="button" data-sampling-pause>Pause animation</button><button type="button" class="lab-reset" data-sampling-reset>Reset</button></div>
+    <p class="lab-note">Illustrative one-dimensional energy model.</p>
+  </div>
+  <div class="mini-lab__visual">
+    <div class="lab-legend"><span><i class="lab-swatch lab-swatch--line" aria-hidden="true"></i>Model probability</span><span><i class="lab-swatch lab-swatch--fill" aria-hidden="true"></i>Drawn samples</span></div>
+    <svg class="lab-chart" viewBox="0 0 640 250" role="img" aria-labelledby="sampling-chart-title"><title id="sampling-chart-title">Probability over positions from minus three to three. The line shows the model; bars show samples.</title><path class="lab-axis" d="M 24 12 V 228 H 616"></path><g data-sampling-bars></g><path class="lab-curve" data-sampling-curve></path></svg>
+    <div class="lab-axis-ticks" aria-hidden="true"><span>−3</span><span>0</span><span>3</span></div><p class="lab-axis-label">Position in the energy landscape</p>
+    <p class="lab-readout" data-sampling-readout role="status" aria-live="off">Move the temperature slider, then draw some samples.</p>
+  </div>
+</section>
+{% when 'hardware' %}
+<section class="mini-lab" data-lab="bits" aria-labelledby="bits-title">
+  <div class="mini-lab__copy">
+    <p class="eyebrow">Try the idea</p><h4 id="bits-title">A bit that<br>embraces uncertainty.</h4>
+    <p>Each bit takes the value 0 or 1. Adjust the bias to change its probability and watch many independent bits respond.</p>
+    <div class="lab-control"><label for="bit-bias">Input bias <output for="bit-bias" id="bit-bias-value">0.0</output></label><input id="bit-bias" type="range" min="-2" max="2" step="0.1" value="0"></div>
+    <div class="lab-actions"><button type="button" data-bits-run>Run sampler</button><button type="button" class="lab-reset" data-bits-reset>Reset</button></div>
+    <p class="lab-note">Idealized p-bits; dimensionless bias. This illustrates a principle, rather than measured device behavior.</p>
+  </div>
+  <div class="mini-lab__visual">
+    <div class="lab-probability"><span>Probability of a 1</span><output id="bit-probability" for="bit-bias">50.0%</output></div>
+    <div class="bit-grid" aria-hidden="true">{% for bit in (1..48) %}<span class="bit-cell" data-bit="0">0</span>{% endfor %}</div>
+    <div class="lab-legend"><span><i class="lab-swatch lab-swatch--zero" aria-hidden="true"></i>0</span><span><i class="lab-swatch lab-swatch--one" aria-hidden="true"></i>1</span></div>
+    <p class="lab-readout" data-bits-readout role="status" aria-live="off">Run the sampler to compare the observed fraction of ones with the probability above.</p>
+  </div>
+</section>
+{% when 'physics' %}
+<section class="mini-lab" data-lab="oscillators" aria-labelledby="oscillators-title">
+  <div class="mini-lab__copy">
+    <p class="eyebrow">Try the idea</p><h4 id="oscillators-title">Set one in motion.<br>Watch the other respond.</h4>
+    <p>Two identical oscillators share a spring. Change their coupling to see how motion moves between them.</p>
+    <div class="lab-control"><label for="oscillator-coupling">Coupling strength <output for="oscillator-coupling" id="oscillator-coupling-value">0.40</output></label><input id="oscillator-coupling" type="range" min="0" max="1.5" step="0.05" value="0.4"></div>
+    <div class="lab-actions"><button type="button" data-oscillators-play>Play motion</button><button type="button" class="lab-reset" data-oscillators-reset>Reset</button></div>
+    <p class="lab-note">Idealized model with no damping or delay; not a reproduction of the paper’s results.</p>
+  </div>
+  <div class="mini-lab__visual">
+    <div class="lab-legend"><span><i class="lab-swatch lab-swatch--line" aria-hidden="true"></i>Oscillator 1</span><span><i class="lab-swatch lab-swatch--dashed" aria-hidden="true"></i>Oscillator 2</span></div>
+    <svg class="lab-chart" viewBox="0 0 640 290" role="img" aria-labelledby="oscillator-chart-title"><title id="oscillator-chart-title">Two spring-coupled oscillators, with their displacements plotted over 24 model time units.</title><path class="lab-axis" d="M 24 16 V 92 M 616 16 V 92"></path><path class="lab-spring" data-spring-left></path><path class="lab-spring" data-spring-middle></path><path class="lab-spring" data-spring-right></path><rect class="lab-mass lab-mass--one" data-mass-one x="204" y="34" width="32" height="40" rx="5"></rect><rect class="lab-mass lab-mass--two" data-mass-two x="424" y="34" width="32" height="40" rx="5"></rect><path class="lab-axis" d="M 24 128 V 270 H 616 M 24 199 H 616"></path><path class="lab-curve" data-oscillator-one></path><path class="lab-curve lab-curve--second" data-oscillator-two></path><path class="lab-playhead" data-oscillator-playhead d="M 24 128 V 270"></path></svg>
+    <div class="lab-axis-ticks" aria-hidden="true"><span>0</span><span>12</span><span>24</span></div><p class="lab-axis-label">Time in model units · curves show displacement</p>
+    <p class="lab-readout" data-oscillators-readout role="status" aria-live="off">Press play to follow the two oscillators.</p>
+  </div>
+</section>
+{% endcase %}
