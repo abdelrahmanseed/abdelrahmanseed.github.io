@@ -209,7 +209,7 @@
       const shimmer = paused ? .8 : .65 + Math.sin(elapsed + p.phase) * .2;
       const alpha = mix(.55 + p.size * .4, .45 + density * .5, surface) * shimmer;
       ctx.fillStyle = `rgba(${Math.round(mix(144,216,density / 1.2))},${Math.round(mix(207,239,density / 1.2))},${Math.round(mix(154,188,density / 1.2))},${Math.min(.95, alpha)})`;
-      ctx.beginPath(); ctx.arc(x, y, mix(1 + p.size * .7, 1.5, hardware), 0, Math.PI * 2); ctx.fill();
+      ctx.beginPath(); ctx.arc(x, y, mix(1.8 + p.size * .8, 2.2, hardware), 0, Math.PI * 2); ctx.fill();
     });
     if (stageVisible && !paused && !document.hidden) scheduleDraw();
   }

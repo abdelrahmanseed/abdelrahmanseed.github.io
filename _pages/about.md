@@ -39,11 +39,10 @@ redirect_from:
   <div class="wrap section-heading reveal"><p class="eyebrow">01 / Research & publications</p><h2 id="research-heading">Randomness.<br><span class="muted">With a purpose.</span></h2><div class="section-heading__aside"><p>How can we learn better ways to search, sample, and compute? My work connects algorithms, stochastic devices, and physical systems.</p><a class="text-link" href="{{ site.author.googlescholar }}" target="_blank" rel="noopener">Google Scholar ↗</a></div></div>
   <div class="research-narrative wrap">
     <div class="research-stage">
-      <div class="stage-heading"><span class="eyebrow">An intuition for the research</span><span class="stage-counter" aria-hidden="true">01 / 03</span></div>
-      <canvas id="sampler-canvas" role="img" aria-label="Illustrative particles gradually form a probability distribution as you scroll through the three research ideas."></canvas>
+      <div class="stage-heading"><span class="eyebrow">Sampling dynamics</span><span class="stage-counter" aria-hidden="true">01 / 03</span></div>
+      <canvas id="sampler-canvas" role="img" aria-label="Particles move from random positions into a probability surface and a stochastic-bit grid."></canvas>
       <div class="stage-equation"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block" aria-label="p of x is proportional to e to the power of negative beta times E of x"><mrow><mi>p</mi><mo>(</mo><mi mathvariant="bold">x</mi><mo>)</mo><mo>∝</mo><msup><mi mathvariant="normal">e</mi><mrow><mo>−</mo><mi>β</mi><mi>E</mi><mo>(</mo><mi mathvariant="bold">x</mi><mo>)</mo></mrow></msup></mrow></math></div>
       <div class="stage-footer"><span><i aria-hidden="true"></i> <span id="stage-label">Explore the possibilities</span></span><button type="button" class="motion-toggle" aria-pressed="false">Pause motion</button></div>
-      <p class="stage-caption">Conceptual illustration · scroll to move through the ideas</p>
     </div>
     <div class="research-steps">
       <article class="research-step" data-stage="0"><span class="step-number">01 — Explore</span><h3>Start with<br>possibilities.</h3><p>Randomness gives a search process room to explore. The challenge is directing that exploration through a complicated energy landscape.</p><a href="#paper-paoa" class="text-link">The PAOA story ↓</a></article>

@@ -524,11 +524,6 @@ section[id],details[id] {
 .motion-toggle:hover {
   background:var(--forest-hover);
 }
-.stage-caption {
-  font-size:14px;
-  color:inherit;
-  margin:12px 0 0;
-}
 .research-step {
   min-height:0;
   display:flex;
@@ -1546,11 +1541,12 @@ details[open]>summary .expand-icon::after {
     margin-bottom:45px;
   }
   .research-stage {
-    top:calc(var(--header) + 12px);
+    position:static;
+    top:auto;
     padding:18px 18px 13px;
-    z-index:2;
+    z-index:auto;
     width:100%;
-    box-shadow:0 10px 30px #19292318;
+    box-shadow:none;
   }
   .stage-heading .eyebrow {
     font-size:14px;
@@ -1562,10 +1558,6 @@ details[open]>summary .expand-icon::after {
   .stage-footer {
     padding-top:10px;
     font-size:14px;
-  }
-  .stage-caption {
-    font-size:14px;
-    margin-top:8px;
   }
   .motion-toggle {
     font-size:14px;
@@ -2029,7 +2021,6 @@ details[open]>summary .expand-icon::after {
   color:#000;
 }
 .mini-lab__copy,.mini-lab__visual { min-width:0; }
-.mini-lab__copy>.eyebrow { font-size:14px; margin:0 0 12px; }
 .mini-lab h4 { font-size:28px; line-height:1.15; margin-bottom:18px; }
 .mini-lab__copy>p:not(.eyebrow):not(.lab-note) { font-size:18px; line-height:1.7; max-width:44ch; }
 .lab-control { margin-top:22px; }

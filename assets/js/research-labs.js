@@ -87,7 +87,7 @@
         readout.textContent = `${total.toLocaleString()} samples · ${Math.round(100 * right / total)}% in the right-hand well.`;
       } else {
         const right = model.probabilities.reduce((sum, probability, i) => sum + (model.positions[i] > 0 ? probability : 0), 0);
-        readout.textContent = `The model puts ${Math.round(right * 100)}% of its probability in the right-hand well. Draw samples to compare.`;
+        readout.textContent = `The model assigns ${Math.round(right * 100)}% probability to the right-hand well.`;
       }
     }
     function takeSamples(amount) {
@@ -107,13 +107,12 @@
       output.value = temperature.toFixed(1);
       model = models.boltzmann(temperature);
       counts = new Array(model.positions.length).fill(0);
-      total = 0; sinceBatch = 0; render();
+      total = 0; sinceBatch = 0;
+      if (reducedMotion.matches) takeSamples(200);
+      else render();
       player.refresh();
     }
     slider.addEventListener('input', reset);
-    sampling.querySelector('[data-sampling-draw]').addEventListener('click', () => {
-      takeSamples(200);
-    });
     pauseButton.addEventListener('click', () => { if (player.running) player.pause(); else player.start(); });
     const setPauseVisibility = () => { pauseButton.hidden = reducedMotion.matches; };
     reducedMotion.addEventListener('change', setPauseVisibility);
