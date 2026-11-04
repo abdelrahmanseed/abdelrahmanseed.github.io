@@ -1,0 +1,99 @@
+/* Keep every figure to the right of its corresponding description. */
+.paper-story-figure {
+  display:grid;
+  grid-template-columns:minmax(280px,1fr) minmax(300px,1.25fr);
+  gap:32px;
+  align-items:start;
+  overflow-x:auto;
+  overscroll-behavior-x:contain;
+  padding:38px 0;
+  border-top:1px solid #d6dfd0;
+}
+.figure-text {
+  display:flow-root;
+  max-width:none;
+  min-width:0;
+}
+.figure-text>p:last-child {
+  margin-bottom:0;
+}
+.figure-notes strong {
+  font-weight:600;
+}
+.figure-notes p:last-child {
+  margin-bottom:0;
+}
+.paper-story-figure .figure-text .eyebrow {
+  display:block;
+  color:var(--green,var(--asa-teal,#2c634b));
+  font-size:14px;
+  text-transform:none;
+  letter-spacing:.015em;
+  margin-bottom:14px;
+}
+.paper-story-figure .figure-text h2,
+.paper-story-figure .figure-text h4 {
+  font-size:24px;
+  line-height:1.2;
+  margin-bottom:18px;
+}
+.paper-story-figure figure {
+  width:100%;
+  margin:0;
+  padding:14px;
+  background:#fff;
+  border-radius:4px;
+  min-width:0;
+}
+.paper-story-figure figure>a {
+  display:block;
+  position:static;
+  padding:0;
+  border:0;
+  background:transparent;
+}
+.paper-story-figure figure a>span {
+  position:static;
+  display:block;
+  font-size:14px;
+  text-align:right;
+  margin-top:12px;
+  color:var(--green,var(--asa-teal,#2c634b));
+}
+.paper-story-figure figcaption {
+  display:block;
+  font-style:normal;
+  font-size:14px;
+  color:#000;
+  margin-top:10px;
+}
+.paper-story-figure img {
+  width:100%;
+  height:auto;
+  object-fit:contain;
+  max-height:640px;
+}
+
+.paper-story-figure .figure-text p {
+  color:#000;
+  font-size:18px;
+  line-height:1.85;
+  margin:0 0 1.2em;
+}
+.paper-story-figure .figure-text>p:last-child,
+.paper-story-figure .figure-notes p:last-child {
+  margin-bottom:0;
+}
+@media(max-width:760px) {
+  .paper-story-figure {
+    grid-template-columns:minmax(260px,1fr) minmax(280px,1.25fr);
+    gap:20px;
+    padding:28px 0;
+  }
+  .paper-story-figure .figure-text h2,
+  .paper-story-figure .figure-text h4 {
+    font-size:23px;
+    margin-bottom:15px;
+  }
+  .paper-story-figure figure { padding:10px; }
+}

@@ -8,6 +8,9 @@ paoa:
     text: A classical optimizer updates the parameters that drive a probabilistic computer. Exact probability flow provides
       the theoretical description; independent samples provide a practical estimate when the state space becomes too large
       to enumerate.
+    notes:
+    - label: "The feedback loop"
+      text: "The classical optimizer updates couplings and biases; the probabilistic computer returns configurations from the resulting dynamics. The cost is evaluated from those samples, so the learned object is a search procedure rather than a single candidate solution."
     image: /images/paper-stories/paoa/figure-1.webp
     page: 2
   - title: Check the theory on a majority gate.
@@ -34,12 +37,20 @@ paoa:
   - title: Compare matched parameter budgets.
     text: PAOA and QAOA are compared on the 26-spin Sherrington–Kirkpatrick model using matched parameter counts. The energy
       and approximation-ratio plots show how each method changes as the number of layers increases.
+    notes:
+    - label: "Panels (a) and (b)"
+      text: "Panel (a) compares energy at matched parameter counts on 26-spin test instances. Panel (b) summarizes approximation ratios and bootstrap confidence intervals; PAOA schedules are transferred from a separate training set without retraining."
     image: /images/paper-stories/paoa/figure-4.webp
     page: 7
   - title: Let different spins follow different schedules.
     text: Heavy-tailed couplings create distinct groups of strongly and weakly connected spins. A two-schedule ansatz learns
       different temperature profiles for these groups, suggesting a problem-dependent annealing strategy that can be extended
       to larger depths.
+    notes:
+    - label: "Panels (a) and (b)"
+      text: "Sorting the heavy-tailed couplings separates strongly and weakly connected spins. The two groups receive different learned schedules, making the comparison about the structure of the problem rather than simply increasing annealing depth."
+    - label: "Panels (c)–(e)"
+      text: "The learned distinction motivates longer double schedules. The final panels compare average and instance-by-instance success against single-schedule simulated annealing, showing both aggregate performance and variation across the tested problems."
     image: /images/paper-stories/paoa/figure-5.webp
     page: 8
   conclusion_title: Learning a procedure for search.
@@ -59,6 +70,11 @@ paoaSPAD:
     text: The hardware–software loop combines a classical optimizer, cost evaluations, and samples from a 64 × 64 perimeter-gated
       SPAD array. The chip and board photographs place the algorithm alongside the physical platform and its nonuniform device
       responses.
+    notes:
+    - label: "Panel (a)"
+      text: "The optimizer receives a cost estimated from sampled configurations and updates the PAOA parameters. This is the algorithmic loop that the physical sampler supports."
+    - label: "Panels (b) and (c)"
+      text: "The die view shows distinct device activation curves, while the board photograph places the array alongside its control and readout circuitry. Their separation makes device variability visible within the system architecture."
     image: /images/paper-stories/paoaSPAD/figure-1.webp
     page: 2
   - title: Turn avalanche events into probabilistic bits.
@@ -86,6 +102,9 @@ paoaSPAD:
     text: CPU simulations extrapolate schedules learned at shallow depth to much longer runs. Residual energy and approximation
       ratio track the resulting improvement. These large-depth curves are simulations, rather than additional measurements
       on the physical array.
+    notes:
+    - label: "Panels (a) and (b)"
+      text: "The same extrapolated schedules are evaluated using residual energy and approximation ratio. They were learned at depth 17 and extended without retraining; these large-depth results are CPU simulations, with confidence intervals across the tested instances and runs."
     image: /images/paper-stories/paoaSPAD/figure-4.webp
     page: 5
   conclusion_title: Learning with device characteristics.
@@ -99,26 +118,41 @@ paoaSPAD:
   - title: Compare the physical SPAD structures.
     text: Cross-sections contrast a conventional SPAD with its perimeter-gated variant. The gate provides a way to influence
       the junction-edge electric field and the resulting stochastic behavior.
+    notes:
+    - label: "Panels (a) and (b)"
+      text: "The cross-sections compare a conventional SPAD with the added perimeter gate. That gate provides a separate way to influence the junction-edge field."
     image: /images/paper-stories/paoaSPAD/figure-S1.webp
     page: 8
   - title: Connect dark counts to operating conditions.
     text: The panels relate carrier-generation mechanisms to bias voltage, temperature, and gate voltage. These measurements
       explain why a device’s probabilistic response changes with its environment.
+    notes:
+    - label: "Panel (a) and panels (b)–(d)"
+      text: "Carrier-generation mechanisms are followed by measured dark-count rates versus excess bias, temperature, and gate voltage. Minimum, maximum, and mean curves expose variation across the array."
     image: /images/paper-stories/paoaSPAD/figure-S2.webp
     page: 9
   - title: Inspect the chip and pixel architecture.
     text: The photomicrograph and circuit schematic connect the 64 × 64 array to the addressing, quenching, reset, and readout
       functions required for characterization.
+    notes:
+    - label: "Panels (a) and (b)"
+      text: "The micrograph identifies the array on the die. The circuit diagram shows the addressing, quench/reset, and counter blocks that make individual-pixel characterization possible."
     image: /images/paper-stories/paoaSPAD/figure-S3.webp
     page: 9
   - title: Describe the asymmetric activation mathematically.
     text: The Gompertz response and its derivatives identify the midpoint, inflection point, and transition range. They provide
       interpretable quantities for modeling the measured activation curves.
+    notes:
+    - label: "Panels (a)–(c)"
+      text: "The activation curve and its first two derivatives distinguish the midpoint, inflection point, and transition range of the asymmetric Gompertz response."
     image: /images/paper-stories/paoaSPAD/figure-S4.webp
     page: 10
   - title: Separate fabrication variation from operating shifts.
     text: Simulations and measurements show how slope and midpoint change across device parameters, integration windows, and
       temperature. These effects motivate activation-aware learning.
+    notes:
+    - label: "Panels (a)–(c)"
+      text: "Simulation separates slope changes from midpoint shifts. Measurements then show how integration time and temperature alter the effective activation curve, alongside manufacturing variability."
     image: /images/paper-stories/paoaSPAD/figure-S5.webp
     page: 11
   - title: Document the characterization apparatus.
@@ -151,18 +185,31 @@ isingformer:
     text: A temperature-conditioned Transformer learns from long-run MCMC configurations. It proposes complete configurations
       to selected replicas of a parallel-tempering ladder, where local updates and replica exchanges continue to propagate
       promising states.
+    notes:
+    - label: "Left: learning configurations"
+      text: "Long-run MCMC provides configurations at several inverse temperatures. A decoder-only Transformer learns a temperature-conditioned distribution over complete spin states, using both position information and a learned temperature embedding."
+    - label: "Right: using proposals"
+      text: "Generated configurations enter hot and intermediate replicas of a parallel-tempering ladder. Energy evaluation filters proposals, while local updates and replica swaps continue the search. The coldest replicas are not directly supplied with generated proposals."
     image: /images/paper-stories/isingformer/figure-1.webp
     page: 2
   - title: Test temperature interpolation and context.
     text: The two-dimensional Ising model offers physical quantities against which to check generated samples. Free energy,
       magnetization, and clamped-boundary examples test both interpolation to unseen temperatures and conditional generation
       outside the training setup.
+    notes:
+    - label: "Panels (a) and (b)"
+      text: "Free energy tests interpolation between trained temperatures, while magnetization checks the finite-size transition. The comparison uses an exact free-energy reference and Gibbs samples, rather than relying on visual similarity alone."
+    - label: "Panel (c)"
+      text: "The half-clamped boundary is absent from training. Energy variance after a single Gibbs sweep tests whether Transformer initialization helps under that changed condition."
     image: /images/paper-stories/isingformer/figure-2.webp
     page: 4
   - title: Introduce global moves into a spin-glass search.
     text: For three-dimensional spin-glass instances, the plots track residual energy against Monte Carlo sweeps. Turning
       on proposal moves changes the search trajectory relative to ordinary parallel tempering, with learned and MCMC-generated
       proposals compared separately.
+    notes:
+    - label: "Panels (a) and (b)"
+      text: "The proposal source changes from IsingFormer to long-run MCMC. The dashed line marks activation after 100 sweeps, allowing the subsequent energy reduction to be compared with ordinary parallel tempering under each proposal source."
     image: /images/paper-stories/isingformer/figure-3.webp
     page: 6
   - title: Reuse one generator across factorization targets.
@@ -196,36 +243,59 @@ isingformer:
   - title: Use learned initialization under unfamiliar boundaries.
     text: Spin configurations compare Transformer and random initialization when part of the lattice is clamped. The test
       probes whether learned context helps the subsequent Monte Carlo evolution.
+    notes:
+    - label: "Panels (a)–(c)"
+      text: "The long-run reference is compared with one sweep after Transformer initialization and one sweep from random initialization. Similar-looking configurations suggest a useful starting state, but do not by themselves establish convergence."
     image: /images/paper-stories/isingformer/figure-S1.webp
     page: 15
   - title: Check the acceptance rule in a controlled circuit.
     text: A small full-adder system makes the stationary distribution directly inspectable. The example shows why energy-only
       acceptance of external proposals does not generally preserve the Boltzmann target.
+    notes:
+    - label: "Panels (a) and (b)"
+      text: "A five-spin full-adder and a controlled three-replica ladder make the target distribution exactly inspectable. Proposals are supplied to two replicas, leaving the coldest replica unaugmented."
+    - label: "Panel (c)"
+      text: "The nonzero limiting KL divergence under the energy-only acceptance rule exposes its sampling bias. Exact transition-matrix results and Monte Carlo estimates distinguish optimization usefulness from unbiased equilibrium sampling."
     image: /images/paper-stories/isingformer/figure-S2.webp
     page: 17
   - title: Turn proposal moves off.
     text: The warm-start experiment enables proposals only for the first part of the run. The later trajectories test whether
       an early advantage persists when the search returns to ordinary parallel tempering.
+    notes:
+    - label: "Panels (a) and (b)"
+      text: "Both proposal sources are switched off after the initial 100 sweeps. The later approach toward the PT baseline tests whether the early advantage survives without continued proposal moves."
     image: /images/paper-stories/isingformer/figure-S3.webp
     page: 18
   - title: Vary proposal coverage and context.
     text: Ablations change which replicas receive proposals and how their context is chosen. These experiments isolate design
       choices in the proposal mechanism using MCMC-generated configurations.
+    notes:
+    - label: "Panels (a) and (b)"
+      text: "The first ablation changes which replicas receive proposals; the second changes how much of the current state conditions a proposal. Both use MCMC-generated candidates, isolating these choices from Transformer training."
     image: /images/paper-stories/isingformer/figure-S4.webp
     page: 19
   - title: Measure proposal acceptance across temperatures.
     text: Acceptance varies across the parallel-tempering ladder. The per-replica plot shows where global candidates are accepted
       and where the existing configurations are harder to replace.
+    notes:
+    - label: "Reading the replica index"
+      text: "Indices run from hotter to colder replicas. The plot covers proposal-enabled replicas 1–20; replicas 21 and 22 receive no proposals, so there is no acceptance-rate measurement for them here."
     image: /images/paper-stories/isingformer/figure-S5.webp
     page: 20
   - title: Inspect communication between neighboring replicas.
     text: Swap-acceptance probabilities compare ordinary and augmented parallel tempering. This checks how the added proposal
       moves affect the exchange pathway through the temperature ladder.
+    notes:
+    - label: "What is compared"
+      text: "The curves measure exchanges between adjacent replicas, combining the alternating swap stages. Their broad similarity checks whether adding proposals substantially changes this communication pathway in the tested ladder."
     image: /images/paper-stories/isingformer/figure-S6.webp
     page: 20
   - title: Use a small logic gate as a distribution check.
     text: The three-spin AND-gate model provides an exactly enumerable example. Its truth table and Boltzmann probabilities
       connect the circuit encoding to the intended target distribution.
+    notes:
+    - label: "Panels (a)–(c)"
+      text: "The Ising graph, truth table, and eight-state distribution connect the encoding to the logical constraint. States 0, 2, 4, and 7 satisfy the AND relation and receive the largest probabilities."
     image: /images/paper-stories/isingformer/figure-S7.webp
     page: 21
 ising-machines-generative-ai:
@@ -238,22 +308,38 @@ ising-machines-generative-ai:
     text: A task is encoded as an Ising energy landscape, an algorithm drives exploration, and samples are evaluated against
       the original objective. Hardware capabilities constrain this loop while new algorithms create demands for different
       hardware features.
+    notes:
+    - label: "Panel (a)"
+      text: "The task is encoded as an energy function before the machine explores configurations. Hardware constraints and algorithmic requirements feed back into one another, so the workflow includes both problem formulation and physical execution."
+    - label: "Panel (b)"
+      text: "The three algorithm families place different demands on hardware: annealing needs temperature scheduling, tempering needs replica exchange and energy calculations, and variational methods need sampled feedback to a classical optimizer."
     image: /images/paper-stories/ising-machines-generative-ai/figure-1.webp
     page: 2
   - title: Work beyond the capacity of one chip.
     text: Cluster mean-field methods partition a large interaction graph into hardware-sized pieces. The figure contrasts
       serial and parallel updates, showing how classical processing approximates interactions at the boundaries between clusters.
+    notes:
+    - label: "Panels (a)–(c)"
+      text: "The interaction graph is partitioned into hardware-sized clusters. An active cluster is updated while the remaining clusters are frozen, and a classical processor approximates interactions across their boundaries."
+    - label: "Panels (d) and (e)"
+      text: "CPU curves compare convergence as the cluster count changes. The FPGA comparison then tests a larger problem than one device can hold, separating a capacity-scaling method from a claim about arbitrary partitioning being equally effective."
     image: /images/paper-stories/ising-machines-generative-ai/figure-2.webp
     page: 8
   - title: Make the stochastic trajectory variational.
     text: PAOA adds a learnable layer to the workflow. Costs estimated from samples update effective couplings, fields, or
       schedules, creating a sequence of stochastic dynamics adapted to the optimization problem.
+    notes:
+    - label: "The two sides of the loop"
+      text: "The CPU evaluates the sampled objective and changes variational parameters. The Ising machine returns states under those parameters; repeating the exchange learns a non-equilibrium trajectory rather than assuming a fixed thermal distribution."
     image: /images/paper-stories/ising-machines-generative-ai/figure-3.webp
     page: 9
   - title: Connect generative models and Ising machines.
     text: 'The relationship works in both directions: samples from probabilistic systems can train generative models, while
       learned models can propose global configurations for search. The generator–verifier view helps distinguish proposing
       a candidate from evaluating its quality.'
+    notes:
+    - label: "Training and search"
+      text: "The left side supplies temperature-indexed MCMC data for the generator. The right side inserts complete generated configurations into a tempering search, where proposal evaluation and replica exchange remain necessary. The acceptance rule determines whether the resulting process is suitable for equilibrium sampling or optimization."
     image: /images/paper-stories/ising-machines-generative-ai/figure-4.webp
     page: 12
   conclusion_title: A common language across platforms.
@@ -285,6 +371,11 @@ configurable-p-neurons:
   - title: Build several activation functions.
     text: Spintronic circuit examples implement probabilistic versions of tanh, sigmoid, and ReLU. Instantaneous outputs and
       time-averaged responses connect transistor-level designs to the activation functions they realize.
+    notes:
+    - label: "Panels (a)–(c)"
+      text: "Instantaneous responses and time averages are shown separately for probabilistic tanh, sigmoid, and ReLU neurons. The average activation is the quantity to compare with the intended nonlinear function."
+    - label: "Panels (d)–(f)"
+      text: "The corresponding transistor-level designs change the activation circuit and stochastic unit. Comparing each circuit with the response directly above it connects the modular design choices to the measured behavior."
     image: /images/paper-stories/configurable-p-neurons/figure-2.webp
     page: 2
   - title: Engineer the distribution of the stochastic unit.
@@ -300,6 +391,9 @@ configurable-p-neurons:
   - title: Tune the range of probabilistic behavior.
     text: The response is not fixed by the architecture alone. Supply conditions and device characteristics change the transition
       range, providing circuit-level controls over the resulting activation function.
+    notes:
+    - label: "Panels (a)–(c)"
+      text: "Supply voltage tunes the stochastic distribution, β scales the tanh response, and the final plot relates the available probabilistic range to tunneling magnetoresistance."
     image: /images/paper-stories/configurable-p-neurons/figure-4.webp
     page: 3
   - title: Test modularity on digital hardware.
@@ -355,11 +449,21 @@ defect-aware-2d-memristors:
   - title: Predict monolayer device behavior.
     text: The model connects device area and defect density to intrinsic yield, switching-voltage distributions, and variability
       in monolayer h-BN memristors. Experimental comparisons provide a check on the statistical predictions.
+    notes:
+    - label: "Panels (a)–(e)"
+      text: "The device schematic and defect realization connect the material model to intrinsic yield and variability. Area and defect density control how many potential switching sites a device contains."
+    - label: "Panels (f)–(h)"
+      text: "Applied-voltage yield curves become switching-voltage distributions and an area-dependent voltage prediction. Experimental points provide the comparison for the probabilistic device model."
     image: /images/paper-stories/defect-aware-2d-memristors/figure-3.webp
     page: 24
   - title: Extend the model to multilayer devices.
     text: A multilayer switching path changes which defects must participate in conduction. The figure applies the framework
       to multilayer h-BN devices and compares area-dependent predictions with measured switching behavior.
+    notes:
+    - label: "Panels (a)–(d)"
+      text: "The multilayer switching structure is followed by area-dependent yield curves, voltage distributions, and voltage/variability summaries at fixed defect density."
+    - label: "Panels (e)–(h)"
+      text: "Measured switching statistics anchor the model. Holding area fixed while changing defect density then separates a material-distribution effect from the device-area sweep above."
     image: /images/paper-stories/defect-aware-2d-memristors/figure-4.webp
     page: 25
   - title: Examine extreme miniaturization.
@@ -400,21 +504,35 @@ hbn-memristors-scalability:
   - title: Relate intrinsic yield to density and area.
     text: A smaller device contains fewer possible switching sites. These curves show how the intrinsic yield and its variability
       change with both defect density and device area, including the high-yield regime.
+    notes:
+    - label: "Panels (a)–(c)"
+      text: "The yield sweep, high-yield enlargement, and coefficient of variation separate the probability of having defects from variability between device realizations."
     image: /images/paper-stories/hbn-memristors-scalability/figure-2.webp
     page: 2
   - title: Check monolayer switching predictions.
     text: Area-dependent switching-voltage curves are fitted to reported monolayer measurements and then extrapolated. The
       comparison connects the spatial defect model to an experimentally measurable operating quantity.
+    notes:
+    - label: "Panels (a)–(c)"
+      text: "Operational yield is converted into a voltage distribution, then compared with measured switching voltage across device areas. This tests voltage predictions as well as yield."
     image: /images/paper-stories/hbn-memristors-scalability/figure-3.webp
     page: 2
   - title: Move to multilayer devices.
     text: The multilayer case uses measured voltage-dependent yield to calibrate the model. Predicted curves then examine
       how changes in defect density and device area shift the operational response.
+    notes:
+    - label: "Panels (a)–(c)"
+      text: "Measured multilayer-device statistics establish the fit. Subsequent model sweeps change device area and defect density separately to expose their distinct effects."
     image: /images/paper-stories/hbn-memristors-scalability/figure-4.webp
     page: 2
   - title: Expose the variability tradeoff.
     text: The final panels bring together variation, average SET voltage, and standard deviation across area scales. Reading
       them together shows why a high switching yield alone is not a complete measure of device quality.
+    notes:
+    - label: "Panels (a)–(c)"
+      text: "Coefficient of variation, mean SET voltage, and standard deviation are plotted against device area. The three measures distinguish relative spread from the absolute voltage scale."
+    - label: "Panels (d)–(f)"
+      text: "The same quantities are then plotted against defect density at fixed area. Comparing the two rows shows why improving one variability measure cannot be interpreted without the corresponding voltage and geometry."
     image: /images/paper-stories/hbn-memristors-scalability/figure-5.webp
     page: 2
   conclusion_title: An initial step toward defect-aware scaling.
@@ -431,11 +549,21 @@ adaptive-regularization-portfolio:
   - title: Evaluate realized risk on the first asset set.
     text: The first experiment uses 45 Hang Seng Index assets observed from 2010 to 2011. Each panel varies the added noise
       level, comparing annualized realized risk across training-window lengths and competing covariance-regularization methods.
+    notes:
+    - label: "The four plots"
+      text: "The panels add Gaussian return noise with standard deviations 0, 0.02, 0.04, and 0.06. Each plots annualized realized risk against the training-window length for the 2010–2011 asset set."
+    - label: "What to compare"
+      text: "Lower risk is the evaluation criterion. Comparing methods at the same window length and noise setting tests sensitivity to noisy returns, rather than comparing different training histories."
     image: /images/paper-stories/adaptive-regularization-portfolio/figure-1.webp
     page: 4
   - title: Repeat the comparison on a second period.
     text: A second experiment uses 50 Hang Seng Index assets from 2016 to 2017. Repeating the noise and training-window comparisons
       checks whether the behavior carries over to a different asset set and time period.
+    notes:
+    - label: "A second dataset"
+      text: "The same four noise settings are evaluated on the 2016–2017 period with 50 assets. The repeated design checks whether the pattern from the earlier period persists on another dataset."
+    - label: "Reading the curves"
+      text: "Compare methods within each panel before comparing noise levels. These are realized-risk results for the tested historical datasets, rather than a guarantee about future portfolio performance."
     image: /images/paper-stories/adaptive-regularization-portfolio/figure-2.webp
     page: 4
   conclusion_title: Adapt the estimator to the observations.
@@ -451,16 +579,25 @@ delay-eigenvalue-coupled-oscillators:
   - title: Define one physical problem for every method.
     text: Two coupled mass–spring oscillators provide the common test system. A delay in the interaction changes the characteristic
       equation, making the calculation of dynamical eigenvalues more demanding than in the instantaneous case.
+    notes:
+    - label: "The common benchmark"
+      text: "The wall springs, masses, and coupling define one mechanical system for every solver. An external force acts on the first mass to initiate the response."
     image: /images/paper-stories/delay-eigenvalue-coupled-oscillators/figure-1.webp
     page: 4
   - title: Compare the real components of the eigenvalues.
     text: Taylor expansion, Rekasius substitution, self-consistent iteration, and Chebyshev discretization are evaluated as
       the delay varies. The real components reveal the predicted growth or decay behavior and where the approximations diverge.
+    notes:
+    - label: "Panels (a)–(d)"
+      text: "Taylor expansion, Rekasius substitution, self-consistent iteration, and Krylov approximation are applied to the same delay-dependent real components."
     image: /images/paper-stories/delay-eigenvalue-coupled-oscillators/figure-2.webp
     page: 6
   - title: Compare the imaginary components.
     text: The corresponding imaginary components describe the oscillatory part of the modes. Viewing them alongside the real
       components exposes differences between methods that a single stability metric could miss.
+    notes:
+    - label: "Panels (a)–(d)"
+      text: "The same method order is retained for the imaginary components, allowing each solver’s frequency branches to be read alongside its real-part result."
     image: /images/paper-stories/delay-eigenvalue-coupled-oscillators/figure-3.webp
     page: 7
   conclusion_title: Choose a solver by the dynamics it must resolve.
@@ -477,21 +614,33 @@ coupled-oscillators-delay:
   - title: Define the delayed oscillator pair.
     text: A two-mass spring model establishes the degrees of freedom, damping, and coupling. It provides a classical setting
       in which the consequences of finite interaction delay can be studied explicitly.
+    notes:
+    - label: "Model components"
+      text: "The masses and wall springs define the uncoupled oscillators; the coupling and damping terms determine how their motion interacts and decays."
     image: /images/paper-stories/coupled-oscillators-delay/figure-1.webp
     page: 3
   - title: See the spectral modes without delay.
     text: Power spectra for several history functions establish the reference response. Detuning changes which modes are excited
       and how their resonances appear in the total spectral density.
+    notes:
+    - label: "Upper and lower panels"
+      text: "The upper spectra use zero delay; the lower spectra use a delay of 0.1. Different history functions excite different mode combinations, so comparing rows separates delay effects from the initial preparation."
     image: /images/paper-stories/coupled-oscillators-delay/figure-2.webp
     page: 6
   - title: Connect the spectrum to energy trajectories.
     text: The oscillator energies are plotted for different initial histories. These time-domain examples show how the chosen
       preparation changes the visible exchange between the two subsystems.
+    notes:
+    - label: "Panels (a)–(c)"
+      text: "Three history functions prepare the same coupled system differently. Following both energy curves shows how the preparation changes the observed exchange without changing the model parameters."
     image: /images/paper-stories/coupled-oscillators-delay/figure-3.webp
     page: 7
   - title: Track damping through spectral linewidths.
     text: Linewidths of the coupled modes are compared across damping rates and delays. This connects the spectral response
       to the persistence of the oscillations.
+    notes:
+    - label: "Upper and lower panels"
+      text: "The upper plots follow the second eigenstate and the lower plots the first. Comparing delays at the same damping rate reveals changes in spectral linewidth."
     image: /images/paper-stories/coupled-oscillators-delay/figure-4.webp
     page: 7
   - title: Follow the delayed eigenvalue spectrum.
@@ -557,11 +706,17 @@ coupled-oscillators-delay:
   - title: Connect stability boundaries to bifurcation.
     text: A bifurcation diagram plots the critical coupling against normalized delay. It connects the observed stability transitions
       with the boundary predicted by the dynamical analysis.
+    notes:
+    - label: "Curve and markers"
+      text: "The black bifurcation boundary plots critical coupling against normalized delay. Red circles evaluate the derived stability condition, providing a direct check against that boundary."
     image: /images/paper-stories/coupled-oscillators-delay/figure-11.webp
     page: 12
   - title: Revisit the spectrum in the delayed regime.
     text: Power-density plots compare several coupling cases and history functions as delay varies. They connect changes in
       the eigenvalue picture to observable spectral features.
+    notes:
+    - label: "Rows and columns"
+      text: "The rows correspond to the two eigenstates. The three coupling choices—half, equal to, and twice the damping rate—show how the delay-dependent spectra change across the coupling boundary."
     image: /images/paper-stories/coupled-oscillators-delay/figure-12.webp
     page: 12
   - title: Measure energy exchange and coherence.
@@ -610,6 +765,11 @@ wur-aerial-data-demo:
   - title: Connect sensing, flight, and the dashboard.
     text: The system diagram follows the wake-up signal from the UAV to an IoT device, then follows the collected data to
       the base station and user interface. It also shows the hardware path used to detect an addressed wake-up call.
+    notes:
+    - label: "System path"
+      text: "The UAV activates a ground device through the wake-up link, then relays its measurements toward the base station and dashboard. The arrows distinguish activation from sensed-data transfer."
+    - label: "Receiver detail"
+      text: "The inset places signal conditioning and address detection before the main sensing and communication circuitry. This separation explains how the device can wait for a call without keeping its full data path active."
     image: /images/paper-stories/wur-aerial-data-demo/figure-1.webp
     page: 3
   - title: Take the wake-up link outdoors.
@@ -625,21 +785,35 @@ wur-aerial-data-demo:
   - title: Build the sensing node.
     text: The board brings together sensors, a microcontroller, a data transceiver, and the wake-up receiver. These components
       allow a sleeping node to respond to a call and then transmit its measurements.
+    notes:
+    - label: "Board functions"
+      text: "The labeled blocks locate the microcontroller, wake-up receiver, data transceiver, battery, and sensor connections. They show the complete sensing node used in the demonstration."
     image: /images/paper-stories/wur-aerial-data-demo/figure-3.webp
     page: 3
   - title: Measure the effect of horizontal misalignment.
     text: The maximum wake-up height is plotted as the UAV moves away from direct alignment with the device. The result turns
       a laboratory communication link into a deployment constraint.
+    notes:
+    - label: "Geometry and range"
+      text: "The vertical axis is the maximum successful wake-up height; the horizontal axis is sideways offset from the device. Each point describes a different link geometry, rather than flight time."
+    - label: "Observed trend"
+      text: "The tested height falls as offset increases. This distinguishes the favorable overhead case from operation farther to one side, where greater separation and antenna alignment constrain the link."
     image: /images/paper-stories/wur-aerial-data-demo/figure-4.webp
     page: 3
   - title: Follow a measurement through the software stack.
     text: The data-flow diagram connects flight control, sensing, the base station, a cloud database, and the dashboard. It
       shows how the radio event becomes information visible to a user.
+    notes:
+    - label: "Measurements and commands"
+      text: "Measurements move through the UAV/base-station link to a Firebase database and dashboard. The command path lets the interface request an intended node, with Node-RED linking the software components."
     image: /images/paper-stories/wur-aerial-data-demo/figure-5.webp
     page: 4
   - title: Assemble the end-to-end demonstration.
     text: The workstation setup places monitoring and control interfaces alongside the physical electronics. This is the integration
       step that connects individual working components into a usable system.
+    notes:
+    - label: "Demonstration setup"
+      text: "The raised transmitter emulates the UAV side during an indoor demonstration. The laptop and displays show the collected data and interface, allowing the wake-up/data sequence to be inspected without flying an aircraft in the venue."
     image: /images/paper-stories/wur-aerial-data-demo/figure-6.webp
     page: 4
   - title: Demonstrate the wake-up transaction.
@@ -696,6 +870,9 @@ aerial-data-aggregation:
   - title: Implement the receiver input stage.
     text: Matching, envelope detection, and low-pass filtering translate the received signal into a form the wake-up receiver
       can use. The schematic makes the signal-processing path explicit.
+    notes:
+    - label: "Three circuit stages"
+      text: "The matching network couples the antenna to the input; the envelope detector rectifies the signal; the low-pass filter retains the lower-frequency carrier needed by the wake-up receiver."
     image: /images/paper-stories/aerial-data-aggregation/figure-4.webp
     page: 5
   - title: Build the transmitter and receiver hardware.
@@ -711,11 +888,19 @@ aerial-data-aggregation:
   - title: Make the measurements accessible.
     text: The mobile interface presents sensed data and system controls. It provides the user-facing endpoint of the otherwise
       hardware-centered data-collection pipeline.
+    notes:
+    - label: "Sensor view"
+      text: "The sensor screen displays collected measurements, completing the path from the ground node through the UAV and base station to the user."
+    - label: "Control and home views"
+      text: "The IoT control screen supports addressed wake-up requests. The remaining view provides navigation among the application’s functions, making the dashboard part of the operational system rather than only a results display."
     image: /images/paper-stories/aerial-data-aggregation/figure-6.webp
     page: 7
   - title: Integrate the sensing board.
     text: The annotated prototype identifies the microcontroller, sensor interfaces, wake-up module, power source, and data
       radio. The layout shows how the required functions fit on the actual device.
+    notes:
+    - label: "Hardware integration"
+      text: "The photograph identifies the data transceiver, microcontroller, wake-up receiver, input stage, battery holder, and free sensor pins. Their placement documents how the low-power wake-up path is integrated with a functioning sensing node."
     image: /images/paper-stories/aerial-data-aggregation/figure-7.webp
     page: 7
   - title: Check the wake-up signal on the bench.
@@ -777,26 +962,47 @@ aerial-data-aggregation:
   - title: Define a reliable communication window.
     text: A UAV is only within range for a limited interval, and a duty-cycled sensor is active for only part of that time.
       The timing diagram explains why overlap determines successful communication.
+    notes:
+    - label: "Three time intervals"
+      text: "The device’s active interval must fit within the UAV’s available communication time. The reliable arrival window identifies timings that leave enough overlap to complete the exchange."
     image: /images/paper-stories/aerial-data-aggregation/figure-13.webp
     page: 9
   - title: Connect timing to flight geometry.
     text: The path diagram relates UAV travel distance, radio range, and horizontal misalignment. It provides the geometry
       needed to translate speed into an available communication time.
+    notes:
+    - label: "Flight geometry"
+      text: "The path crosses the device’s communication disk with a horizontal offset. Increasing that offset shortens the traversed chord and therefore the available contact time at a fixed UAV speed."
     image: /images/paper-stories/aerial-data-aggregation/figure-14.webp
     page: 9
   - title: Expose the lifetime–reliability tradeoff.
     text: Increasing the sleep period extends battery life but reduces the chance that an ordinary duty-cycled node catches
       the UAV visit. The two curves make the competing effects visible.
+    notes:
+    - label: "Two vertical axes"
+      text: "The blue curve tracks communication reliability and the red curve battery lifetime as the duty-cycle sleep period increases. The same setting must be read against both outcomes."
+    - label: "The tradeoff"
+      text: "Longer sleep saves energy but increases the chance of missing the aircraft’s communication window. The plot therefore connects a battery-life benefit to a loss in timely availability."
     image: /images/paper-stories/aerial-data-aggregation/figure-15.webp
     page: 11
   - title: See what faster flight changes.
     text: Communication reliability is plotted against UAV speed for the duty-cycled baseline. A shorter contact window makes
       missed visits more likely, motivating an on-demand wake-up mechanism.
+    notes:
+    - label: "What is held fixed"
+      text: "The plot varies UAV speed within the duty-cycled communication model. A faster aircraft spends less time within the device’s usable range, leaving fewer opportunities for a scheduled active interval to overlap."
+    - label: "How to read the result"
+      text: "The falling curve concerns successful communication during that contact window. It does not describe a change in the device’s radio sensitivity or the aircraft’s ability to transmit."
     image: /images/paper-stories/aerial-data-aggregation/figure-16.webp
     page: 11
   - title: Scale the model to a sensor field.
     text: The system model expands from one UAV–sensor link to a spatial deployment. Altitude, distance, and the distribution
       of devices now become part of the analysis.
+    notes:
+    - label: "Spatial model"
+      text: "UAVs are placed above a field of IoT devices. The diagram distinguishes UAV altitude from the link distance to an individual ground node, which both enter the network geometry."
+    - label: "From one link to a field"
+      text: "The subsequent analysis averages over spatial realizations rather than assigning every device the same separation. This connects the prototype’s wake-up mechanism to probabilities of intended and unintended activation across a sensor field."
     image: /images/paper-stories/aerial-data-aggregation/figure-17.webp
     page: 12
   - title: Construct a spatial network realization.

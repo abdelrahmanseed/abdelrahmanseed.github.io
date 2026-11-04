@@ -781,78 +781,6 @@ details[open]>summary .expand-icon::after {
 .paper-intro h4 {
   margin-bottom:16px;
 }
-.paper-story-figure {
-  display:block;
-  padding:26px 0;
-  border-top:1px solid #d6dfd0;
-}
-.paper-story-figure.is-balanced {
-  display:grid;
-  grid-template-columns:minmax(0,var(--figure-text-track,1fr)) minmax(0,var(--figure-image-track,1.25fr));
-  gap:28px;
-  align-items:start;
-}
-.figure-text {
-  display:flow-root;
-  max-width:72ch;
-}
-.paper-story-figure.is-balanced .figure-text {
-  max-width:none;
-}
-.figure-text>p:last-child {
-  margin-bottom:0;
-}
-.figure-notes strong {
-  font-weight:600;
-}
-.figure-notes p:last-child {
-  margin-bottom:0;
-}
-.figure-text .eyebrow {
-  display:block;
-  color:var(--green);
-  margin-bottom:14px;
-}
-.figure-text h4 {
-  font-size:24px;
-  line-height:1.2;
-  margin-bottom:18px;
-}
-.paper-story-figure figure {
-  width:min(100%,var(--figure-stack-width,820px));
-  margin:18px 0 0;
-  padding:14px;
-  background:#fff;
-  border-radius:4px;
-  min-width:0;
-}
-.paper-story-figure.is-balanced figure {
-  width:100%;
-  margin:0;
-}
-.paper-story-figure figure a {
-  display:block;
-}
-.paper-story-figure figure a>span {
-  display:block;
-  font-size:14px;
-  text-align:right;
-  margin-top:12px;
-  color:var(--green);
-}
-.paper-story-figure figcaption {
-  font-size:14px;
-  color:var(--muted);
-  margin-top:10px;
-}
-.paper-story-figure img {
-  width:100%;
-  object-fit:contain;
-  max-height:640px;
-}
-.paper-story-figure.is-balanced img {
-  max-height:none;
-}
 .supplementary,.paper-citation {
   border-block:1px solid #ced8c8;
   padding:20px 0;
@@ -1760,22 +1688,6 @@ details[open]>summary .expand-icon::after {
   }
   .paper-intro h4 {
     font-size:23px;
-  }
-  .paper-story-figure {
-    padding:22px 0;
-  }
-  .paper-story-figure.is-balanced {
-    display:block;
-  }
-  .paper-story-figure.is-balanced figure {
-    margin-top:18px;
-  }
-  .figure-text h4 {
-    font-size:23px;
-    margin-bottom:15px;
-  }
-  .paper-story-figure figure {
-    padding:10px;
   }
   .paper-conclusion h4 {
     font-size:24px;
