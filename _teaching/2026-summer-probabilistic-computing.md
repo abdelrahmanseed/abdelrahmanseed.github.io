@@ -46,6 +46,6 @@ Through Python implementations, students study Markov chain sampling with Gibbs 
 
 The course also applies probabilistic methods to neural networks. Students train stochastic models, compare them with deterministic baselines, and examine the trade-offs among accuracy, runtime, and energy use. They leave with practical experience building probabilistic algorithms and assessing when engineered randomness is useful for machine intelligence.
 
-<p class="course-description__source">2026 course overview preserved on October 21, 2026, from the <a href="https://summer.ucsb.edu/programs/summer-research-academies/research-tracks" target="_blank" rel="noopener">UCSB Summer Sessions track listing</a>.</p>
+<p class="course-description__source">Source: <a href="/files/archives/ucsb-sra-research-tracks-2026-11-03/#probabilistic-computing" target="_blank" rel="noopener">UCSB Summer Sessions track listing</a>, saved November 3, 2026.</p>
 
 </section>

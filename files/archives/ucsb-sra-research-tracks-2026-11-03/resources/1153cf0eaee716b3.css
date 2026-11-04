@@ -1,0 +1,1030 @@
+/**
+ * @file
+ * Digital Asset Inventory - Public Styles
+ *
+ * Public-facing styles for archive registry, detail pages, and banner.
+ * All styles use either:
+ *   - .dai--public wrapper (for view-based pages)
+ *   - .dai- prefixed component classes (for standalone components)
+ *
+ * Colors use CSS variables from dai-base.css for theme overridability.
+ */
+
+/* ===== Public Archive Registry ===== */
+
+/* Container styling */
+.dai--public {
+  max-width: 1200px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-bottom: 3em;
+}
+
+/* Hide filters when view is empty (progressive enhancement) */
+.dai--public:has(.view-empty) .views-exposed-form {
+  display: none;
+}
+
+/* ===== Archive Registry Intro Box ===== */
+.dai--public .dai-archive-registry-intro {
+  margin-bottom: 2rem;
+  padding: 1.5em;
+  color: var(--dai-text-primary);
+  border: 1px solid var(--dai-surface-border);
+  border-radius: var(--dai-surface-radius);
+  background-color: var(--dai-surface-bg);
+}
+
+.dai--public .dai-archive-registry-intro h2,
+.dai--public .dai-archive-registry-intro h2:first-child {
+  margin-top: 0;
+  margin-bottom: 0.5em;
+  color: var(--dai-text-primary);
+}
+
+.dai--public .dai-archive-registry-intro p {
+  margin: 1rem 0;
+  color: var(--dai-text-primary);
+  line-height: 1.6;
+}
+
+.dai--public .dai-archive-registry-intro p:first-child {
+  margin-top: 0;
+}
+
+.dai--public .dai-archive-registry-intro p:last-child {
+  margin-bottom: 0;
+}
+
+/* Archive Registry Intro Links */
+.dai--public .dai-archive-registry-intro a:link,
+.dai--public .dai-archive-registry-intro a:visited {
+  text-decoration: underline;
+  color: var(--dai-link);
+  border-bottom: none;
+  box-shadow: none;
+}
+
+.dai--public .dai-archive-registry-intro a:hover,
+.dai--public .dai-archive-registry-intro a:focus {
+  text-decoration: underline;
+  color: var(--dai-link-hover);
+  border-bottom: none;
+  box-shadow: none;
+  text-decoration-thickness: 2px;
+}
+
+/* ===== Public Archive Table Styles ===== */
+/* Matches .dai-archive-detail-table styling exactly for consistency */
+
+/* Table structure - base styles (all viewports) */
+/* Reset only view-content (not the parent view) to avoid affecting breadcrumbs/title */
+/* !important needed to override theme grid layouts (Olivero, etc.) */
+.dai--public .view-content {
+  display: block !important;
+  overflow-x: visible;
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+  gap: 0 !important;
+}
+
+/* Reset table margins for consistent spacing */
+.dai--public .view-content > table {
+  margin-top: 0.25rem !important;
+}
+
+/* Empty state area - same spacing as table */
+.dai--public .view-empty {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+/* Desktop table styling (1024px and above) */
+@media (min-width: 1024px) {
+  .dai--public table,
+  .dai--public table.views-table,
+  .dai--public table.tablesaw {
+    width: 100%;
+    margin: 1rem 0;
+    border-collapse: collapse;
+  }
+
+  /* Cell styling - matches .dai-archive-detail-table exactly */
+  /* !important needed for theme-agnostic consistency */
+  .dai--public table th,
+  .dai--public table td {
+    padding: 0.75rem !important;
+    text-align: left;
+    word-wrap: break-word;
+    border: 1px solid var(--dai-surface-border) !important;
+    overflow-wrap: anywhere;
+  }
+
+  /* Header styling */
+  .dai--public table th {
+    color: var(--dai-text-primary);
+    background-color: var(--dai-surface-bg);
+    font-weight: 700;
+  }
+
+  /* Body cell styling */
+  .dai--public table td {
+    color: var(--dai-text-primary);
+    background-color: var(--dai-surface-bg-alt);
+  }
+}
+
+/* Balance column widths for archive registry table */
+@media (min-width: 1024px) {
+  .dai--public td.views-field-file-name,
+  .dai--public th.views-field-file-name {
+    max-width: 300px;
+    overflow-wrap: anywhere;
+  }
+
+  .dai--public td.views-field-asset-type,
+  .dai--public th.views-field-asset-type,
+  .dai--public td.views-field-archive-type-badge,
+  .dai--public th.views-field-archive-type-badge {
+    white-space: nowrap;
+  }
+}
+
+/* ===== Public Archive Links ===== */
+
+/* General links */
+.dai--public a:link,
+.dai--public a:visited {
+  text-decoration: underline;
+  color: var(--dai-link);
+  border-bottom: none;
+  box-shadow: none;
+}
+
+.dai--public a:hover,
+.dai--public a:focus {
+  text-decoration: underline;
+  color: var(--dai-link-hover);
+  border-bottom: none;
+  box-shadow: none;
+  text-decoration-thickness: 2px;
+}
+
+/* Sortable table header links - no underline */
+.dai--public th a:link,
+.dai--public th a:visited,
+.dai--public thead a:link,
+.dai--public thead a:visited {
+  text-decoration: none;
+  color: var(--dai-text-primary);
+  border-bottom: none;
+  box-shadow: none;
+}
+
+.dai--public th a:hover,
+.dai--public th a:focus,
+.dai--public thead a:hover,
+.dai--public thead a:focus {
+  text-decoration: underline;
+  color: var(--dai-text-primary);
+  border-bottom: none;
+  box-shadow: none;
+}
+
+/* Table cell links - single underline only */
+.dai--public td a:link,
+.dai--public td a:visited,
+.dai--public tbody a:link,
+.dai--public tbody a:visited {
+  text-decoration: underline;
+  color: var(--dai-link);
+  border-bottom: none;
+  box-shadow: none;
+}
+
+.dai--public td a:hover,
+.dai--public td a:focus,
+.dai--public tbody a:hover,
+.dai--public tbody a:focus {
+  text-decoration: underline;
+  color: var(--dai-link-hover);
+  border-bottom: none;
+  box-shadow: none;
+  text-decoration-thickness: 2px;
+}
+
+/* ===== CSS-Only Responsive Stacked Mode (Card Layout) ===== */
+/* Matches .dai-archive-detail-table stacked mode exactly */
+/* Uses data-label attributes injected by per-view Twig templates */
+@media (max-width: 1023px) {
+  .dai--public .view-content {
+    overflow-x: hidden;
+  }
+
+  .dai--public table.dai-stack-table {
+    border: 0 !important;
+  }
+
+  /* Hide table header - labels shown per cell via data-label */
+  .dai--public table.dai-stack-table thead {
+    display: none !important;
+  }
+
+  /* Each row becomes a card - matches detail table exactly */
+  .dai--public table.dai-stack-table tbody tr {
+    display: block !important;
+    margin-bottom: 1rem;
+    padding: 0;
+    border: 1px solid var(--dai-surface-border) !important;
+    border-radius: var(--dai-surface-radius);
+    background-color: var(--dai-surface-bg-alt);
+  }
+
+  /* Each cell becomes a block - matches detail table exactly */
+  .dai--public table.dai-stack-table td {
+    position: static !important;
+    display: block !important;
+    float: none !important;
+    box-sizing: border-box;
+    width: 100% !important;
+    height: auto !important;
+    padding: 0.75rem !important;
+    text-align: left;
+    border: none !important;
+    border-bottom: 1px solid var(--dai-surface-border) !important;
+  }
+
+  .dai--public table.dai-stack-table td:last-child {
+    border-bottom: none !important;
+  }
+
+  /* Show labels from data-label attribute */
+  .dai--public table.dai-stack-table td::before {
+    display: block;
+    margin-bottom: 0.25rem;
+    content: attr(data-label);
+    color: var(--dai-text-primary);
+    font-weight: 700;
+  }
+
+  /* Hide empty labels */
+  .dai--public table.dai-stack-table td[data-label=""]::before {
+    display: none;
+  }
+
+  /* Tablesaw coexistence: If Tablesaw is also present, hide our ::before labels */
+  .dai--public table.dai-stack-table td:has(.tablesaw-cell-label)::before {
+    display: none !important;
+  }
+
+  /* Style Tablesaw elements when present (fallback for sites with responsive_tables_filter) */
+  .dai--public table.dai-stack-table .tablesaw-cell-label,
+  .dai--public table.dai-stack-table .tablesaw-cell-content {
+    position: static !important;
+    display: block !important;
+    float: none !important;
+    width: 100% !important;
+  }
+
+  .dai--public table.dai-stack-table .tablesaw-cell-label {
+    margin-bottom: 0.25rem;
+    font-weight: 700;
+  }
+
+  /* Text wrapping for long content */
+  .dai--public table.dai-stack-table td,
+  .dai--public table.dai-stack-table a {
+    overflow-wrap: anywhere;
+  }
+}
+
+/* ===== Archive Empty State ===== */
+.dai--public .dai-archive-empty {
+  margin: 1rem 0;
+  padding: 2rem;
+  text-align: center;
+  border: 1px solid var(--dai-surface-border);
+  border-radius: var(--dai-surface-radius);
+  background-color: var(--dai-surface-bg);
+}
+
+.dai--public .dai-archive-empty p {
+  margin: 0;
+  color: var(--dai-text-muted);
+  font-size: 1.1rem;
+}
+
+/* ===== Archive Type Badges (Public Registry) ===== */
+/* Subtle badges to distinguish Legacy (pre-deadline) vs General (post-deadline) archives */
+.dai-archive-type-badge {
+  display: inline-block;
+  padding: 0.25em 0.75em;
+  white-space: nowrap;
+  text-decoration: none;
+  border: none;
+  border-radius: 3px;
+  box-shadow: none;
+  font-size: 0.85em;
+  font-weight: 500;
+}
+
+/* Legacy Archive - archived before the configured ADA deadline */
+/* Light blue background with blue text */
+.dai-archive-type-badge--legacy {
+  color: var(--dai-badge-legacy-text);
+  background-color: var(--dai-badge-legacy-bg);
+}
+
+/* General Archive - archived after ADA deadline */
+/* Neutral gray background with dark gray text */
+.dai-archive-type-badge--general {
+  color: var(--dai-badge-general-text);
+  background-color: var(--dai-badge-general-bg);
+}
+
+/* ===== Archive Detail Page ===== */
+
+/* Container - page title alignment is theme-controlled (rendered outside this container).
+ * Themes can match title width: .page-title { max-width: 1200px; margin: 0 auto; }
+ */
+.dai--archive-detail {
+  max-width: 1200px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-bottom: 3em;
+  color: var(--dai-text-primary);
+}
+
+.dai--archive-detail h3 {
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+  color: var(--dai-text-primary);
+}
+
+.dai--archive-detail p {
+  margin: 0.75em 0;
+  color: var(--dai-text-primary);
+  line-height: 1.5;
+}
+
+/* Archive Detail Links */
+.dai--archive-detail a:link,
+.dai--archive-detail a:visited {
+  text-decoration: underline;
+  color: var(--dai-link);
+  border-bottom: none;
+  box-shadow: none;
+}
+
+.dai--archive-detail a:hover,
+.dai--archive-detail a:focus {
+  text-decoration: underline;
+  color: var(--dai-link-hover);
+  border-bottom: none;
+  box-shadow: none;
+  text-decoration-thickness: 2px;
+}
+
+/* ===== Login Required Notice ===== */
+/* Styled as a notice (not an error) - authentication is an expected access state */
+.dai-archive-login-required {
+  margin-bottom: 1em;
+  padding: 0.75em 1em 1em 1em;
+  color: var(--dai-text-primary);
+  border: 1px solid var(--dai-notes-border);
+  border-left: 4px solid var(--dai-accent-info);
+  border-radius: var(--dai-surface-radius);
+  background-color: var(--dai-notes-bg);
+}
+
+.dai-archive-login-required__title {
+  font-size: 1.1em;
+}
+
+.dai-archive-login-required p {
+  margin: 0 0 0.5em 0;
+  color: var(--dai-text-primary);
+}
+
+.dai-archive-login-required p:last-child {
+  margin-bottom: 0;
+}
+
+/* Login link - styled as a prominent link, not a button */
+/* Uses darker color for 7:1 contrast against notes-bg (#fff3cd) */
+/* Higher specificity needed to override .dai--archive-detail a:link */
+.dai-archive-login-required a.dai-archive-login-link,
+.dai-archive-login-required a.dai-archive-login-link:link,
+.dai-archive-login-required a.dai-archive-login-link:visited {
+  text-decoration: underline;
+  color: var(--dai-link-on-notice);
+  border-bottom: none;
+  box-shadow: none;
+  font-weight: 600;
+}
+
+.dai-archive-login-required a.dai-archive-login-link:hover,
+.dai-archive-login-required a.dai-archive-login-link:focus {
+  text-decoration: underline;
+  color: var(--dai-link-on-notice-hover);
+  border-bottom: none;
+  box-shadow: none;
+  text-decoration-thickness: 2px;
+}
+
+/* ===== Archive Notice Box ===== */
+.dai-archive-notice {
+  margin-top: 0;
+  margin-bottom: 1.5em;
+  padding: 1.5em;
+  color: var(--dai-text-primary);
+  border: 1px solid var(--dai-surface-border);
+  border-radius: var(--dai-surface-radius);
+  background-color: var(--dai-surface-bg);
+}
+
+.dai-archive-notice h2 {
+  margin-top: 0;
+  margin-bottom: 0.5em;
+  color: var(--dai-text-primary);
+}
+
+.dai-archive-notice p {
+  margin: 0.75em 0;
+  color: var(--dai-text-primary);
+  line-height: 1.5;
+}
+
+.dai-archive-notice p:last-of-type {
+  margin-bottom: 0;
+}
+
+/* Copy link button container within notice */
+.dai-archive-notice .dai-archive-copy-link {
+  margin-top: 1em;
+}
+
+/* ===== Admin-Only Access Notice (Anonymous Users) ===== */
+/* Shown when anonymous users visit an admin-only archive detail page.
+ * "Admin-only controls visibility & disclosure, not storage."
+ * We don't show the file URL; we show a contact message. */
+.dai-archive-access-notice {
+  margin-top: 0;
+  margin-bottom: 1.5em;
+  padding: 1.5em;
+  color: var(--dai-text-primary);
+  border: 1px solid var(--dai-surface-border);
+  border-left: 4px solid var(--dai-badge-warning-bg, #b8860b);
+  border-radius: var(--dai-surface-radius);
+  background-color: var(--dai-surface-bg);
+}
+
+.dai-archive-access-notice h2 {
+  margin-top: 0;
+  margin-bottom: 0.5em;
+  color: var(--dai-text-primary);
+}
+
+.dai-archive-access-notice p {
+  margin: 0.75em 0;
+  color: var(--dai-text-primary);
+  line-height: 1.5;
+}
+
+.dai-archive-access-notice p:first-of-type {
+  margin-top: 0;
+}
+
+.dai-archive-access-notice p:last-of-type {
+  margin-bottom: 0;
+}
+
+/* ===== Admin Notice (Admins Viewing Admin-Only) ===== */
+/* Info banner shown to admins when viewing an admin-only archive. */
+.dai-archive-admin-notice {
+  margin-top: 0;
+  margin-bottom: 1.5em;
+  padding: 1em 1.5em;
+  color: var(--dai-text-primary);
+  border: 1px solid var(--dai-badge-info-border, #b3d4fc);
+  border-radius: var(--dai-surface-radius);
+  background-color: var(--dai-badge-info-bg, #e8f2fd);
+}
+
+.dai-archive-admin-notice p {
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Integrity note */
+.dai-archive-integrity-note {
+  margin-top: 1em;
+  color: var(--dai-text-primary);
+}
+
+/* Back link */
+.dai-archive-back-link {
+  margin-top: 2em;
+}
+
+/* Touch target: 44px minimum for WCAG 2.5.5 AAA */
+.dai-archive-back-link a {
+  display: inline-block;
+  min-height: 44px;
+  line-height: 44px;
+}
+
+.dai-archive-back-link a:link,
+.dai-archive-back-link a:visited {
+  text-decoration: underline;
+  color: var(--dai-link);
+  border-bottom: none;
+  box-shadow: none;
+}
+
+.dai-archive-back-link a:hover,
+.dai-archive-back-link a:focus {
+  text-decoration: underline;
+  color: var(--dai-link-hover);
+  border-bottom: none;
+  box-shadow: none;
+  text-decoration-thickness: 2px;
+}
+
+/* ===== Archive Detail Table ===== */
+.dai-archive-detail-table {
+  width: 100%;
+  margin: 1rem 0;
+  border-collapse: collapse;
+}
+
+.dai-archive-detail-table th,
+.dai-archive-detail-table td {
+  padding: 0.75rem;
+  text-align: left;
+  word-wrap: break-word;
+  border: 1px solid var(--dai-surface-border);
+  overflow-wrap: anywhere;
+}
+
+.dai-archive-detail-table th {
+  color: var(--dai-text-primary);
+  background-color: var(--dai-surface-bg);
+  font-weight: 700;
+}
+
+/* Name column wrapping for long filenames */
+.dai-archive-detail-table td:first-child,
+.dai-archive-detail-table th:first-child {
+  max-width: 300px;
+  overflow-wrap: anywhere;
+}
+
+/* Type column: don't break */
+.dai-archive-detail-table td:nth-child(2),
+.dai-archive-detail-table th:nth-child(2) {
+  white-space: nowrap;
+}
+
+.dai-archive-detail-table td {
+  color: var(--dai-text-primary);
+  background-color: var(--dai-surface-bg-alt);
+}
+
+/* Table links */
+.dai-archive-detail-table a:link,
+.dai-archive-detail-table a:visited {
+  text-decoration: underline;
+  color: var(--dai-link);
+  border-bottom: none;
+  box-shadow: none;
+}
+
+.dai-archive-detail-table a:hover,
+.dai-archive-detail-table a:focus {
+  text-decoration: underline;
+  color: var(--dai-link-hover);
+  border-bottom: none;
+  box-shadow: none;
+  text-decoration-thickness: 2px;
+}
+
+/* Archive Detail Table - Responsive Stacked Mode */
+/* Supports mobile viewports and WCAG 1.4.10 reflow at 400% zoom */
+@media (max-width: 1023px) {
+  .dai-archive-detail-table {
+    border: 0;
+  }
+
+  /* Hide table header - labels shown per cell via data-label */
+  .dai-archive-detail-table thead {
+    display: none;
+  }
+
+  /* Each row becomes a card */
+  .dai-archive-detail-table tbody tr {
+    display: block;
+    margin-bottom: 1rem;
+    padding: 0;
+    border: 1px solid var(--dai-surface-border);
+    border-radius: var(--dai-surface-radius);
+    background-color: var(--dai-surface-bg-alt);
+  }
+
+  /* Each cell becomes a block with label */
+  .dai-archive-detail-table td {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0.75rem;
+    text-align: left;
+    border: none;
+    border-bottom: 1px solid var(--dai-surface-border);
+  }
+
+  .dai-archive-detail-table td:last-child {
+    border-bottom: none;
+  }
+
+  /* Show label from data-label attribute */
+  .dai-archive-detail-table td::before {
+    display: block;
+    margin-bottom: 0.25rem;
+    content: attr(data-label);
+    color: var(--dai-text-primary);
+    font-weight: 700;
+  }
+}
+
+/* ===== Copy Link Button ===== */
+.dai-archive-copy-link__button,
+button.dai-archive-copy-link__button,
+button.dai-archive-copy-link__button[type="button"] {
+  display: inline-block;
+  min-height: 44px;
+  padding: 0.625rem 1.25rem;
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--dai-btn-primary-text);
+  border: 2px solid var(--dai-accent-info);
+  border-radius: var(--dai-surface-radius);
+  background-color: var(--dai-accent-info);
+  box-shadow: none;
+  text-shadow: none;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.dai-archive-copy-link__button:hover,
+.dai-archive-copy-link__button:focus,
+button.dai-archive-copy-link__button:hover,
+button.dai-archive-copy-link__button:focus,
+button.dai-archive-copy-link__button[type="button"]:hover,
+button.dai-archive-copy-link__button[type="button"]:focus {
+  text-decoration: none;
+  color: var(--dai-btn-primary-text);
+  border-color: var(--dai-accent-info-hover);
+  outline: 2px solid var(--dai-accent-info-hover);
+  outline-offset: 2px;
+  background-color: var(--dai-accent-info-hover);
+}
+
+.dai-archive-copy-link__confirmation {
+  margin-left: 0.5rem;
+  color: var(--dai-text-success);
+  font-weight: 600;
+}
+
+/* ===== Archived Content Banner ===== */
+/* Banner displayed on archived content pages (uses base library, works in any context) */
+/* Left accent rail makes it recognizable as a system notice */
+/* No max-width: inherits from theme's content container. Themes can add:
+ *   .dai-archived-content-banner { max-width: 800px; margin-left: auto; margin-right: auto; }
+ */
+.dai-archived-content-banner {
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  color: var(--dai-text-primary);
+  border: 1px solid var(--dai-surface-border);
+  border-left: 4px solid var(--dai-accent-info);
+  border-radius: var(--dai-surface-radius);
+  background-color: var(--dai-surface-bg);
+}
+
+.dai-archived-content-banner h2 {
+  margin: 0 0 0.75rem 0;
+  color: var(--dai-text-primary);
+  font-weight: 700;
+}
+
+.dai-archived-content-banner p {
+  margin: 0.5rem 0;
+  color: var(--dai-text-primary);
+  line-height: 1.5;
+}
+
+.dai-archived-content-banner p:last-child {
+  margin-bottom: 0;
+}
+
+/* ===== Archived Media Placeholder ===== */
+/* Replaces embedded videos/documents that have been archived */
+.dai-archived-media-placeholder {
+  margin: 1rem 0;
+  padding: 1rem 1.25rem;
+  border: 1px solid var(--dai-surface-border);
+  border-left: 4px solid var(--dai-accent-info);
+  border-radius: var(--dai-surface-radius);
+  background-color: var(--dai-surface-bg);
+}
+
+/* Header with icon and title */
+.dai-archived-media-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--dai-surface-border);
+}
+
+.dai-archived-media-icon {
+  flex-shrink: 0;
+  color: var(--dai-accent-info);
+}
+
+.dai-archived-media-title {
+  text-decoration: none;
+  color: var(--dai-text-primary);
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.dai-archived-media-title:hover,
+.dai-archived-media-title:focus {
+  text-decoration: underline;
+  color: var(--dai-accent-info);
+}
+
+/* ===== Inline Archived Link ===== */
+/* Used when archived content is linked in public content */
+/* Shows as: "Document Name (Archived)" with link to detail page */
+/* Link colors and label styling inherited from theme */
+
+/* Body with notice and accessibility message */
+.dai-archived-media-body {
+  color: var(--dai-text-primary);
+}
+
+.dai-archived-media-notice {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  margin: 0 0 0.5rem 0;
+  line-height: 1.5;
+}
+
+.dai-archived-info-icon {
+  flex-shrink: 0;
+  margin-top: 0.15rem;
+  color: var(--dai-accent-info);
+}
+
+.dai-archived-media-accessibility {
+  margin: 0;
+  color: var(--dai-text-secondary, #666);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+/* Archived link with preserved derived thumbnail */
+.dai-archived-link--thumbnail {
+  display: inline-block;
+  text-decoration: none;
+}
+
+.dai-archived-thumbnail {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* ==========================================================================
+ * Archive Registry pagination (public-facing).
+ * ========================================================================== */
+
+.dai-pager {
+  margin: 2rem 0;
+}
+
+.dai-pager__items {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.dai-pager__item {
+  margin: 0;
+  padding: 0;
+}
+
+/* Base control: high specificity to beat theme styles. */
+nav.dai-pager .dai-pager__item > a,
+nav.dai-pager .dai-pager__item > span,
+nav.dai-pager .dai-pager__item > a:hover,
+nav.dai-pager .dai-pager__item > a:focus,
+nav.dai-pager .dai-pager__item > a:active,
+nav.dai-pager .dai-pager__item > a:visited {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  min-width: 46px;
+  height: 46px;
+  margin: 0;
+  padding: 0 14px;
+  transition:
+    background-color 0.15s ease,
+    border-color 0.15s ease,
+    color 0.15s ease;
+  vertical-align: middle;
+  white-space: nowrap;
+  text-decoration: none;
+  color: #2f2f2f;
+  border: 1px solid #969696;
+  border-radius: 6px;
+  background: #fff;
+  background-image: none;
+  box-shadow: none;
+  text-shadow: none;
+  font-size: 1.125rem;
+  font-weight: 500;
+  line-height: 1;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+/* Kill theme pseudo-element decorations (all states). */
+nav.dai-pager .dai-pager__item > a::before,
+nav.dai-pager .dai-pager__item > a::after,
+nav.dai-pager .dai-pager__item > a:hover::before,
+nav.dai-pager .dai-pager__item > a:hover::after,
+nav.dai-pager .dai-pager__item > a:focus::before,
+nav.dai-pager .dai-pager__item > a:focus::after {
+  display: none;
+  content: none;
+}
+
+/* Force neutral link color. */
+nav.dai-pager .dai-pager__item > a {
+  color: #2f2f2f;
+}
+
+/* Hover. */
+nav.dai-pager .dai-pager__item > a:hover {
+  color: #111;
+  border-color: #7f7f7f;
+  background: #f7f7f7;
+}
+
+/* Focus. */
+nav.dai-pager .dai-pager__item > a:focus-visible {
+  outline: 3px solid #1a73e8;
+  outline-offset: 2px;
+}
+
+/* Numeric items and ellipsis. */
+nav.dai-pager .dai-pager__item--number > a,
+nav.dai-pager .dai-pager__item--number > span,
+nav.dai-pager .dai-pager__item--ellipsis > span {
+  min-width: 46px;
+  padding-right: 14px;
+  padding-left: 14px;
+}
+
+/* Current page: dark filled. Selector covers every interactive
+ * state so the theme's link color (e.g. Olivero's #005aa3) cannot
+ * leak through on focus or active and break the white-on-#111
+ * contrast (1.4.3, 4.5:1).
+ */
+nav.dai-pager .dai-pager__item--active > a,
+nav.dai-pager .dai-pager__item--active > a:link,
+nav.dai-pager .dai-pager__item--active > a:visited,
+nav.dai-pager .dai-pager__item--active > a:hover,
+nav.dai-pager .dai-pager__item--active > a:focus,
+nav.dai-pager .dai-pager__item--active > a:focus-visible,
+nav.dai-pager .dai-pager__item--active > a:active {
+  color: #fff;
+  border-color: #111;
+  background: #111;
+  font-weight: 700;
+}
+
+/* Previous / Next: force neutral color on all states. */
+nav.dai-pager .dai-pager__item--previous > a,
+nav.dai-pager .dai-pager__item--next > a,
+nav.dai-pager .dai-pager__item--previous > a:hover,
+nav.dai-pager .dai-pager__item--next > a:hover,
+nav.dai-pager .dai-pager__item--previous > a:visited,
+nav.dai-pager .dai-pager__item--next > a:visited {
+  gap: 8px;
+  min-width: 96px;
+  padding-right: 16px;
+  padding-left: 16px;
+  color: #2f2f2f;
+}
+
+/* Reset nested spans inside Previous / Next. */
+nav.dai-pager .dai-pager__item--previous > a > span,
+nav.dai-pager .dai-pager__item--next > a > span {
+  display: inline;
+  min-width: 0;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  color: inherit;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  font: inherit;
+  line-height: inherit;
+}
+
+/* Arrow glyphs. */
+nav.dai-pager .dai-pager__item--previous > a > span[aria-hidden="true"],
+nav.dai-pager .dai-pager__item--next > a > span[aria-hidden="true"] {
+  font-size: 1.25rem;
+  line-height: 1;
+}
+
+/* Ellipsis. */
+nav.dai-pager .dai-pager__item--ellipsis > span {
+  color: #444;
+  font-weight: 600;
+}
+
+/* Disabled state. WCAG 1.4.3 exempts inactive UI components, but
+ * many automated audits still flag low-contrast text. Darkening to
+ * #5d5d5d gives ~6:1 on the #f8f8f8 fill so the disabled label is
+ * legible without losing the visual cue that it is non-interactive.
+ */
+nav.dai-pager .dai-pager__item--disabled > span {
+  cursor: default;
+  color: #5d5d5d;
+  border-color: #b8b8b8;
+  background: #f8f8f8;
+}
+
+/* Page summary: visible on mobile only where numbers are hidden. */
+.dai-pager__summary {
+  display: none;
+  margin-top: 0.75rem;
+  text-align: center;
+  color: #6b7280;
+  font-size: 0.8125rem;
+}
+
+/* Medium screens: tighter. */
+@media (max-width: 48em) {
+  .dai-pager__items {
+    gap: 8px;
+  }
+
+  nav.dai-pager .dai-pager__item > a,
+  nav.dai-pager .dai-pager__item > span,
+  nav.dai-pager .dai-pager__item > a:hover,
+  nav.dai-pager .dai-pager__item > a:visited {
+    min-width: 44px;
+    height: 44px;
+    padding: 0 12px;
+    font-size: 1rem;
+  }
+
+  nav.dai-pager .dai-pager__item--previous > a,
+  nav.dai-pager .dai-pager__item--next > a {
+    min-width: 88px;
+    padding-right: 14px;
+    padding-left: 14px;
+  }
+}
+
+/* Small screens: hide numbers, show summary. */
+@media (max-width: 30em) {
+  nav.dai-pager .dai-pager__item--number:not(.dai-pager__item--active) {
+    display: none;
+  }
+
+  nav.dai-pager .dai-pager__item--ellipsis {
+    display: none;
+  }
+
+  .dai-pager__summary {
+    display: block;
+  }
+}

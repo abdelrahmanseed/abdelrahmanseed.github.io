@@ -1,0 +1,19 @@
+/**
+ * @file
+ * Table sort indicator.
+ *
+ * @see tablesort-indicator.html.twig
+ */
+
+.tablesort {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background-size: 100%;
+}
+.tablesort--asc {
+  background-image: url("c7d5fe49f15a7f6d.svg");
+}
+.tablesort--desc {
+  background-image: url("371e5e833dbd6fa1.svg");
+}

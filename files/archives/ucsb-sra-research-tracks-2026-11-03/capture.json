@@ -1,0 +1,568 @@
+{
+  "source_url": "https://summer.ucsb.edu/programs/summer-research-academies/research-tracks",
+  "captured_date": "2026-11-03",
+  "captured_timezone": "America/Los_Angeles",
+  "source_html_sha256": "1b1ff6c2008027a9da2480c142b295fabf7fc8c94623e7d246b3644d2309b96c",
+  "description": "Static copy of the complete 2026 track page with local images, stylesheets and fonts. Scripts, tracking and search form removed; links to other pages still open the original sites. Archive notice and Track 1 anchor added. Resources unavailable at the source are recorded separately.",
+  "unavailable_source_resources": [
+    {
+      "source_url": "https://summer.ucsb.edu/sites/default/files/images/home/UCSB_day1_2016-62_crop.jpg",
+      "error": "HTTP 404"
+    },
+    {
+      "source_url": "https://s3-us-west-2.amazonaws.com/s.cdpn.io/93/artill_clean_icons-webfont.eot",
+      "error": "HTTP 403"
+    },
+    {
+      "source_url": "https://s3-us-west-2.amazonaws.com/s.cdpn.io/93/artill_clean_icons-webfont.woff",
+      "error": "HTTP 403"
+    },
+    {
+      "source_url": "https://s3-us-west-2.amazonaws.com/s.cdpn.io/93/artill_clean_icons-webfont.ttf",
+      "error": "HTTP 403"
+    },
+    {
+      "source_url": "https://s3-us-west-2.amazonaws.com/s.cdpn.io/93/artill_clean_icons-webfont.svg",
+      "error": "HTTP 403"
+    },
+    {
+      "source_url": "https://summer.ucsb.edu/themes/summerCustom/bootstrap/assets/fonts/bootstrap/glyphicons-halflings-regular.eot",
+      "error": "HTTP 404"
+    },
+    {
+      "source_url": "https://summer.ucsb.edu/themes/summerCustom/bootstrap/assets/fonts/bootstrap/glyphicons-halflings-regular.woff2",
+      "error": "HTTP 404"
+    },
+    {
+      "source_url": "https://summer.ucsb.edu/themes/summerCustom/bootstrap/assets/fonts/bootstrap/glyphicons-halflings-regular.woff",
+      "error": "HTTP 404"
+    },
+    {
+      "source_url": "https://summer.ucsb.edu/themes/summerCustom/bootstrap/assets/fonts/bootstrap/glyphicons-halflings-regular.ttf",
+      "error": "HTTP 404"
+    },
+    {
+      "source_url": "https://summer.ucsb.edu/themes/summerCustom/bootstrap/assets/fonts/bootstrap/glyphicons-halflings-regular.svg",
+      "error": "HTTP 404"
+    }
+  ],
+  "resources": [
+    {
+      "source_url": "https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap",
+      "local_path": "resources/fcd1555e12be0a17.css",
+      "source_sha256": "0bc14ab3486a994cb1e2a5b0cdd6849b507ec92959fe581fb763dac93b44e82d",
+      "saved_sha256": "546ae537b263ea21968800dd3de5bd4d0d71571d8a3948de029eb435993dab5a"
+    },
+    {
+      "source_url": "https://fonts.gstatic.com/s/nunitosans/v19/pe1kMImSLYBIv1o4X1M8cce4OdVisMz5nZRqy6cmmmU3t2FQWEAEOvV9wNvrwlNstMKW3Y6K5WMwXeVy3GboJ0kTHmoP8FUg.ttf",
+      "local_path": "resources/9712e0ec03a743ab.ttf",
+      "source_sha256": "cf5c58584b6f36344ed844b5684b5517436947ceaa2b72259bb8763b00bf7e38",
+      "saved_sha256": "cf5c58584b6f36344ed844b5684b5517436947ceaa2b72259bb8763b00bf7e38"
+    },
+    {
+      "source_url": "https://fonts.gstatic.com/s/nunitosans/v19/pe1kMImSLYBIv1o4X1M8cce4OdVisMz5nZRqy6cmmmU3t2FQWEAEOvV9wNvrwlNstMKW3Y6K5WMwXeVy3GboJ0kTHmoP91Ug.ttf",
+      "local_path": "resources/d10a308dc3759d98.ttf",
+      "source_sha256": "b90b1b83e743942c704d56a3cbe2b9844d0298f61a071bc15ec1e636d21910a4",
+      "saved_sha256": "b90b1b83e743942c704d56a3cbe2b9844d0298f61a071bc15ec1e636d21910a4"
+    },
+    {
+      "source_url": "https://fonts.gstatic.com/s/nunitosans/v19/pe1kMImSLYBIv1o4X1M8cce4OdVisMz5nZRqy6cmmmU3t2FQWEAEOvV9wNvrwlNstMKW3Y6K5WMwXeVy3GboJ0kTHmom8FUg.ttf",
+      "local_path": "resources/f6ec760e9c253897.ttf",
+      "source_sha256": "c91687cd8f0e090211d35e2d5606e1f44966c8fa6f2acb7df133ebc262ee79f7",
+      "saved_sha256": "c91687cd8f0e090211d35e2d5606e1f44966c8fa6f2acb7df133ebc262ee79f7"
+    },
+    {
+      "source_url": "https://fonts.gstatic.com/s/nunitosans/v19/pe1kMImSLYBIv1o4X1M8cce4OdVisMz5nZRqy6cmmmU3t2FQWEAEOvV9wNvrwlNstMKW3Y6K5WMwXeVy3GboJ0kTHmpR8FUg.ttf",
+      "local_path": "resources/b0ea95bd06931ed7.ttf",
+      "source_sha256": "38d3af7b6b61e881423ea72f93f9d72f20c9c9420b34728bef21beb58c973713",
+      "saved_sha256": "38d3af7b6b61e881423ea72f93f9d72f20c9c9420b34728bef21beb58c973713"
+    },
+    {
+      "source_url": "https://fonts.gstatic.com/s/nunitosans/v19/pe1kMImSLYBIv1o4X1M8cce4OdVisMz5nZRqy6cmmmU3t2FQWEAEOvV9wNvrwlNstMKW3Y6K5WMwXeVy3GboJ0kTHmpo8FUg.ttf",
+      "local_path": "resources/dcdec52ae9691ef9.ttf",
+      "source_sha256": "5b36f3aec9d18c5a01806561e9cd3d29707e5b429ec447a2e1bc95f3f6691d32",
+      "saved_sha256": "5b36f3aec9d18c5a01806561e9cd3d29707e5b429ec447a2e1bc95f3f6691d32"
+    },
+    {
+      "source_url": "https://fonts.gstatic.com/s/nunitosans/v19/pe1kMImSLYBIv1o4X1M8cce4OdVisMz5nZRqy6cmmmU3t2FQWEAEOvV9wNvrwlNstMKW3Y6K5WMwXeVy3GboJ0kTHmq991Ug.ttf",
+      "local_path": "resources/239930e1a0eb3b45.ttf",
+      "source_sha256": "afe447f3b071d5f466938f5fc0d4ad9dd23adf71b8b6ab6b830faf5bdcf3061b",
+      "saved_sha256": "afe447f3b071d5f466938f5fc0d4ad9dd23adf71b8b6ab6b830faf5bdcf3061b"
+    },
+    {
+      "source_url": "https://fonts.gstatic.com/s/nunitosans/v19/pe1kMImSLYBIv1o4X1M8cce4OdVisMz5nZRqy6cmmmU3t2FQWEAEOvV9wNvrwlNstMKW3Y6K5WMwXeVy3GboJ0kTHmqP91Ug.ttf",
+      "local_path": "resources/20444f1563a1341c.ttf",
+      "source_sha256": "cd867360d8a056d92bf3de1777d613d74a1dfcaa15eaced6cf43b0819340f15d",
+      "saved_sha256": "cd867360d8a056d92bf3de1777d613d74a1dfcaa15eaced6cf43b0819340f15d"
+    },
+    {
+      "source_url": "https://fonts.gstatic.com/s/nunitosans/v19/pe1kMImSLYBIv1o4X1M8cce4OdVisMz5nZRqy6cmmmU3t2FQWEAEOvV9wNvrwlNstMKW3Y6K5WMwXeVy3GboJ0kTHmrR91Ug.ttf",
+      "local_path": "resources/b666bfd110a230a0.ttf",
+      "source_sha256": "a3e0d7d00914a7381774e33b3f27ee88d3007426899a1e5e516bf9a58148b001",
+      "saved_sha256": "a3e0d7d00914a7381774e33b3f27ee88d3007426899a1e5e516bf9a58148b001"
+    },
+    {
+      "source_url": "https://fonts.gstatic.com/s/nunitosans/v19/pe1mMImSLYBIv1o4X1M8ce2xCx3yop4tQpF_MeTm0lfGWVpNn64CL7U8upHZIbMV51Q42ptCp5F5bxqqtQ1yiU4G1ilntA.ttf",
+      "local_path": "resources/98332267038b9cdf.ttf",
+      "source_sha256": "a699fa825cd47524461c459a54fe3cd51eb13e1e76ba238fe6ea86932979a808",
+      "saved_sha256": "a699fa825cd47524461c459a54fe3cd51eb13e1e76ba238fe6ea86932979a808"
+    },
+    {
+      "source_url": "https://fonts.gstatic.com/s/nunitosans/v19/pe1mMImSLYBIv1o4X1M8ce2xCx3yop4tQpF_MeTm0lfGWVpNn64CL7U8upHZIbMV51Q42ptCp5F5bxqqtQ1yiU4G5ClntA.ttf",
+      "local_path": "resources/4ef325e31f9e3ca9.ttf",
+      "source_sha256": "9e7ac0c584cebdc8b9042f4eb2ddc65fcee0e7c87d4d1b1b8a2717b1ce3b35a5",
+      "saved_sha256": "9e7ac0c584cebdc8b9042f4eb2ddc65fcee0e7c87d4d1b1b8a2717b1ce3b35a5"
+    },
+    {
+      "source_url": "https://fonts.gstatic.com/s/nunitosans/v19/pe1mMImSLYBIv1o4X1M8ce2xCx3yop4tQpF_MeTm0lfGWVpNn64CL7U8upHZIbMV51Q42ptCp5F5bxqqtQ1yiU4GCC5ntA.ttf",
+      "local_path": "resources/3527e8c63798be3e.ttf",
+      "source_sha256": "ad2699609215220841b2bbb16dd1899f32559d24f55b4cdaaa913ca3e15e3fbd",
+      "saved_sha256": "ad2699609215220841b2bbb16dd1899f32559d24f55b4cdaaa913ca3e15e3fbd"
+    },
+    {
+      "source_url": "https://fonts.gstatic.com/s/nunitosans/v19/pe1mMImSLYBIv1o4X1M8ce2xCx3yop4tQpF_MeTm0lfGWVpNn64CL7U8upHZIbMV51Q42ptCp5F5bxqqtQ1yiU4GMS5ntA.ttf",
+      "local_path": "resources/2b196e874f42be4b.ttf",
+      "source_sha256": "ec2336c2beb651fb7f9fb968ef4e5b69e91af624c240331a239d3aefd6e41ef0",
+      "saved_sha256": "ec2336c2beb651fb7f9fb968ef4e5b69e91af624c240331a239d3aefd6e41ef0"
+    },
+    {
+      "source_url": "https://fonts.gstatic.com/s/nunitosans/v19/pe1mMImSLYBIv1o4X1M8ce2xCx3yop4tQpF_MeTm0lfGWVpNn64CL7U8upHZIbMV51Q42ptCp5F5bxqqtQ1yiU4GVi5ntA.ttf",
+      "local_path": "resources/35f048e2f95abf71.ttf",
+      "source_sha256": "9cad4d40b0754d7cbc51ff2e991b80369123214e2300cbbd7adf91ed096e2dff",
+      "saved_sha256": "9cad4d40b0754d7cbc51ff2e991b80369123214e2300cbbd7adf91ed096e2dff"
+    },
+    {
+      "source_url": "https://fonts.gstatic.com/s/nunitosans/v19/pe1mMImSLYBIv1o4X1M8ce2xCx3yop4tQpF_MeTm0lfGWVpNn64CL7U8upHZIbMV51Q42ptCp5F5bxqqtQ1yiU4GVilntA.ttf",
+      "local_path": "resources/46a4b72724a3422b.ttf",
+      "source_sha256": "42ff3603f69669f269ca43ec215ac36c4db4ac6a080ae82a615110dba48256d6",
+      "saved_sha256": "42ff3603f69669f269ca43ec215ac36c4db4ac6a080ae82a615110dba48256d6"
+    },
+    {
+      "source_url": "https://fonts.gstatic.com/s/nunitosans/v19/pe1mMImSLYBIv1o4X1M8ce2xCx3yop4tQpF_MeTm0lfGWVpNn64CL7U8upHZIbMV51Q42ptCp5F5bxqqtQ1yiU4Gfy5ntA.ttf",
+      "local_path": "resources/4042e9f35c02e8f2.ttf",
+      "source_sha256": "7a4f2474d3b5cba876017a79919d5af7661c7e99f972511ff1ebf60555d4232c",
+      "saved_sha256": "7a4f2474d3b5cba876017a79919d5af7661c7e99f972511ff1ebf60555d4232c"
+    },
+    {
+      "source_url": "https://fonts.gstatic.com/s/nunitosans/v19/pe1mMImSLYBIv1o4X1M8ce2xCx3yop4tQpF_MeTm0lfGWVpNn64CL7U8upHZIbMV51Q42ptCp5F5bxqqtQ1yiU4GiClntA.ttf",
+      "local_path": "resources/86eeb3409110e9f2.ttf",
+      "source_sha256": "bc3fc458b34d4250d2bf4ddb9eac5b3c1e31cd32912cdfaae44b75ee2cc17d05",
+      "saved_sha256": "bc3fc458b34d4250d2bf4ddb9eac5b3c1e31cd32912cdfaae44b75ee2cc17d05"
+    },
+    {
+      "source_url": "https://summer.ucsb.edu/core/misc/icons/73b355/check.svg",
+      "local_path": "resources/e2613d9526b0603c.svg",
+      "source_sha256": "18eb607df3924ebaa3eb4994c8cf257458b74afabf4ab5ce921e8337cabeb254",
+      "saved_sha256": "2f19dc8c48e0d60b36d54e8ae900cb8a35adfcfef3e70b046cdb693875caf2d4"
+    },
+    {
+      "source_url": "https://summer.ucsb.edu/core/misc/icons/787878/twistie-down.svg",
+      "local_path": "resources/c7d5fe49f15a7f6d.svg",
+      "source_sha256": "bd1e4cb00a3a6d35243b268256dc5e9f85985512c3c579b7e21d06ac7a941366",
+      "saved_sha256": "bd1e4cb00a3a6d35243b268256dc5e9f85985512c3c579b7e21d06ac7a941366"
+    },
+    {
+      "source_url": "https://summer.ucsb.edu/core/misc/icons/787878/twistie-up.svg",
+      "local_path": "resources/371e5e833dbd6fa1.svg",
+      "source_sha256": "a143f3c403b50118cfae79e1f9f3ed3c9e4749c5d033449c9121ceaaf2ece49b",
+      "saved_sha256": "a143f3c403b50118cfae79e1f9f3ed3c9e4749c5d033449c9121ceaaf2ece49b"
+    },
+    {
+      "source_url": "https://summer.ucsb.edu/core/misc/icons/e29700/warning.svg",
+      "local_path": "resources/903b5b045325383e.svg",
+      "source_sha256": "8000f5642f52ebc87bf6a6f444d9600f7ade79f79febc01212f465acfa52a7d7",
+      "saved_sha256": "10dc9ed9126e8ef439d1b425fbf3f251d3d56a97ddbf28fc78a073fb358020e3"
+    },
+    {
+      "source_url": "https://summer.ucsb.edu/core/misc/icons/e32700/error.svg",
+      "local_path": "resources/d017df7439a2cd67.svg",
+      "source_sha256": "d665da63811ead02f6df6ac2ce1db95dbd8969fc5dee014f905508d0e3d47e9b",
+      "saved_sha256": "d665da63811ead02f6df6ac2ce1db95dbd8969fc5dee014f905508d0e3d47e9b"
+    },
+    {
+      "source_url": "https://summer.ucsb.edu/core/modules/system/css/components/align.module.css?tnlabd",
+      "local_path": "resources/1dc23c8224e40ec7.css",
+      "source_sha256": "97fe5992208187911c3daff7fe8556ee254ca0a340ab9af0e3ba04ce7e40e2e3",
+      "saved_sha256": "97fe5992208187911c3daff7fe8556ee254ca0a340ab9af0e3ba04ce7e40e2e3"
+    },
+    {
+      "source_url": "https://summer.ucsb.edu/core/modules/system/css/components/clearfix.module.css?tnlabd",
+      "local_path": "resources/96f62a9854111615.css",
+      "source_sha256": "3d9270fc85db4191fb8ba5840be147343068237fcf4f2ccb1260bbc16cb8a135",
+      "saved_sha256": "3d9270fc85db4191fb8ba5840be147343068237fcf4f2ccb1260bbc16cb8a135"
+    },
+    {
+      "source_url": "https://summer.ucsb.edu/core/modules/system/css/components/container-inline.module.css?tnlabd",
+      "local_path": "resources/abde9c008a1c5311.css",
+      "source_sha256": "835b971b0367d87a44e8d6c919b9cc8d858887b9327e8573fd4852941876a37b",
+      "saved_sha256": "835b971b0367d87a44e8d6c919b9cc8d858887b9327e8573fd4852941876a37b"
+    },
+    {
+      "source_url": "https://summer.ucsb.edu/core/modules/system/css/components/details.module.css?tnlabd",
+      "local_path": "resources/73d5b3db87c4b782.css",
+      "source_sha256": "f31746cbb75773acc9358471805e24d2f80184a9686f2e4dfbf57530c3a583c0",
+      "saved_sha256": "f31746cbb75773acc9358471805e24d2f80184a9686f2e4dfbf57530c3a583c0"
+    },
+    {
+      "source_url": "https://summer.ucsb.edu/core/modules/system/css/components/fieldgroup.module.css?tnlabd",
+      "local_path": "resources/38d8d2d6dd68cdd1.css",
+      "source_sha256": "c799ec87fb8a6e52bd93a883abdc71eef0dec77d2365ce4c2f46178a3e0909fd",
+      "saved_sha256": "c799ec87fb8a6e52bd93a883abdc71eef0dec77d2365ce4c2f46178a3e0909fd"
+    },
+    {
+      "source_url": "https://summer.ucsb.edu/core/modules/system/css/components/hidden.module.css?tnlabd",
+      "local_path": "resources/7727385e15f10851.css",
+      "source_sha256": "17da666fb2f2826ae9a1e4f57d7240ecf68055fda85b26c15c5e45e448a1922e",
+      "saved_sha256": "17da666fb2f2826ae9a1e4f57d7240ecf68055fda85b26c15c5e45e448a1922e"
+    },
+    {
+      "source_url": "https://summer.ucsb.edu/core/modules/system/css/components/item-list.module.css?tnlabd",
+      "local_path": "resources/4f46fbf7543c1e40.css",
+      "source_sha256": "28d32d0650810a89bbec9ca8586078f10dee7834bbaf365affb5d85fc8eb0da0",
+      "saved_sha256": "28d32d0650810a89bbec9ca8586078f10dee7834bbaf365affb5d85fc8eb0da0"
+    },
+    {
+      "source_url": "https://summer.ucsb.edu/core/modules/system/css/components/js.module.css?tnlabd",
+      "local_path": "resources/60b5f39d1537088b.css",
+      "source_sha256": "798bb3c57e867261bcc0f65184beda0afbc67608a50896ee00c304a114afcf8a",
+      "saved_sha256": "798bb3c57e867261bcc0f65184beda0afbc67608a50896ee00c304a114afcf8a"
+    },
+    {
+      "source_url": "https://summer.ucsb.edu/core/modules/system/css/components/nowrap.module.css?tnlabd",
+      "local_path": "resources/06026be55f07b635.css",
+      "source_sha256": "4a4fa2a793d87c88f1509f370dbc40b6deec2188b6a918f92365f873b7bc566d",
+      "saved_sha256": "4a4fa2a793d87c88f1509f370dbc40b6deec2188b6a918f92365f873b7bc566d"
+    },
+    {
+      "source_url": "https://summer.ucsb.edu/core/modules/system/css/components/position-container.module.css?tnlabd",
+      "local_path": "resources/40fd589431a8e456.css",
+      "source_sha256": "92931ceb6a0ad1c9b3e8fc6f335b9dfd6f0c7c8ee36f089bb10241c142a78faa",
+      "saved_sha256": "92931ceb6a0ad1c9b3e8fc6f335b9dfd6f0c7c8ee36f089bb10241c142a78faa"
+    },
+    {
+      "source_url": "https://summer.ucsb.edu/core/modules/system/css/components/reset-appearance.module.css?tnlabd",
+      "local_path": "resources/35c507f992d53efe.css",
+      "source_sha256": "6f466ec3bcee630a91c4023557bf5c4dcff4db777adfd5766d0e8acae12d6d8d",
+      "saved_sha256": "6f466ec3bcee630a91c4023557bf5c4dcff4db777adfd5766d0e8acae12d6d8d"
+    },
+    {
+      "source_url": "https://summer.ucsb.edu/core/modules/system/css/components/resize.module.css?tnlabd",
+      "local_path": "resources/0cc509872df9a0a5.css",
+      "source_sha256": "299064cf3027c5efab4ab6df345de1302dfa562db83eca51965371938480f56c",
+      "saved_sha256": "299064cf3027c5efab4ab6df345de1302dfa562db83eca51965371938480f56c"
+    },
+    {
+      "source_url": "https://summer.ucsb.edu/core/modules/system/css/components/system-status-counter.css?tnlabd",
+      "local_path": "resources/7966d276679d66a5.css",
+      "source_sha256": "86fe10f537d021373f6fef474b84b50b7658731eee18e5d39c72476f6b251859",
+      "saved_sha256": "d34b8991be2a0b87edc670123ece18514997307dde1cdcd6e511025cc11230ce"
+    },
+    {
+      "source_url": "https://summer.ucsb.edu/core/modules/system/css/components/system-status-report-counters.css?tnlabd",
+      "local_path": "resources/a754c7149b893316.css",
+      "source_sha256": "da6360a75aac69be7076b4a5a4a2d0bfbd3bc4a674bba2e7a9cb698035719159",
+      "saved_sha256": "da6360a75aac69be7076b4a5a4a2d0bfbd3bc4a674bba2e7a9cb698035719159"
+    },
+    {
+      "source_url": "https://summer.ucsb.edu/core/modules/system/css/components/system-status-report-general-info.css?tnlabd",
+      "local_path": "resources/b3e3f1ced5a80e51.css",
+      "source_sha256": "d106f9ce97021e6ce9a05e593a70ec7e4956667eab83726c9eb1b473b709fb8e",
+      "saved_sha256": "d106f9ce97021e6ce9a05e593a70ec7e4956667eab83726c9eb1b473b709fb8e"
+    },
+    {
+      "source_url": "https://summer.ucsb.edu/core/modules/system/css/components/tablesort.module.css?tnlabd",
+      "local_path": "resources/0072d345a9499c17.css",
+      "source_sha256": "2298e6d2bafbe82af2f8c1a4f963d9df7f04ecd5092a08bb06011f01ea9655c1",
+      "saved_sha256": "0478aea524ec35106e1d008ad4bd7080c31741d4ccecffaa5789e001261c8727"
+    },
+    {
+      "source_url": "https://summer.ucsb.edu/modules/contrib/digital_asset_inventory/css/dai-admin.css?tnlabd",
+      "local_path": "resources/b46bf6cd451d8c58.css",
+      "source_sha256": "84221aa32fc5d8aecf88080514256c0abb2a39214cac88f0de938a4230358791",
+      "saved_sha256": "84221aa32fc5d8aecf88080514256c0abb2a39214cac88f0de938a4230358791"
+    },
+    {
+      "source_url": "https://summer.ucsb.edu/modules/contrib/digital_asset_inventory/css/dai-base.css?tnlabd",
+      "local_path": "resources/f197df51af9b8c8a.css",
+      "source_sha256": "dfc08e67ac09f1ac699ca5aa45665d39a7257f75e8161530bf30702d303f83d3",
+      "saved_sha256": "dfc08e67ac09f1ac699ca5aa45665d39a7257f75e8161530bf30702d303f83d3"
+    },
+    {
+      "source_url": "https://summer.ucsb.edu/modules/contrib/digital_asset_inventory/css/dai-public.css?tnlabd",
+      "local_path": "resources/1153cf0eaee716b3.css",
+      "source_sha256": "8b66d1298c6173ee846d7ce59796bd1f4cd5a3beb14ea749b1d860f080d90e92",
+      "saved_sha256": "8b66d1298c6173ee846d7ce59796bd1f4cd5a3beb14ea749b1d860f080d90e92"
+    },
+    {
+      "source_url": "https://summer.ucsb.edu/modules/contrib/paragraphs/css/paragraphs.unpublished.css?tnlabd",
+      "local_path": "resources/ebd2a7be750e6ed6.css",
+      "source_sha256": "f1eea94c1d7f9c6747515e1d7af60618498e8197905f290bc3851da41fbd5588",
+      "saved_sha256": "f1eea94c1d7f9c6747515e1d7af60618498e8197905f290bc3851da41fbd5588"
+    },
+    {
+      "source_url": "https://summer.ucsb.edu/sites/default/files/assets/hero-swish-navy.png",
+      "local_path": "resources/404d33d5415a3b48.png",
+      "source_sha256": "c0a6c86357a8fc44021ab3714b004b249f99d8e5ec05f26b12181037fb3f7b30",
+      "saved_sha256": "c0a6c86357a8fc44021ab3714b004b249f99d8e5ec05f26b12181037fb3f7b30"
+    },
+    {
+      "source_url": "https://summer.ucsb.edu/sites/default/files/images/2024-11/SRA%20Research%20Tracks%204.jpg",
+      "local_path": "resources/d5ade004bdf66e23.jpg",
+      "source_sha256": "1aee41e76615ab34b6939ccbf7b5fddec629e6e7448d8a5476990d374ecdb050",
+      "saved_sha256": "1aee41e76615ab34b6939ccbf7b5fddec629e6e7448d8a5476990d374ecdb050"
+    },
+    {
+      "source_url": "https://summer.ucsb.edu/sites/default/files/images/assets/dropdown-arrow-icon.png",
+      "local_path": "resources/3a576952e4ee2b55.png",
+      "source_sha256": "27d12ab7db5e197e4918d061678e773b9a751263ca6c2a6624c5b755b815703c",
+      "saved_sha256": "27d12ab7db5e197e4918d061678e773b9a751263ca6c2a6624c5b755b815703c"
+    },
+    {
+      "source_url": "https://summer.ucsb.edu/sites/default/files/images/assets/quotation-marks.svg",
+      "local_path": "resources/627108580b17baf6.svg",
+      "source_sha256": "8e398f8e4ed5076d55a0e78da81de7a10126685c251ed77f1165c147470ec3c4",
+      "saved_sha256": "8e398f8e4ed5076d55a0e78da81de7a10126685c251ed77f1165c147470ec3c4"
+    },
+    {
+      "source_url": "https://summer.ucsb.edu/sites/default/files/images/plus-icon.png",
+      "local_path": "resources/0e7e58dbe15d4b8a.png",
+      "source_sha256": "1495e2dd0506b2c7ec09e217bb1a6e6f59158482918e617fbfd98bfdc0886a28",
+      "saved_sha256": "1495e2dd0506b2c7ec09e217bb1a6e6f59158482918e617fbfd98bfdc0886a28"
+    },
+    {
+      "source_url": "https://summer.ucsb.edu/themes/summerCustom/css/customStyle.css?tnlabd",
+      "local_path": "resources/1e3ef4b31842b410.css",
+      "source_sha256": "582d1566a837b34252e98adaaee24da758b67a2c0bf2c6bda754d358138284b4",
+      "saved_sha256": "60f088f015d8a2e26dca8ecbec5d6d31901d3e14faf33652335ce4d09aa94e1f"
+    },
+    {
+      "source_url": "https://summer.ucsb.edu/themes/summerCustom/css/style.css?tnlabd",
+      "local_path": "resources/945c3f2f0268787b.css",
+      "source_sha256": "878d3cb966b435f11cd4c12338ba7ed525a903635bf54fdec5c9baf59fdf7001",
+      "saved_sha256": "8f564ce8939506ca70dd53aae5353943d56bc6f4b00e418bab97f69dbbeea85c"
+    },
+    {
+      "source_url": "https://summer.ucsb.edu/themes/summerCustom/favicon.ico",
+      "local_path": "resources/250ac006cb9db819.ico",
+      "source_sha256": "1592502450ef38295b774f209c1ee93e3defb8be4e9ba729f510250feaa9c177",
+      "saved_sha256": "1592502450ef38295b774f209c1ee93e3defb8be4e9ba729f510250feaa9c177"
+    },
+    {
+      "source_url": "https://summer.ucsb.edu/themes/summerCustom/images/required.svg",
+      "local_path": "resources/ead508d4bcc59034.svg",
+      "source_sha256": "1107824fee57311554e87b7ebf3da2f518124457e2b0df8bfdd22870dfbb2548",
+      "saved_sha256": "1107824fee57311554e87b7ebf3da2f518124457e2b0df8bfdd22870dfbb2548"
+    },
+    {
+      "source_url": "https://summer.ucsb.edu/themes/ucsbweb/bootstrap/assets/fonts/bootstrap/glyphicons-halflings-regular.eot",
+      "local_path": "resources/816fd5a2b7d03720.eot",
+      "source_sha256": "13634da87d9e23f8c3ed9108ce1724d183a39ad072e73e1b3d8cbf646d2d0407",
+      "saved_sha256": "13634da87d9e23f8c3ed9108ce1724d183a39ad072e73e1b3d8cbf646d2d0407"
+    },
+    {
+      "source_url": "https://summer.ucsb.edu/themes/ucsbweb/bootstrap/assets/fonts/bootstrap/glyphicons-halflings-regular.svg",
+      "local_path": "resources/1f652d11aa3725f2.svg",
+      "source_sha256": "42f60659d265c1a3c30f9fa42abcbb56bd4a53af4d83d316d6dd7a36903c43e5",
+      "saved_sha256": "0688333129cbe4acc8baea3b35f8015287078f3035b9f56768389dd9cf8a0d91"
+    },
+    {
+      "source_url": "https://summer.ucsb.edu/themes/ucsbweb/bootstrap/assets/fonts/bootstrap/glyphicons-halflings-regular.ttf",
+      "local_path": "resources/54fc7fbb3f5a33d7.ttf",
+      "source_sha256": "e395044093757d82afcb138957d06a1ea9361bdcf0b442d06a18a8051af57456",
+      "saved_sha256": "e395044093757d82afcb138957d06a1ea9361bdcf0b442d06a18a8051af57456"
+    },
+    {
+      "source_url": "https://summer.ucsb.edu/themes/ucsbweb/bootstrap/assets/fonts/bootstrap/glyphicons-halflings-regular.woff",
+      "local_path": "resources/1be0806cc17fb3c9.woff",
+      "source_sha256": "a26394f7ede100ca118eff2eda08596275a9839b959c226e15439557a5a80742",
+      "saved_sha256": "a26394f7ede100ca118eff2eda08596275a9839b959c226e15439557a5a80742"
+    },
+    {
+      "source_url": "https://summer.ucsb.edu/themes/ucsbweb/bootstrap/assets/fonts/bootstrap/glyphicons-halflings-regular.woff2",
+      "local_path": "resources/69f319025cc15dd4.woff2",
+      "source_sha256": "fe185d11a49676890d47bb783312a0cda5a44c4039214094e7957b4c040ef11c",
+      "saved_sha256": "fe185d11a49676890d47bb783312a0cda5a44c4039214094e7957b4c040ef11c"
+    },
+    {
+      "source_url": "https://summer.ucsb.edu/themes/ucsbweb/css/style.css?tnlabd",
+      "local_path": "resources/247e2312204fbb0f.css",
+      "source_sha256": "54ccf366a3f310c3ccb6d5f2dba08c63664419382dedfdee37fe774dbeef2efb",
+      "saved_sha256": "e1867c80ee8ad6aa4bf5aaa970aefa88dcbb0c41ba6ba550af8bec9bda643b8a"
+    },
+    {
+      "source_url": "https://summer.ucsb.edu/themes/ucsbweb/images/required.svg",
+      "local_path": "resources/af8d1ec02b8b2a7a.svg",
+      "source_sha256": "1107824fee57311554e87b7ebf3da2f518124457e2b0df8bfdd22870dfbb2548",
+      "saved_sha256": "1107824fee57311554e87b7ebf3da2f518124457e2b0df8bfdd22870dfbb2548"
+    },
+    {
+      "source_url": "https://webfonts.brand.ucsb.edu/Produkt/Produkt-Black-Web.eot",
+      "local_path": "resources/7fec223e847ba4aa.eot",
+      "source_sha256": "bf9ceb886c8ff397e9479be4c87b452001b93177ab2f357d1cbcb43a7e767b17",
+      "saved_sha256": "bf9ceb886c8ff397e9479be4c87b452001b93177ab2f357d1cbcb43a7e767b17"
+    },
+    {
+      "source_url": "https://webfonts.brand.ucsb.edu/Produkt/Produkt-Black-Web.woff",
+      "local_path": "resources/4b183c9ba03950d3.woff",
+      "source_sha256": "afe839f679f92a2f1797e76b9fbc78e73fb491c424a4c21d75616087a00de78e",
+      "saved_sha256": "afe839f679f92a2f1797e76b9fbc78e73fb491c424a4c21d75616087a00de78e"
+    },
+    {
+      "source_url": "https://webfonts.brand.ucsb.edu/Produkt/Produkt-Black-Web.woff2",
+      "local_path": "resources/5b8747d30146a5b3.woff2",
+      "source_sha256": "9e2263727214c720aba9856818ff63ab1a0f88d9c814f4bb785f5d8f0c77ba2f",
+      "saved_sha256": "9e2263727214c720aba9856818ff63ab1a0f88d9c814f4bb785f5d8f0c77ba2f"
+    },
+    {
+      "source_url": "https://webfonts.brand.ucsb.edu/Produkt/Produkt-Bold-Web.eot",
+      "local_path": "resources/797a2c33064a719a.eot",
+      "source_sha256": "41a2ef156d55249ec58c8a67fae3706576f5ae8952e5f904f1944a36c9f9794f",
+      "saved_sha256": "41a2ef156d55249ec58c8a67fae3706576f5ae8952e5f904f1944a36c9f9794f"
+    },
+    {
+      "source_url": "https://webfonts.brand.ucsb.edu/Produkt/Produkt-Bold-Web.woff",
+      "local_path": "resources/bd0fa512d63bdeaa.woff",
+      "source_sha256": "6afc57072d87f9b478f19e20de6a1954cdc565005fbb65cb957900069af24515",
+      "saved_sha256": "6afc57072d87f9b478f19e20de6a1954cdc565005fbb65cb957900069af24515"
+    },
+    {
+      "source_url": "https://webfonts.brand.ucsb.edu/Produkt/Produkt-Bold-Web.woff2",
+      "local_path": "resources/486c03d08d68186c.woff2",
+      "source_sha256": "27b4950c62ad83bede06af37abfae99c29721db0635aee15f2f09cde605be29f",
+      "saved_sha256": "27b4950c62ad83bede06af37abfae99c29721db0635aee15f2f09cde605be29f"
+    },
+    {
+      "source_url": "https://webfonts.brand.ucsb.edu/Produkt/Produkt-Extralight-Web.eot",
+      "local_path": "resources/12d65d4eed333798.eot",
+      "source_sha256": "6d5a88b8bae679e21248e5edc4a887d037e7d0d1e855ff30c1e456342f20e286",
+      "saved_sha256": "6d5a88b8bae679e21248e5edc4a887d037e7d0d1e855ff30c1e456342f20e286"
+    },
+    {
+      "source_url": "https://webfonts.brand.ucsb.edu/Produkt/Produkt-Extralight-Web.woff",
+      "local_path": "resources/704ea80637f5ace0.woff",
+      "source_sha256": "a003fa651477af8c8374952a3785208b51979c936a86fe7851b188b96e61cab0",
+      "saved_sha256": "a003fa651477af8c8374952a3785208b51979c936a86fe7851b188b96e61cab0"
+    },
+    {
+      "source_url": "https://webfonts.brand.ucsb.edu/Produkt/Produkt-Extralight-Web.woff2",
+      "local_path": "resources/e7e39cdcb47a433d.woff2",
+      "source_sha256": "522875169c1144be1e23262bdc6762da892a8d9d0e971f5d8ad0156429afaca9",
+      "saved_sha256": "522875169c1144be1e23262bdc6762da892a8d9d0e971f5d8ad0156429afaca9"
+    },
+    {
+      "source_url": "https://webfonts.brand.ucsb.edu/Produkt/Produkt-Light-Web.eot",
+      "local_path": "resources/9242613a0a1f19f7.eot",
+      "source_sha256": "f7e182640fe6761351b2bfe040610f5b1209e91811c3f4d6bc68ca9fb66fac75",
+      "saved_sha256": "f7e182640fe6761351b2bfe040610f5b1209e91811c3f4d6bc68ca9fb66fac75"
+    },
+    {
+      "source_url": "https://webfonts.brand.ucsb.edu/Produkt/Produkt-Light-Web.woff",
+      "local_path": "resources/1e5aab5dc63a7cd1.woff",
+      "source_sha256": "bcf5d7f9999f1a1230665499991868213ae6be62e430591a3742ebf660d3590f",
+      "saved_sha256": "bcf5d7f9999f1a1230665499991868213ae6be62e430591a3742ebf660d3590f"
+    },
+    {
+      "source_url": "https://webfonts.brand.ucsb.edu/Produkt/Produkt-Light-Web.woff2",
+      "local_path": "resources/b7efb8af1db2fef7.woff2",
+      "source_sha256": "df6ae8bbd4df875b6f78d18cd66e000986fc36a0722479e45fabc66addf7b893",
+      "saved_sha256": "df6ae8bbd4df875b6f78d18cd66e000986fc36a0722479e45fabc66addf7b893"
+    },
+    {
+      "source_url": "https://webfonts.brand.ucsb.edu/Produkt/Produkt-Medium-Web.eot",
+      "local_path": "resources/bbe710586b72d29e.eot",
+      "source_sha256": "65597ad4a7236b2f951e102bf6c59b8f9da0ab2abb41d8a23145310182d76bcf",
+      "saved_sha256": "65597ad4a7236b2f951e102bf6c59b8f9da0ab2abb41d8a23145310182d76bcf"
+    },
+    {
+      "source_url": "https://webfonts.brand.ucsb.edu/Produkt/Produkt-Medium-Web.woff",
+      "local_path": "resources/f14c69414ecd054e.woff",
+      "source_sha256": "f03871b1f6111503b16c61b93ec2ae39cdfa8920195d60e5063549bbf69a6369",
+      "saved_sha256": "f03871b1f6111503b16c61b93ec2ae39cdfa8920195d60e5063549bbf69a6369"
+    },
+    {
+      "source_url": "https://webfonts.brand.ucsb.edu/Produkt/Produkt-Medium-Web.woff2",
+      "local_path": "resources/cc83b672ab735598.woff2",
+      "source_sha256": "bf3c9589c1dd3c37eeaa1c84c6d538433699be07bc1535bf7ac29c747e331076",
+      "saved_sha256": "bf3c9589c1dd3c37eeaa1c84c6d538433699be07bc1535bf7ac29c747e331076"
+    },
+    {
+      "source_url": "https://webfonts.brand.ucsb.edu/Produkt/Produkt-Regular-Web.eot",
+      "local_path": "resources/6a7a0af72b8bd2dc.eot",
+      "source_sha256": "7bbde0494538562f6ca48150df1d78714928371bcc53b8f5aa954f31acb68b12",
+      "saved_sha256": "7bbde0494538562f6ca48150df1d78714928371bcc53b8f5aa954f31acb68b12"
+    },
+    {
+      "source_url": "https://webfonts.brand.ucsb.edu/Produkt/Produkt-Regular-Web.woff",
+      "local_path": "resources/04d735ee84d2bb95.woff",
+      "source_sha256": "9ba69de03c2597aaf7d83450c94bb4b2ef046151e24669d42f8a87f3411cd76e",
+      "saved_sha256": "9ba69de03c2597aaf7d83450c94bb4b2ef046151e24669d42f8a87f3411cd76e"
+    },
+    {
+      "source_url": "https://webfonts.brand.ucsb.edu/Produkt/Produkt-Regular-Web.woff2",
+      "local_path": "resources/889eb23931cacfc1.woff2",
+      "source_sha256": "fe424fd1f3fae57f59651504fbec5136fd61d5bf7b906d4932782022e7f067b8",
+      "saved_sha256": "fe424fd1f3fae57f59651504fbec5136fd61d5bf7b906d4932782022e7f067b8"
+    },
+    {
+      "source_url": "https://webfonts.brand.ucsb.edu/Produkt/Produkt-Semibold-Web.eot",
+      "local_path": "resources/9ad263d4afb42e4c.eot",
+      "source_sha256": "5e6173b97a61cca8664186f7d6fcca7eecd2a1bd2c1245d1a1e2db3cc1f6fa23",
+      "saved_sha256": "5e6173b97a61cca8664186f7d6fcca7eecd2a1bd2c1245d1a1e2db3cc1f6fa23"
+    },
+    {
+      "source_url": "https://webfonts.brand.ucsb.edu/Produkt/Produkt-Semibold-Web.woff",
+      "local_path": "resources/1df90d38d59ace95.woff",
+      "source_sha256": "ce02a45b150925ca7af956c97d1eca114928c41986e9316e2eed599ea3192ed3",
+      "saved_sha256": "ce02a45b150925ca7af956c97d1eca114928c41986e9316e2eed599ea3192ed3"
+    },
+    {
+      "source_url": "https://webfonts.brand.ucsb.edu/Produkt/Produkt-Semibold-Web.woff2",
+      "local_path": "resources/2e74db0cd42c2e90.woff2",
+      "source_sha256": "abe4f7d4fc96d3da8c0ec5784db87afb99e4ef4e5f4dc8739292e265b3029631",
+      "saved_sha256": "abe4f7d4fc96d3da8c0ec5784db87afb99e4ef4e5f4dc8739292e265b3029631"
+    },
+    {
+      "source_url": "https://webfonts.brand.ucsb.edu/Produkt/Produkt-Super-Web.eot",
+      "local_path": "resources/68b2aaef8e87b376.eot",
+      "source_sha256": "9182f64ead3967a939b8bdc5501fa029bd64ecb84751931ebbd3bbbc3d0ac2e6",
+      "saved_sha256": "9182f64ead3967a939b8bdc5501fa029bd64ecb84751931ebbd3bbbc3d0ac2e6"
+    },
+    {
+      "source_url": "https://webfonts.brand.ucsb.edu/Produkt/Produkt-Super-Web.woff",
+      "local_path": "resources/14423e752a27f7f3.woff",
+      "source_sha256": "6d9e1a5f18749d60718be2a7f238421e699457ffa0b5620438ab6ae159b20f38",
+      "saved_sha256": "6d9e1a5f18749d60718be2a7f238421e699457ffa0b5620438ab6ae159b20f38"
+    },
+    {
+      "source_url": "https://webfonts.brand.ucsb.edu/Produkt/Produkt-Super-Web.woff2",
+      "local_path": "resources/269a88a132af05b1.woff2",
+      "source_sha256": "0560f3c8968b86e2d66e4569f659722ac285bb600a7749990dd3aa14c47f11e5",
+      "saved_sha256": "0560f3c8968b86e2d66e4569f659722ac285bb600a7749990dd3aa14c47f11e5"
+    },
+    {
+      "source_url": "https://webfonts.brand.ucsb.edu/Produkt/Produkt-Thin-Web.eot",
+      "local_path": "resources/be3f40f1aa97a5b4.eot",
+      "source_sha256": "34682aed90cdd0d3b922b697fac60dd6241afca53072208c577da60666d447e4",
+      "saved_sha256": "34682aed90cdd0d3b922b697fac60dd6241afca53072208c577da60666d447e4"
+    },
+    {
+      "source_url": "https://webfonts.brand.ucsb.edu/Produkt/Produkt-Thin-Web.woff",
+      "local_path": "resources/7175076752333581.woff",
+      "source_sha256": "0ffeac14a58b5c46a1854f4c18975f209832d1818396191bc8b3290dc3615893",
+      "saved_sha256": "0ffeac14a58b5c46a1854f4c18975f209832d1818396191bc8b3290dc3615893"
+    },
+    {
+      "source_url": "https://webfonts.brand.ucsb.edu/Produkt/Produkt-Thin-Web.woff2",
+      "local_path": "resources/4e858f7b42718813.woff2",
+      "source_sha256": "f1a06867727c8dd3ade4d45a598b23b68cfa41ecd3ae8f276b2d1861da6fcccc",
+      "saved_sha256": "f1a06867727c8dd3ade4d45a598b23b68cfa41ecd3ae8f276b2d1861da6fcccc"
+    },
+    {
+      "source_url": "https://webfonts.brand.ucsb.edu/webfont.min.css",
+      "local_path": "resources/c2e59f76e9684f7d.css",
+      "source_sha256": "36b8de3af7b8d8d7d795ee2b7414c083fc532495d7637b3a6eb8170ec473d8d4",
+      "saved_sha256": "5f1a21f567a7ac1eb94a791f9b4e60922ab747b6d5c2cddd1b40b8578676d915"
+    }
+  ],
+  "saved_html_sha256": "1dfe7e3e490930deafd6f830d8a281a4609c42d3e3cbcbb9bfe6d27b3a5f9061"
+}
