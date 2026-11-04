@@ -17,10 +17,10 @@ redirect_from:
       <p class="hero__name">Abdelrahman S. Abdelrahman</p>
       <p class="hero__role">PhD candidate · Electrical & Computer Engineering</p>
       <h1 id="hero-title">Learning to compute<br>with <em>randomness.</em></h1>
-      <p class="hero__intro">I work across the entire computing stack, from developing new algorithms to implementing them on specialized hardware.</p>
+      <p class="hero__intro">I work across the entire computing stack, from developing algorithms in Python and C++ to implementing them on specialized hardware such as FPGAs and single-photon avalanche diode arrays.</p>
       <p class="hero__intro">My research spans rigorous benchmarking of variational probabilistic algorithms such as PAOA against quantum counterparts such as QAOA. I also develop methods that learn how many samples stochastic neurons need to retain accuracy while substantially reducing memory use and computation. At the device level, I model stochastic processes in emerging technologies such as 2D memristors.</p>
-      <p class="hero__intro">Beyond academia, I built and deployed computer vision systems at Wakeb for safety and tracking applications, bringing these solutions to resource-constrained NVIDIA Jetson devices.</p>
-      <ul class="hero__skills" aria-label="Core technical skills"><li>Python & C++</li><li>PyTorch</li><li>Monte Carlo methods</li><li>Hardware acceleration</li></ul>
+      <p class="hero__intro">Beyond academia, I built real-time computer vision systems for safety monitoring and object tracking using PyTorch, YOLO, and ByteTrack. I worked from dataset preparation through deployment on resource-constrained NVIDIA Jetson devices.</p>
+      <ul class="hero__skills" aria-label="Core technical skills"><li>Python & C++</li><li>PyTorch</li><li>Monte Carlo methods</li><li>FPGA & NVIDIA Jetson</li></ul>
       <div class="hero__actions"><a class="button button--dark" href="{{ '/files/CV.pdf' | relative_url }}" target="_blank" rel="noopener">Download CV <span aria-hidden="true">↗</span></a><a class="button button--outline" href="mailto:{{ site.author.email }}">Get in touch <span aria-hidden="true">↗</span></a><a class="text-link" href="#publications">View research ↓</a></div>
     </div>
   </div>
