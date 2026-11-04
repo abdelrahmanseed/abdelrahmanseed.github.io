@@ -1,4 +1,4 @@
-/* Keep every figure to the right of its corresponding description. */
+/* Figures sit right of descriptions on desktop and above them on mobile. */
 .paper-story-figure {
   display:grid;
   grid-template-columns:minmax(280px,1fr) minmax(300px,1.25fr);
@@ -86,9 +86,18 @@
 }
 @media(max-width:760px) {
   .paper-story-figure {
-    grid-template-columns:minmax(260px,1fr) minmax(280px,1.25fr);
+    grid-template-columns:minmax(0,1fr);
     gap:20px;
+    overflow-x:visible;
     padding:28px 0;
+  }
+  .paper-story-figure>figure {
+    grid-column:1;
+    grid-row:1;
+  }
+  .paper-story-figure>.figure-text {
+    grid-column:1;
+    grid-row:2;
   }
   .paper-story-figure .figure-text h2,
   .paper-story-figure .figure-text h4 {
