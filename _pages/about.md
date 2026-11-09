@@ -10,12 +10,20 @@ redirect_from:
 ---
 
 <section class="hero wrap" id="about" aria-labelledby="hero-title">
-  <div class="hero__top"><p class="eyebrow">Machine learning · Probabilistic computing</p><a class="hero__location" href="https://opus.ece.ucsb.edu" target="_blank" rel="noopener">UC Santa Barbara · OPUS Lab ↗</a></div>
   <div class="hero__main">
-    <figure class="hero__portrait"><img src="{{ '/images/profile.webp' | relative_url }}" alt="Portrait of Abdelrahman S. Abdelrahman" width="640" height="670" fetchpriority="high" decoding="async"></figure>
+    <div class="hero__profile">
+      <figure class="hero__portrait"><img src="{{ '/images/profile.webp' | relative_url }}" alt="Portrait of Abdelrahman S. Abdelrahman" width="640" height="670" fetchpriority="high" decoding="async"></figure>
+      <nav class="profile-links" aria-label="Contact and academic profiles">
+        <a href="https://www.linkedin.com/in/{{ site.author.linkedin }}/" target="_blank" rel="noopener" aria-label="LinkedIn profile" title="LinkedIn">{% include profile-icon.html name="linkedin" %}<span>LinkedIn</span></a>
+        <a href="{{ site.author.googlescholar }}" target="_blank" rel="noopener" aria-label="Google Scholar profile" title="Google Scholar">{% include profile-icon.html name="scholar" %}<span>Google Scholar</span></a>
+        <a href="mailto:{{ site.author.email }}" aria-label="Email Abdelrahman" title="Email">{% include profile-icon.html name="email" %}<span>Email</span></a>
+        <a href="https://github.com/{{ site.author.github }}" target="_blank" rel="noopener" aria-label="GitHub profile" title="GitHub">{% include profile-icon.html name="github" %}<span>GitHub</span></a>
+        <a href="{{ site.author.orcid }}" target="_blank" rel="noopener" aria-label="ORCID profile" title="ORCID">{% include profile-icon.html name="orcid" %}<span>ORCID</span></a>
+      </nav>
+    </div>
     <div class="hero__copy">
       <p class="hero__name">Abdelrahman S. Abdelrahman</p>
-      <p class="hero__role">PhD candidate · Electrical & Computer Engineering</p>
+      <p class="hero__role">PhD candidate · Electrical & Computer Engineering<a class="hero__location" href="https://opus.ece.ucsb.edu" target="_blank" rel="noopener">UC Santa Barbara · OPUS Lab ↗</a></p>
       <h1 id="hero-title">Learning to compute<br>with <em>randomness.</em></h1>
       <p class="hero__intro">I work across the entire computing stack, from developing algorithms in Python and C++ to implementing them on specialized hardware such as FPGAs and single-photon avalanche diode arrays.</p>
       <p class="hero__intro">My research spans rigorous benchmarking of variational probabilistic algorithms such as PAOA against quantum counterparts such as QAOA. I also develop methods that learn how many samples stochastic neurons need to retain accuracy while substantially reducing memory use and computation. At the device level, I model stochastic processes in emerging technologies such as 2D memristors.</p>
@@ -38,7 +46,7 @@ redirect_from:
 </figure>
 
 <section class="research-section" id="research" aria-labelledby="research-heading">
-  <div class="wrap section-heading reveal"><p class="eyebrow">01 / Research & publications</p><h2 id="research-heading">Randomness.<br><span class="muted">With a purpose.</span></h2><div class="section-heading__aside"><p>How can we learn better ways to search, sample, and compute? My work connects algorithms, stochastic devices, and physical systems.</p><a class="text-link" href="{{ site.author.googlescholar }}" target="_blank" rel="noopener">Google Scholar ↗</a></div></div>
+  <div class="wrap section-heading reveal"><p class="eyebrow">01 / Research & publications</p><h2 id="research-heading">Engineered Randomness</h2><div class="section-heading__aside"><p>How can we learn better ways to search, sample, and compute? My work connects algorithms, stochastic devices, and physical systems.</p><a class="text-link" href="{{ site.author.googlescholar }}" target="_blank" rel="noopener">Google Scholar ↗</a></div></div>
   <div class="research-narrative wrap">
     <div class="research-stage">
       <div class="stage-heading"><span class="eyebrow">Sampling dynamics</span><span class="stage-counter" aria-hidden="true">01 / 03</span></div>
@@ -71,7 +79,7 @@ redirect_from:
 </section>
 
 <section class="teaching-section section-pad" id="teaching" aria-labelledby="teaching-heading">
-  <div class="wrap"><div class="section-heading reveal"><p class="eyebrow">02 / Teaching & mentorship</p><h2 id="teaching-heading">Ideas make sense<br><span class="muted">when you build them.</span></h2><p class="section-heading__aside">From executable sampling notebooks to digital circuits and student research. Courses, materials, and mentorship at UC Santa Barbara.</p></div>
+  <div class="wrap"><div class="section-heading reveal"><p class="eyebrow">02 / Teaching & mentorship</p><h2 id="teaching-heading">Mentorship and Teaching: from concepts to implementations</h2><p class="section-heading__aside">From executable sampling notebooks to digital circuits and student research. Courses, materials, and mentorship at UC Santa Barbara.</p></div>
     {% assign courses = site.teaching | sort: 'date' | reverse %}
     <div class="course-list">{% for course in courses %}<article class="course"><div class="course__meta"><span class="eyebrow">{{ course.term }}</span><span>{{ course.type }}</span></div><div class="course__body"><h3>{{ course.title }}</h3><p>{{ course.excerpt | strip_html }}</p><div class="resource-links">
       {% if course.materialurl %}<a href="{{ course.materialurl }}" target="_blank" rel="noopener">{{ course.materiallabel | default: 'Materials' }} ↗</a>{% endif %}
@@ -84,14 +92,14 @@ redirect_from:
 </section>
 
 <section class="work-section section-pad" id="work" aria-labelledby="work-heading"><div class="wrap">
-  <div class="section-heading reveal"><p class="eyebrow">03 / Applied work</p><h2 id="work-heading">From a model.<br><span class="muted">To the real world.</span></h2><p class="section-heading__aside">Computer vision systems developed at Wakeb for industrial safety and real-time monitoring.</p></div>
+  <div class="section-heading reveal"><p class="eyebrow">03 / Applied work</p><h2 id="work-heading">Detection and Tracking Real-Time Deployment</h2><p class="section-heading__aside">Computer vision systems developed at Wakeb for industrial safety and real-time monitoring.</p></div>
   <article class="featured-project"><div class="featured-project__copy"><p class="eyebrow">Alfanar Electric / Smart Alerting System</p><h3>Personnel detection.<br>High-voltage safety.</h3><p>Personnel detection in high-voltage test areas, enabling automated safety shutdowns.</p><ul class="tags"><li>PyTorch</li><li>YOLO</li><li>ByteTrack</li><li>C++</li><li>NVIDIA Jetson</li></ul></div><div class="project-demo"><iframe src="https://ucsb.app.box.com/embed/s/yaqn7m7cyu536uvv67y2pba7i8jsfc4a/file/2186396742575?uxLite=true" title="Smart Alerting System video demonstration" allow="fullscreen" allowfullscreen loading="lazy"></iframe><a class="text-link" href="https://ucsb.app.box.com/s/yaqn7m7cyu536uvv67y2pba7i8jsfc4a/file/2186396742575" target="_blank" rel="noopener">Watch demo in Box ↗</a></div></article>
   <article class="monitoring-project"><div><p class="eyebrow">Saudi Water Authority / Aware</p><h3>Real-time awareness.<br>At deployment scale.</h3><p>A PyTorch and YOLO crowd-management system with a secure offline dashboard for autonomous operation.</p></div><div class="project-scale"><strong>100<span>+</span></strong><span>Cameras in deployment</span></div></article>
   <div class="implementation-resources"><h3>Behind the systems</h3><div class="resource-links"><a href="https://ucsb.box.com/s/ldx6tqr5v77df2l8qinkt46jzb60d1j5" target="_blank" rel="noopener">Report 1 ↗</a><a href="https://ucsb.box.com/s/k889bw7w9iwrnpwdmpu9ta1pbcbdkbzo" target="_blank" rel="noopener">Code 1 ↗</a><a href="https://ucsb.box.com/s/j6l3zth650uo28palamt0r6quihod5n7" target="_blank" rel="noopener">Report 2 ↗</a><a href="https://ucsb.box.com/s/x9gjqivp0mj45ngxeh1ocgp5ridc878f" target="_blank" rel="noopener">Code 2 ↗</a></div></div>
 </div></section>
 
 <section class="background-section section-pad" id="background" aria-labelledby="background-heading"><div class="wrap">
-  <div class="section-heading reveal"><p class="eyebrow">04 / Background</p><h2 id="background-heading">A little more<br><span class="muted">behind the work.</span></h2><div class="section-heading__aside"><p>Education, experience, technical skills, awards, and the talks that connect the ideas.</p><a class="button button--outline" href="{{ '/files/CV.pdf' | relative_url }}" target="_blank" rel="noopener">Download full CV ↗</a></div></div>
+  <div class="section-heading reveal"><p class="eyebrow">04 / Background</p><h2 id="background-heading">Qualifications and Experiences</h2><div class="section-heading__aside"><p>Education, experience, technical skills, awards, and the talks that connect the ideas.</p><a class="button button--outline" href="{{ '/files/CV.pdf' | relative_url }}" target="_blank" rel="noopener">Download full CV ↗</a></div></div>
   {% include one-page-background.html %}
 </div></section>
 
