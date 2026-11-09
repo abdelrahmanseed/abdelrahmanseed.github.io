@@ -22,3 +22,28 @@ bundle exec jekyll serve --host 127.0.0.1 --port 4001 --livereload
 Open <http://127.0.0.1:4001/>. The one-page presentation uses `_layouts/one-page.html`, `assets/css/one-page.css`, and `assets/js/one-page.js`. Motion respects the visitor’s reduced-motion preference; the research animation also has a pause control.
 
 Three interactive examples accompany the learning, hardware, and physics research themes: temperature-dependent Boltzmann sampling, idealized p-bits, and coupled oscillators. These are illustrative mathematical models, rather than reproductions of the papers’ measurements. Animations run while visible, pause when hidden, respect manual pause controls, and support reduced motion. Their numerical checks run with `node scripts/check-research-models.cjs`.
+
+### Maintaining the site
+
+| What to edit | Location |
+| --- | --- |
+| Homepage copy, section order and contact links | `_pages/about.md` |
+| Paper titles, dates, URLs and citations | `_publications/` and `_data/paper_metadata.yml` |
+| Paper descriptions and figure notes | `_data/paper_stories.yml` |
+| Shared figure markup and intrinsic image sizes | `_includes/paper-figure.html` and `_data/figure_dimensions.yml` |
+| Figure positions, sizes and mobile ordering | `assets/css/figure-pairs.css` |
+| Homepage styling | `assets/css/one-page.css` |
+| Shared figure viewer | `assets/js/figure-viewer.js`, loaded by `_includes/figure-viewer.html` |
+| Simulation mathematics and controls | `assets/js/research-models.js` and `assets/js/research-labs.js` |
+
+The homepage and individual paper pages use the same figure template and viewer. Keep the numerical models independent of the DOM so they remain directly testable. Keep archived source snapshots under `files/archives/` unchanged.
+
+Before publishing, run:
+
+```sh
+bundle exec jekyll build
+node scripts/check-research-models.cjs
+node scripts/check-figure-viewer.cjs
+```
+
+For layout changes, also review desktop and mobile views, publication filters and deep links, figure expansion, and motion controls. GitHub Pages build and deployment results are separate: inspect the failed step in Actions before changing application code to address a publishing timeout.

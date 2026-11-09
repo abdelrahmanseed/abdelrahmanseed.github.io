@@ -14,14 +14,8 @@
   max-width:none;
   min-width:0;
 }
-.figure-text>p:last-child {
-  margin-bottom:0;
-}
 .figure-notes strong {
   font-weight:600;
-}
-.figure-notes p:last-child {
-  margin-bottom:0;
 }
 .paper-story-figure .figure-text .eyebrow {
   display:block;

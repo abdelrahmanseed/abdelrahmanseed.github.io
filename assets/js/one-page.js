@@ -56,25 +56,7 @@
   addEventListener('hashchange', () => revealTarget(location.hash));
   addEventListener('popstate', () => revealTarget(location.hash));
 
-  // The native dialog provides Escape handling, focus trapping, and focus return.
-  const dialog = document.querySelector('.figure-viewer');
-  if (dialog && typeof dialog.showModal === 'function') {
-    document.querySelectorAll('[data-figure-open]').forEach(link => link.addEventListener('click', event => {
-      if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
-      event.preventDefault();
-      const img = dialog.querySelector('img');
-      img.src = link.href;
-      img.alt = link.querySelector('img').alt;
-      dialog.querySelector('.figure-viewer__caption').textContent = link.dataset.caption;
-      dialog.showModal();
-    }));
-    dialog.querySelector('[data-figure-close]').addEventListener('click', () => dialog.close());
-    dialog.addEventListener('click', event => {
-      if (event.target !== dialog) return;
-      const r = dialog.getBoundingClientRect();
-      if (event.clientX < r.left || event.clientX > r.right || event.clientY < r.top || event.clientY > r.bottom) dialog.close();
-    });
-  }
+  // Figure expansion is initialized separately by figure-viewer.js.
   document.querySelectorAll('.copy-citation').forEach(button => button.addEventListener('click', async () => {
     const text = button.closest('.paper-citation').querySelector('code').textContent;
     const label = button.nextElementSibling;

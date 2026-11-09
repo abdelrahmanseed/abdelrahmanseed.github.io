@@ -1,0 +1,26 @@
+{% comment %}Shared figure layout. Inputs: figure, index, optional standalone and supplementary.{% endcomment %}
+{% assign figure = include.figure %}
+{% assign dimensions = site.data.figure_dimensions[figure.image] %}
+{% assign figure_number = include.index %}
+{% assign heading_tag = 'h4' %}
+{% assign anchored = false %}
+{% if include.supplementary %}{% assign figure_number = figure_number | prepend: 'S' %}{% endif %}
+{% if include.standalone %}
+  {% assign heading_tag = 'h2' %}
+  {% unless include.supplementary %}{% assign anchored = true %}{% endunless %}
+{% endif %}
+<section class="{% if include.standalone %}paper-section {% endif %}paper-story-figure"{% if anchored %} id="figure-{{ figure_number }}" aria-labelledby="figure-heading-{{ figure_number }}"{% endif %}>
+  <div class="figure-text">
+    <span class="eyebrow">Figure {{ figure_number }}</span>
+    <{{ heading_tag }}{% if anchored %} id="figure-heading-{{ figure_number }}"{% endif %}>{{ figure.title }}</{{ heading_tag }}>
+    <p>{{ figure.text }}</p>
+    {% include figure-notes.html figure=figure %}
+  </div>
+  <figure{% if include.standalone %} class="paper-figure"{% endif %}>
+    <a href="{{ figure.image | relative_url }}" data-figure-open data-caption="Figure {{ figure_number }} · {{ figure.title | escape }}" aria-label="Expand {% if include.supplementary %}supplementary {% endif %}figure {{ figure_number }}{% unless include.supplementary %}: {{ figure.title | escape }}{% endunless %}">
+      <img src="{{ figure.image | relative_url }}" alt="Figure {{ figure_number }}: {{ figure.title | escape }}" width="{{ dimensions.width }}" height="{{ dimensions.height }}" loading="lazy" decoding="async">
+      <span{% if include.standalone %} class="research-story__expand" aria-hidden="true"{% endif %}>Expand figure ↗</span>
+    </a>
+    <figcaption>From the paper, p. {{ figure.page }}.</figcaption>
+  </figure>
+</section>

@@ -22,20 +22,13 @@ layout: research
 
 <article class="paper-body">
   <section class="paper-introduction" id="overview"><h2>The question</h2><p>{{ story.introduction }}</p></section>
-  {% for figure in story.figures %}{% assign dimensions = site.data.figure_dimensions[figure.image] %}
-    <section class="paper-section paper-story-figure" id="figure-{{ forloop.index }}" aria-labelledby="figure-heading-{{ forloop.index }}">
-      <div class="figure-text"><span class="eyebrow">Figure {{ forloop.index }}</span><h2 id="figure-heading-{{ forloop.index }}">{{ figure.title }}</h2>
-      <p>{{ figure.text }}</p>{% include figure-notes.html figure=figure %}</div>
-      <figure class="paper-figure">
-        <a href="{{ figure.image | relative_url }}" data-figure-open data-caption="Figure {{ forloop.index }} · {{ figure.title | escape }}" aria-label="Expand figure {{ forloop.index }}: {{ figure.title | escape }}"><img src="{{ figure.image | relative_url }}" alt="Figure {{ forloop.index }}: {{ figure.title | escape }}" width="{{ dimensions.width }}" height="{{ dimensions.height }}" loading="lazy" decoding="async"><span class="research-story__expand" aria-hidden="true">Expand figure ↗</span></a>
-        <figcaption>From the paper, p. {{ figure.page }}.</figcaption>
-      </figure>
-    </section>
+  {% for figure in story.figures %}
+    {% include paper-figure.html figure=figure index=forloop.index standalone=true %}
   {% endfor %}
   {% if story.supplementary %}
     <details class="paper-supplementary" id="supplementary"><summary>Supplementary figures <span>{{ story.supplementary.size }} figures</span></summary>
-      {% for figure in story.supplementary %}{% assign dimensions = site.data.figure_dimensions[figure.image] %}
-        <section class="paper-section paper-story-figure"><div class="figure-text"><span class="eyebrow">Figure S{{ forloop.index }}</span><h2>{{ figure.title }}</h2><p>{{ figure.text }}</p>{% include figure-notes.html figure=figure %}</div><figure class="paper-figure"><a href="{{ figure.image | relative_url }}" data-figure-open data-caption="Figure S{{ forloop.index }} · {{ figure.title | escape }}" aria-label="Expand supplementary figure S{{ forloop.index }}"><img src="{{ figure.image | relative_url }}" alt="Figure S{{ forloop.index }}: {{ figure.title | escape }}" width="{{ dimensions.width }}" height="{{ dimensions.height }}" loading="lazy"><span class="research-story__expand" aria-hidden="true">Expand figure ↗</span></a><figcaption>From the paper, p. {{ figure.page }}.</figcaption></figure></section>
+      {% for figure in story.supplementary %}
+        {% include paper-figure.html figure=figure index=forloop.index standalone=true supplementary=true %}
       {% endfor %}
     </details>
   {% endif %}

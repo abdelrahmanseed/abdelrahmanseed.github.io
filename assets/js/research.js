@@ -23,28 +23,6 @@
     });
   }
 
-  const dialog = document.querySelector('.figure-viewer');
-  if (dialog && typeof dialog.showModal === 'function') {
-    const image = dialog.querySelector('img');
-    const caption = dialog.querySelector('.figure-viewer__caption');
-    document.querySelectorAll('[data-figure-open]').forEach((link) => {
-      link.addEventListener('click', (event) => {
-        if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
-        event.preventDefault();
-        image.src = link.href;
-        image.alt = link.querySelector('img').alt;
-        caption.textContent = link.dataset.caption;
-        dialog.showModal();
-      });
-    });
-    dialog.querySelector('[data-figure-close]').addEventListener('click', () => dialog.close());
-    dialog.addEventListener('click', (event) => {
-      if (event.target !== dialog) return;
-      const rect = dialog.getBoundingClientRect();
-      if (event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom) dialog.close();
-    });
-  }
-
   if ('IntersectionObserver' in window) {
     const chapters = document.querySelectorAll('.research-chapter, .research-index');
     const navLinks = document.querySelectorAll('.research-nav a');
