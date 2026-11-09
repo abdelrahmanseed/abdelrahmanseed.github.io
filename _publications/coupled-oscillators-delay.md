@@ -1,4 +1,5 @@
 ---
+last_modified_at: "2026-11-08T21:36:29-08:00"
 title: "Energy Transfer and Coherence in Coupled Oscillators with Delayed Coupling"
 collection: publications
 layout: publication

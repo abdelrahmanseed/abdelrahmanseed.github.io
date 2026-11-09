@@ -1,4 +1,5 @@
 ---
+last_modified_at: "2026-11-08T21:36:29-08:00"
 permalink: /
 title: "Abdelrahman S. Abdelrahman"
 description: "PhD candidate at UC Santa Barbara. Learning-based sampling, probabilistic optimization, FPGA, and deployed computer vision systems."

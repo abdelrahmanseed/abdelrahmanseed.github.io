@@ -1,4 +1,5 @@
 ---
+last_modified_at: "2026-11-08T21:36:29-08:00"
 title: "Probabilistic algorithms for Ising machines from optimization to generative AI"
 collection: publications
 layout: publication

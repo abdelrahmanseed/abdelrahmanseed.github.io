@@ -1,4 +1,5 @@
 ---
+last_modified_at: "2026-11-08T21:36:29-08:00"
 title: "Research and publications"
 description: "Probabilistic optimization, stochastic hardware, physical models, and sensing."
 permalink: /research/

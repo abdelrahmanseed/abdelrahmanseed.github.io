@@ -1,4 +1,5 @@
 ---
+last_modified_at: "2026-11-08T21:36:29-08:00"
 layout: archive
 title: "Sitemap"
 permalink: /sitemap/
@@ -7,31 +8,30 @@ author_profile: true
 
 {% include base_path %}
 
-A list of all the posts and pages found on the site. For you robots out there, there is an [XML version]({{ base_path }}/sitemap.xml) available for digesting as well.
+A directory of the research, teaching, and background pages on this site. An [XML sitemap]({{ base_path }}/sitemap.xml) is also available for search engines.
 
 <h2>Pages</h2>
-{% for post in site.pages %}
-  {% include archive-single.html %}
-{% endfor %}
+<ul>
+  <li><a href="{{ '/' | relative_url }}">Home</a></li>
+  <li><a href="{{ '/research/' | relative_url }}">Research and publications</a></li>
+  <li><a href="{{ '/teaching/' | relative_url }}">Teaching</a></li>
+  <li><a href="{{ '/portfolio/' | relative_url }}">Applied work</a></li>
+  <li><a href="{{ '/cv/' | relative_url }}">CV and background</a></li>
+  <li><a href="{{ '/#talks' | relative_url }}">Invited talks</a></li>
+</ul>
 
-<h2>Posts</h2>
-{% for post in site.posts %}
-  {% include archive-single.html %}
+<h2>Publications</h2>
+<ul>
+{% assign papers = site.publications | sort: 'date' | reverse %}
+{% for paper in papers %}
+  <li><a href="{{ paper.url | relative_url }}">{{ paper.title }}</a></li>
 {% endfor %}
+</ul>
 
-{% capture written_label %}'None'{% endcapture %}
-
-{% for collection in site.collections %}
-{% unless collection.output == false or collection.label == "posts" %}
-  {% capture label %}{{ collection.label }}{% endcapture %}
-  {% if label != written_label %}
-  <h2>{{ label }}</h2>
-  {% capture written_label %}{{ label }}{% endcapture %}
-  {% endif %}
-{% endunless %}
-{% for post in collection.docs %}
-  {% unless collection.output == false or collection.label == "posts" %}
-  {% include archive-single.html %}
-  {% endunless %}
+<h2>Courses and mentorship</h2>
+<ul>
+{% assign courses = site.teaching | sort: 'date' | reverse %}
+{% for course in courses %}
+  <li><a href="{{ course.url | relative_url }}">{{ course.title }}</a> · {{ course.term }}</li>
 {% endfor %}
-{% endfor %}
+</ul>

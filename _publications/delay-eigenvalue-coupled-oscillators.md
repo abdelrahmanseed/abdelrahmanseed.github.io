@@ -1,4 +1,5 @@
 ---
+last_modified_at: "2026-11-08T21:36:29-08:00"
 title: "A Comparison of Numerical Solvers for the Delay Eigenvalue Problem of Coupled Oscillators"
 collection: publications
 layout: publication

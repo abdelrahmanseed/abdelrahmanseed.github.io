@@ -1,4 +1,5 @@
 ---
+last_modified_at: "2026-11-08T21:36:29-08:00"
 title: "Demo Abstract: Energy-Efficient Aerial Data Aggregation in IoT Networks with WuR"
 collection: publications
 layout: publication

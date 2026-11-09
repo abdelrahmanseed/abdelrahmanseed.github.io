@@ -89,9 +89,9 @@
 {% if site.social %}
   <script type="application/ld+json">
     {
-      "@context" : "http://schema.org",
-      "@type" : "{% if site.social.type %}{{ site.social.type }}{% else %}Person{% endif %}",
-      "name" : "{{ site.social.name | default: site.name }}",
+      "@context" : "https://schema.org",
+      "@type" : {{ site.social.type | default: 'Person' | jsonify }},
+      "name" : {{ site.social.name | default: site.name | jsonify }},
       "url" : {{ seo_url | jsonify }},
       "sameAs" : {{ site.social.links | jsonify }}
     }

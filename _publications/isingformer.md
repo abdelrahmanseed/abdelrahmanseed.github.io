@@ -1,4 +1,5 @@
 ---
+last_modified_at: "2026-11-08T21:36:29-08:00"
 title: "Isingformer: Augmenting parallel tempering with learned proposals"
 collection: publications
 layout: publication

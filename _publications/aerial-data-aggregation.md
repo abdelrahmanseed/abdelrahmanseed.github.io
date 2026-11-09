@@ -1,4 +1,5 @@
 ---
+last_modified_at: "2026-11-08T21:36:29-08:00"
 title: "Energy-Efficient Aerial Data Aggregation for IoT: From Prototyping to Large-Scale Implementation"
 collection: publications
 layout: publication

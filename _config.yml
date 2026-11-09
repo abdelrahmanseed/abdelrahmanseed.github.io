@@ -93,7 +93,7 @@ publication_category:
 teaser                   :  # filename of teaser fallback teaser image placed in /images/ for social media previews
 breadcrumbs              : false # true, false (default)
 words_per_minute         : 160
-future                   : true
+future                   : false
 read_more                : "disabled" # if enabled, adds "Read more" links to excerpts
 talkmap_link             : false      #change to true to add link to talkmap on talks page
 comments:
@@ -146,9 +146,13 @@ og_description           :  # Social media default site image description
 # For specifying social profiles
 # - https://developers.google.com/structured-data/customize/social-profiles
 social:
-  type                   : # Person or Organization (defaults to Person)
-  name                   : # If the user or organization name differs from the site's name
-  links: # An array of links to social media profiles
+  type                   : Person
+  name                   : *name
+  links:
+    - "https://orcid.org/0009-0009-2231-9884"
+    - "https://www.linkedin.com/in/abdelrahman-seed/"
+    - "https://scholar.google.com/citations?user=PNZvVskAAAAJ&hl=en"
+    - "https://opus.ece.ucsb.edu/people/abdelrahman-abdelrahman"
 
 
 # Analytics
@@ -184,10 +188,16 @@ exclude:
   - LICENSE
   - local
   - log
+  - markdown_generator
   - node_modules
   - package.json*
   - Rakefile
   - README
+  - scripts
+  - talkmap
+  - talkmap.py
+  - talkmap.ipynb
+  - talkmap_out.ipynb
   - tmp
   - vendor
 keep_files:
@@ -235,6 +245,16 @@ collections:
 
 # These settings control how pages and collections are included in the site
 defaults:
+  # Downloads, frozen source snapshots and ownership verification stay available
+  # at their existing URLs without being advertised as canonical search pages.
+  - scope:
+      path: "files"
+    values:
+      sitemap: false
+  - scope:
+      path: "googled5dfc114a3b75210.html"
+    values:
+      sitemap: false
   # _posts
   - scope:
       path: ""
