@@ -39,6 +39,15 @@ Three interactive examples accompany the learning, hardware, and physics researc
 
 The homepage and individual paper pages use the same figure template and viewer. Keep the numerical models independent of the DOM so they remain directly testable. Keep archived source snapshots under `files/archives/` unchanged.
 
+The homepage scripts are plain JavaScript with no npm dependencies. Standalone pages use a small legacy bundle for navigation, theme controls, responsive videos and scrolling. Edit `assets/js/_main.js` or `assets/js/plugins/jquery.greedy-navigation.js`, then rebuild the committed `assets/js/main.min.js` with:
+
+```sh
+npm ci --ignore-scripts
+npm run build:js
+```
+
+The lockfile pins this build's dependencies. Normal Jekyll builds do not need npm. Plotly and Mermaid are not loaded because no current page uses them; MathJax support is retained. The CV is maintained in `_pages/cv.md` and `files/CV.pdf`; the unused template JSON converter has been removed.
+
 Invited talks are maintained directly in the pages above. The old talk-map generator is excluded from publication, and its obsolete scraping workflow has been removed.
 
 Before publishing, run:
