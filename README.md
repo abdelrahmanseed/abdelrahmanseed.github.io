@@ -28,6 +28,7 @@ Three interactive examples accompany the learning, hardware, and physics researc
 | What to edit | Location |
 | --- | --- |
 | Homepage copy, section order and contact links | `_pages/about.md` |
+| Invited talks | `_includes/one-page-background.html` and `_pages/cv.md` |
 | Paper titles, dates, URLs and citations | `_publications/` and `_data/paper_metadata.yml` |
 | Paper descriptions and figure notes | `_data/paper_stories.yml` |
 | Shared figure markup and intrinsic image sizes | `_includes/paper-figure.html` and `_data/figure_dimensions.yml` |
@@ -37,6 +38,8 @@ Three interactive examples accompany the learning, hardware, and physics researc
 | Simulation mathematics and controls | `assets/js/research-models.js` and `assets/js/research-labs.js` |
 
 The homepage and individual paper pages use the same figure template and viewer. Keep the numerical models independent of the DOM so they remain directly testable. Keep archived source snapshots under `files/archives/` unchanged.
+
+Invited talks are maintained directly in the pages above. The old talk-map generator is excluded from publication, and its obsolete scraping workflow has been removed.
 
 Before publishing, run:
 
