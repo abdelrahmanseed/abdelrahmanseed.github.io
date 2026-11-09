@@ -46,7 +46,7 @@ redirect_from:
 </figure>
 
 <section class="research-section" id="research" aria-labelledby="research-heading">
-  <div class="wrap section-heading reveal"><p class="eyebrow">01 / Research & publications</p><h2 id="research-heading">Engineered Randomness</h2><div class="section-heading__aside"><p>How can we learn better ways to search, sample, and compute? My work connects algorithms, stochastic devices, and physical systems.</p><a class="text-link" href="{{ site.author.googlescholar }}" target="_blank" rel="noopener">Google Scholar ↗</a></div></div>
+  <div class="wrap section-heading reveal"><p class="eyebrow">01 / Research & publications</p><h2 id="research-heading">Engineered Randomness: from stochastic possibilities to the physical world</h2><div class="section-heading__aside"><p>How can we learn better ways to search, sample, and compute? My work connects algorithms, stochastic devices, and physical systems.</p><a class="text-link" href="{{ site.author.googlescholar }}" target="_blank" rel="noopener">Google Scholar ↗</a></div></div>
   <div class="research-narrative wrap">
     <div class="research-stage">
       <div class="stage-heading"><span class="eyebrow">Sampling dynamics</span><span class="stage-counter" aria-hidden="true">01 / 03</span></div>
