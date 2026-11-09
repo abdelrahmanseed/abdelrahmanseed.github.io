@@ -1320,6 +1320,9 @@ details[open]>summary .expand-icon::after {
   .research-narrative {
     gap:65px;
   }
+  .section-heading h2 {
+    white-space:normal;
+  }
   .course {
     gap:45px;
   }

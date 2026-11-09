@@ -99,7 +99,7 @@ redirect_from:
 </div></section>
 
 <section class="background-section section-pad" id="background" aria-labelledby="background-heading"><div class="wrap">
-  <div class="section-heading reveal"><p class="eyebrow">04 / Background</p><h2 id="background-heading">Qualifications and Experiences</h2><div class="section-heading__aside"><p>Education, experience, technical skills, awards, and the talks that connect the ideas.</p><a class="button button--outline" href="{{ '/files/CV.pdf' | relative_url }}" target="_blank" rel="noopener">Download full CV ↗</a></div></div>
+  <div class="section-heading reveal"><p class="eyebrow">04 / Background</p><h2 id="background-heading">Qualifications and Experiences: Probabilistic Modeling and Efficient Computing</h2><div class="section-heading__aside"><p>Education, experience, technical skills, awards, and the talks that connect the ideas.</p><a class="button button--outline" href="{{ '/files/CV.pdf' | relative_url }}" target="_blank" rel="noopener">Download full CV ↗</a></div></div>
   {% include one-page-background.html %}
 </div></section>
 
