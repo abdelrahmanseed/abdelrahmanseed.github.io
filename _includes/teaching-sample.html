@@ -12,7 +12,7 @@
     <figcaption>{{ sample.sample_caption }} <a href="{{ sample.sample_source }}" target="_blank" rel="noopener">Open source ↗</a></figcaption>
   </figure>
   {% elsif sample.sample_video %}
-  <div class="teaching-sample__video"><iframe src="{{ sample.sample_video }}" title="{{ sample.sample_title | escape }}" allow="fullscreen" allowfullscreen loading="lazy"></iframe></div>
+  <div class="teaching-sample__video"><iframe data-box-embed src="{{ sample.sample_video }}" title="{{ sample.sample_title | escape }}" allow="fullscreen; focus-without-user-activation 'none'" allowfullscreen loading="lazy"></iframe></div>
   <p>{{ sample.sample_caption }} <a href="{{ sample.sample_source }}" target="_blank" rel="noopener">Open demo ↗</a></p>
   {% endif %}
 </details>
